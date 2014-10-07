@@ -9,24 +9,9 @@ public abstract class Square {
     boolean isFlagged;// declares if the square is flagged
     boolean isClicked; // declares if a flag is clicked
     
-    //Abstract functions
-    public abstract void onClick(); //This behavior will be defined in the subclasses
-    
-    /*
-    * Default constructor
-    */
-    public Square(){
-      isMine = false; 
-      isFlagged = false;
-      isClicked = false;
-    }
-    
-    /*
-    * Constructor with parameters
-    */
-    public Square(boolean mineStatus){
-      isMine = mineStatus;
-    }
+    //Abstract functions  -- to be defined in subclasses
+    public abstract void onClick(); //Defines behaviour when square is clicked
+    public abstract void Square();  //The default constructor
     
     /*
     * Getter for isClicked
@@ -74,27 +59,12 @@ public abstract class Square {
     }
     
     /**
-     *This function tests the statuses of each variable
+     *This function allows the status of the square to be retrieved
      **/     
     public void SquareMineStatus(){
-        
-        isMine = true; // declares if the square is a mine
-        isFlagged = false; // declares if the square is flagged
-        isClicked = false; // declares if a flag is clicked
-        
         System.out.println("status of isMine = " + isMine);
         System.out.println("status of isFlagged = " + isFlagged);
         System.out.println("status of isClicked = " + isClicked);
-    }
-    
-    /**
-     *this function allows the status of a square to be retrieved.
-     */
-    public static void getStatus (){
-        
-        String status="this might be redundant";
-        System.out.println(status);
-    }
-    
+    }  
     
 }

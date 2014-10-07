@@ -11,14 +11,20 @@ package minesweeper;
  */
 public class EmptySquare extends Square{
   /*
-  * Function comment
-  */
-  public void functionName(){
-    String functionLogic;
-  }
-  
+  * onClick defines the behavior of the square once it has been clicked
+  */  
   @Override
   public void onClick() {
     
+  }
+
+  /*
+  * Constructor with parameters
+  */
+  @Override
+  public void Square(){
+    isMine = false;
+    isFlagged = false;
+    isClicked = false;
   }
 }
