@@ -1,58 +1,49 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package minesweeperkc;
+package minesweeper;
+
+import java.util.ArrayList;
 
 /**
- *
+ * Menu class will provide a structure for creating menus
  * @author Jacky Northgrave
  */
 public class Menu {
+
+  String menuName;
+  String greeting= "This is the Main Menu Page.";
+  private ArrayList <String> menuItems = null;
     
-    // Menu class will allow users to
-    // start a new game, access the options menu, 
-    // check the win percentage, or view the help menu. 
-    
-    
-    //Instance Variables
-    String arrayList;
-    String greeting= "This is the Main Menu Page.";
-    
-    private String [][] menuItems = null;
-    
-    public Menu(){
+  /*
+  * Default constructor
+  */
+  Menu(){
     }
     
-    public Menu(String [][] menuItems){
-        this();
-        this.menuItems = menuItems;
-    }
+  /*
+  * Constructor with parameters
+  */
+  Menu(String name, ArrayList <String> items){
+    this.menuName = name;
+    this.menuItems = items;
+  }
     
- /**
- * This function will allow a greeting
- * to appear whenever opening the menu
- */ 
-    public void displayGreeting(String [] args){
-        System.out.println(greeting);
-    }
-/**
- * This function will display individual
- * strings as options for the menu
- */ 
-    public void displayList(){
+  /**
+  * This function will display the menu information
+  */ 
+  public void display(){
+    //Output menu name
+    
+    System.out.println(greeting);
         
-    }
-/**
- * This function will find and reveal
- * all of the adjacent empty cells
- */     
-    public void findEmptyCells(){
-        
-    }
-    public static void main(String [ ] args){
-        
-    }
+    //Output menu items
+  }
+  
+  /**
+  * This function will display individual
+  * strings (menu items) as options for the menu
+  */ 
+  public void displayList(){
+  
+  }
+
 
 }
