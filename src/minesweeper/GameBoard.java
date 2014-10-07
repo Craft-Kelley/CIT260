@@ -1,4 +1,4 @@
-package minesweeperkc;
+package minesweeper;
 
 /**
  * This function will build the game board

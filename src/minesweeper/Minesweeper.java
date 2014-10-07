@@ -16,6 +16,7 @@ package minesweeper;
 public class Minesweeper {
     public String level;
     private int minesLeft;
+    
     /**
      * @param args the command line arguments
      */

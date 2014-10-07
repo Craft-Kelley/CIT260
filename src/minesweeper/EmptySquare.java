@@ -6,9 +6,14 @@
 package minesweeper;
 
 /**
- *
- * @author Tyler
+ * Class comment
+ * @author Summer
  */
 public class EmptySquare extends Square{
-  
+  /*
+  * Function comment
+  */
+  public void functionName(){
+    String functionLogic;
+  }
 }

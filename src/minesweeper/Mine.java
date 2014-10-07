@@ -4,12 +4,12 @@
  * and open the template in the editor.
  * @author Kelley Craft
  */
-package minesweeperkc;
+package minesweeper;
 
 /**
  * Will tell if Mine is dormant or activated
  */
-public class Mine {
+public class Mine extends Square{
     
     /**
      *Declare variables for mine on or off and end game message
