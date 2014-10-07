@@ -5,7 +5,6 @@ package minesweeper;
  * @author Kelley Craft
  */
 public abstract class Square {
-    boolean isMine; // declares if the square is a mine
     boolean isFlagged;// declares if the square is flagged
     boolean isClicked; // declares if a flag is clicked
     
@@ -49,7 +48,6 @@ public abstract class Square {
      *This function allows the status of the square to be retrieved
      **/     
     public void SquareMineStatus(){
-        System.out.println("status of isMine = " + isMine);
         System.out.println("status of isFlagged = " + isFlagged);
         System.out.println("status of isClicked = " + isClicked);
     }  

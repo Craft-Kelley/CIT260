@@ -25,7 +25,6 @@ public class EmptySquare extends Square{
   * Default constructor
   */
   public void EmptySquare(){
-    isMine = false;
     isFlagged = false;
     isClicked = false;
   }
@@ -48,7 +47,7 @@ public class EmptySquare extends Square{
     * Getter for isMine
     */
     public boolean getIsMine(){
-      return isMine;
+      return false;
     }
 
   /*

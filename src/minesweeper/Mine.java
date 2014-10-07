@@ -32,12 +32,11 @@ public class Mine extends Square{
     * Getter for isMine
     */
     public boolean getIsMine(){
-      return isMine;
+      return true;
     }
 
   
   public void Mine(){
-    isMine = true;
     isFlagged = false;
     isClicked = false;
   }
