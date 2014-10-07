@@ -12,7 +12,7 @@ public class GameBoard {
   int numRows;
   int gameLevel; //the level the game is on
   int numMines;
-  Square[][] grid;
+  Square[][] board;
   
   /*
   * Constructor with parameters
@@ -32,7 +32,7 @@ public class GameBoard {
     //TODO: add logic to do calculation based on difficulty level
     
     //For now...
-    numMines = 10;
+    numMines = 3;
   }
   
   /*
@@ -42,23 +42,35 @@ public class GameBoard {
   */
   void buildBoard(){
     calcNumMines();
-    int rand = 0;
-    grid = new Square[numRows][numCols];
-    
-    rand = (int)(Math.random()*100);
-    System.out.println("First: " + rand);
-    rand = (int)(Math.random());
-    System.out.println("Second: " + rand);
+    int mineRow = 0;
+    int mineCol = 0;
+    board = new Square[numRows][numCols];
+    //Fill the array with nulls
+    for (int i = 0; i < numRows; i++){
+      for (int j = 0; j < numCols; j++){
+        board[i][j] = null;
+      }
+    }
+   
     //Place mines
     for (int i = 0; i < numMines; i++){
-      rand = (int)(Math.random()*100);
-       
+      // Assign mineRow to a random number, then mod by the number of rows on the
+      // board to make sure we stay within board bounds.  
+      // Adding 1 ensure that the mines can be placed at the far bound of 
+      // the board.
+      mineRow = (int)(Math.random()*10) % (numRows + 1);
+      mineCol = (int)(Math.random()*10) % (numCols + 1);
+      
+      if(board[mineRow][mineCol] != null){
+        
+      }
+      System.out.println(mineRow + " -- " + mineCol);
       
     }
 
     //Fill in empty squares
     for (int i = 0; i < numRows; i++){
-      for (int k = 0; k < numCols; k++){
+      for (int j = 0; j < numCols; j++){
         
       }
     }

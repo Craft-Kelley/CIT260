@@ -21,8 +21,7 @@ public class EmptySquare extends Square{
   /*
   * Constructor with parameters
   */
-  @Override
-  public void Square(){
+  public void EmptySquare(){
     isMine = false;
     isFlagged = false;
     isClicked = false;

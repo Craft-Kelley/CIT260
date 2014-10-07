@@ -28,11 +28,8 @@ public class Mine extends Square{
     else System.out.println("take another turn");   
   }
 
-  /*
-  * Constructor with parameters
-  */
-  @Override
-  public void Square(){
+  
+  public void Mine(){
     isMine = true;
     isFlagged = false;
     isClicked = false;

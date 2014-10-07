@@ -11,7 +11,6 @@ public abstract class Square {
     
     //Abstract functions  -- to be defined in subclasses
     public abstract void onClick(); //Defines behaviour when square is clicked
-    public abstract void Square();  //The default constructor
     
     /*
     * Getter for isClicked
