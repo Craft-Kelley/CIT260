@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package minesweeperkc;
+package minesweeper;
 
 /**
  *
@@ -19,13 +19,25 @@ public class Player {
     
     public static final String PLAYER_ONE = "PLAYER";
 
-        //Instance variables
-        public String name;
-        public long intWins = 0;
-        public long intLosses = 0;    
+    //Instance variables
+    public String name;
+    int numWins = 0;
+    int numLosses = 0;    
 
+    /*
+    * Default constructor
+    */
     public Player() {
     }
+    
+    /*
+    * Constructor with parameters
+    */
+    public Player(int wins, int losses){
+      numWins = wins;
+      numLosses = losses;
+    }
+    
 /*
 *This function allows the game to retrieve the player's name
 * and set it within the game    
@@ -36,47 +48,58 @@ public class Player {
     public void setName(String name) {
         this.name = name;
     }
-/*
-*This function allows the game to log how many wins 
-*the player has
-*/
+
+   /*
+  *This function allows the game to log how many wins 
+  *the player has
+  */
     public long getIntWins() {
-        return intWins;
+        return numWins;
     }
-    public void setIntWins(long intWins) {
-        this.intWins = intWins;
+    
+    /*
+    *
+    */
+    public void setIntWins(int wins) {
+        this.numWins = wins;
     }
 /*
 *This function allows the game to log how many 
 *losses the player has
 */
     public long getIntLosses() {
-        return intLosses;
+        return numLosses;
     }
-    public void setIntLosses(long losses) {
-        this.intLosses = losses;
+    
+    /*
+    * Setter for numLosses variable
+    */
+    public void setIntLosses(int losses) {
+        this.numLosses = losses;
     }
-/*
-*This function calculates the winning percentage of the player
-*/
-    public double getWinPercentage() {
-    double totalScore = this.getIntWins() + this.getIntLosses();
-
-    if (totalScore == 0) {
-            return 0;
+ /*
+ * This function calculates the winning percentage of the player
+ */
+  public void playerStatistics(){
+     int total = numWins + numLosses;
+    if (total == 0){
+      System.out.println("====================================================");
+      System.out.print("\tNo games have been played by this player\n");
+      System.out.print("\t--Game must be played to recieve stats-- \n");
+      System.out.println("====================================================");
     }
-    double winLossRatio = this.getIntWins() / totalScore;
-    return winLossRatio*100;
+    else {
+      double winPercent = ((double)numWins/total) * 100;
+    
+      int roundedWinPercent = (int)winPercent;
+    
+      System.out.println("===============================================");
+      System.out.println("Wins: " + numWins);
+      System.out.println("Losses: " + numLosses);    
+      System.out.println("Total games: " + total);
+      System.out.println("Your win percentage is " + roundedWinPercent + "%");
+      System.out.println("===============================================");
     }
-/*
-*This function calculates the player's individual stats
-*/
-    public String getPlayerStastics() {
-    String playerStatistics = 
-    this.getName() + " has won " + this.getWinPercentage() + "% of the games.";
-        
-        return playerStatistics;
-    }
-    public static void main(String[] args) {
-    }
+  }
+      
 }
