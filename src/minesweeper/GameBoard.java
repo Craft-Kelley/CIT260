@@ -1,7 +1,12 @@
 package minesweeper;
 
 /**
- * This function will build the game board
+ * This class manages the game board.
+ *  
+ * To run debugging code:
+     GameBoard board = new GameBoard(3, 3, 1);
+     board.buildBoard();
+     board.displayBoard();
  */
 
 import java.util.ArrayList;

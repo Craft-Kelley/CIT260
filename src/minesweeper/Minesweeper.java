@@ -21,9 +21,7 @@ public class Minesweeper {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      GameBoard board = new GameBoard(3, 3, 1);
-      board.buildBoard();
-      board.displayBoard();
+      
     }
     
     /*
