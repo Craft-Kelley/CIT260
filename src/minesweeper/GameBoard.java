@@ -1,54 +1,36 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package minesweeperkc;
 
 /**
- *
+ * This function will build the game board
  * @author Casey
  */
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class GameBoard {
+  int numCols;
+  int numRows;
+  int gameLevel; //the level the game is on
+  ArrayList <Square> boardSquares;
+  
+  /*
+  * Constructor with parameters
+  */
+  GameBoard(int cols, int rows, int level){
+    numCols = cols;
+    numRows = rows;
+    gameLevel = level;
+  }
+  
+  /*
+  * This function fills the list of squares with 
+  * squares, some of which are assigned to be mines,
+  * while others are not mines.
+  */
+  void buildBoard(){
     
-    public static void main(String[] args) {
-        int numRows=0;// initialized to 0 since it's not putting any parameters from above
-	int numCols=0;
-	int numMarked = 0;
-	int numUnknown = numRows * numCols;
-	int[] boardArray;
-        boolean[][] mines;
-        int[][] board;
-	boardArray = new int[numUnknown];
-
-	
-	//storage
-	mines = new boolean[numRows][numCols];
-	board = new int[numRows][numCols];
-	
-	//new board
-	for (int i=0; i<numUnknown; i++){
-		boardArray[i]=i;
-		}
-	
-	//random mine allocation
-	int cells = numRows * numCols;
-	int temp = 0;
-        int numMines=0; 
-	Random rand = new Random();
-	
-	while (temp < numMines) {
-		int cell = rand.nextInt();
-		cell = (cell < 0 ? -cell : cell)%cells;
-		if (!mines[cell%numRows][cell/numRows]) {
-			mines[cell%numRows][cell/numRows] = true;
-			temp++;
-		}
-	}
-    }
+  }
     
   /**
   * This function will find and reveal
