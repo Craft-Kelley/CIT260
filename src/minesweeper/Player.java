@@ -6,82 +6,80 @@
 package minesweeper;
 
 /**
- *
+ * The player class keeps track of user information
  * @author Jacky Northgrave
  */
 public class Player {
+    
+  public static final String PLAYER_ONE = "PLAYER";
+  public String name;
+  int numWins;
+  int numLosses;    
 
+  /*
+  * Default constructor
+  */
+  public Player() {
+    numWins = 0;
+    numLosses = 0;
+  }
     
-// The player class is to show the player's wins, losses, and game statsistics
+  /*
+  * Constructor with parameters
+  */
+  public Player(int wins, int losses){
+    numWins = wins;
+    numLosses = losses;
+  }
     
-
-    
-    
-    public static final String PLAYER_ONE = "PLAYER";
-
-    //Instance variables
-    public String name;
-    int numWins = 0;
-    int numLosses = 0;    
-
-    /*
-    * Default constructor
-    */
-    public Player() {
-    }
-    
-    /*
-    * Constructor with parameters
-    */
-    public Player(int wins, int losses){
-      numWins = wins;
-      numLosses = losses;
-    }
-    
-/*
-*This function allows the game to retrieve the player's name
-* and set it within the game    
-*/
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
+  /*
+  *This function allows the game to retrieve the player's name
+  * and set it within the game    
+  */
+  public String getName() {
+    return name;
+  }
+  
+  /*
+  * Setter for name
+  */
+  public void setName(String name) {
+    this.name = name;
+  }
 
    /*
-  *This function allows the game to log how many wins 
-  *the player has
+  * getter for numWins
   */
-    public long getIntWins() {
-        return numWins;
-    }
+  public long getIntWins() {
+    return numWins;
+  }
     
-    /*
-    *
-    */
-    public void setIntWins(int wins) {
-        this.numWins = wins;
-    }
-/*
-*This function allows the game to log how many 
-*losses the player has
-*/
-    public long getIntLosses() {
-        return numLosses;
-    }
+  /*
+  * Setter for numWins
+  */
+  public void setIntWins(int wins) {
+    this.numWins = wins;
+  }
+  
+  /*
+  * getter for numLosses
+  */
+  public long getIntLosses() {
+    return numLosses;
+  }
     
-    /*
-    * Setter for numLosses variable
-    */
-    public void setIntLosses(int losses) {
-        this.numLosses = losses;
-    }
- /*
- * This function calculates the winning percentage of the player
- */
+  /*
+  * Setter for numLosses variable
+  */
+  public void setIntLosses(int losses) {
+    this.numLosses = losses;
+  }
+ 
+  /*
+  * This function calculates the winning percentage of the player
+  */
   public void playerStatistics(){
-     int total = numWins + numLosses;
+    int total = numWins + numLosses;
     if (total == 0){
       System.out.println("====================================================");
       System.out.print("\tNo games have been played by this player\n");
