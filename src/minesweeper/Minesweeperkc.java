@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package minesweeperkc;
+package minesweeper;
 
 /**
  * Project: Minesweep
@@ -26,6 +26,7 @@ public class Minesweeperkc {
     }
     public static void main(String[] args) {
        //calls the getName() and displayHelp()
+      /*
        Minesweeperkc minesweeper = new Minesweeperkc();
        minesweeper.getName();
        minesweeper.displayHelp();
@@ -54,9 +55,9 @@ public class Minesweeperkc {
        display();
        Stats();
        
-       Player playerSatistics = new Player();
-       System.out.println(player.getPlayerStastics());
-       System.out.println(player.getWinPercentage());
+       Player playerSatistics = new Player();*/
+       //System.out.println(player.getPlayerStastics());
+       //System.out.println(player.getWinPercentage());
     }
    public void getName(){
    System.out.println(name);
