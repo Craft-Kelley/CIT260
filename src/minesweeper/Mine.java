@@ -10,17 +10,15 @@ package minesweeper;
  * Will tell if Mine is dormant or activated
  */
 public class Mine extends Square{
-    
-    /**
-     *Declare variables for mine on or off and end game message
-     */
-     public boolean detonated; //mine status true for detonated false for not
-     public String gameOver = "Kaboom!  You just blew up a mine! \n Game over!";
 
-        /* function will show dormant or display end game message for clicked mine 
-           @param non @ return system out game over message-KC */
-public void clickedMine(){
-          
+  public boolean detonated; //mine status true for detonated false for not
+  public String gameOver = "Kaboom!  You just blew up a mine! \n Game over!";
+
+  /* 
+  * function will show dormant or display end game message for clicked mine 
+  */
+  @Override
+  public void onClick() {
     detonated = true;
     
     if (detonated == true) {
@@ -28,13 +26,6 @@ public void clickedMine(){
         
 }
     else System.out.println("take another turn");   
-    
-  
-}
-
-  @Override
-  public void onClick() {
-    
   }
 
 }
