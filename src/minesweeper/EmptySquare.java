@@ -10,6 +10,40 @@ package minesweeper;
  * @author Summer
  */
 public class EmptySquare extends Square{
+  int numTouching;
+  
+  /*
+  * Constructor with parameters
+  */
+  public void EmptySqure(int touching){
+    numTouching = touching;
+    isFlagged = false;
+    isClicked = false;
+  }
+  
+  /*
+  * Default constructor
+  */
+  public void EmptySquare(){
+    isMine = false;
+    isFlagged = false;
+    isClicked = false;
+  }
+  
+  /*
+  * Getter for numTouching
+  */
+  public int getNumTouching(){
+    return numTouching;
+  }
+  
+  /*
+  * Setter for
+  */
+  public void setNumtouching(int touching){
+    numTouching = touching;
+  }
+  
   /*
   * onClick defines the behavior of the square once it has been clicked
   */  
@@ -18,12 +52,4 @@ public class EmptySquare extends Square{
     
   }
 
-  /*
-  * Constructor with parameters
-  */
-  public void EmptySquare(){
-    isMine = false;
-    isFlagged = false;
-    isClicked = false;
-  }
 }

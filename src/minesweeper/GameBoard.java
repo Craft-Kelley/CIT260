@@ -61,17 +61,28 @@ public class GameBoard {
       mineRow = (int)(Math.random()*10) % (numRows + 1);
       mineCol = (int)(Math.random()*10) % (numCols + 1);
       
+      //if that location on the grid is not already filled...
       if(board[mineRow][mineCol] != null){
+        //put a mine in that location.
+        board[mineRow][mineCol] = new Mine();
         
-      }
-      System.out.println(mineRow + " -- " + mineCol);
-      
+        //For debugging...Shows us where the mines have been placed.
+        System.out.println(mineRow + " -- " + mineCol);
+      }     
     }
 
     //Fill in empty squares
     for (int i = 0; i < numRows; i++){
       for (int j = 0; j < numCols; j++){
-        
+        //If the location on the grid hasn't been filled yet...
+        if(board[i][j] == null){
+          //put an empty square in it.
+          board[i][j] = new EmptySquare();
+          
+          //TODO:
+          //Calculate the number of mines the square is touching
+          //board[i][j].setNumTouching(0);
+        }
       }
     }
   }

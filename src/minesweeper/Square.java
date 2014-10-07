@@ -11,6 +11,7 @@ public abstract class Square {
     
     //Abstract functions  -- to be defined in subclasses
     public abstract void onClick(); //Defines behaviour when square is clicked
+
     
     /*
     * Getter for isClicked
@@ -18,6 +19,7 @@ public abstract class Square {
     public boolean getIsClicked(){
       return isClicked;
     }
+
     
     /*
     * Setter for isMine, also takes action if the
