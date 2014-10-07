@@ -31,7 +31,12 @@ public void clickedMine(){
     
   
 }
+
+  @Override
+  public void onClick() {
     
+  }
+
 }
 
     

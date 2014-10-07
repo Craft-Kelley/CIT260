@@ -16,4 +16,9 @@ public class EmptySquare extends Square{
   public void functionName(){
     String functionLogic;
   }
+  
+  @Override
+  public void onClick() {
+    
+  }
 }
