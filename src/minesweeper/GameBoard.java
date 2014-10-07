@@ -50,4 +50,12 @@ public class GameBoard {
 	}
     }
     
+  /**
+  * This function will find and reveal
+  * all of the adjacent empty cells
+  */     
+  public void findEmptyCells(){
+        
+  }
+    
 }
