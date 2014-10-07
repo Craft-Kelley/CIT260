@@ -45,6 +45,13 @@ public class EmptySquare extends Square{
   }
   
   /*
+    * Getter for isMine
+    */
+    public boolean getIsMine(){
+      return isMine;
+    }
+
+  /*
   * onClick defines the behavior of the square once it has been clicked
   */  
   @Override

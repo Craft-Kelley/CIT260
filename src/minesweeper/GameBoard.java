@@ -52,22 +52,23 @@ public class GameBoard {
       }
     }
    
+    int k = 0;
     //Place mines
-    for (int i = 0; i < numMines; i++){
+    while (k < numMines){
       // Assign mineRow to a random number, then mod by the number of rows on the
-      // board to make sure we stay within board bounds.  
-      // Adding 1 ensure that the mines can be placed at the far bound of 
-      // the board.
-      mineRow = (int)(Math.random()*10) % (numRows + 1);
-      mineCol = (int)(Math.random()*10) % (numCols + 1);
+      // board to make sure we stay within board bounds.
+      mineRow = (int)(Math.random()*10) % (numRows);
+      mineCol = (int)(Math.random()*10) % (numCols);
       
       //if that location on the grid is not already filled...
-      if(board[mineRow][mineCol] != null){
+      if(board[mineRow][mineCol] == null){
         //put a mine in that location.
         board[mineRow][mineCol] = new Mine();
-        
+               
         //For debugging...Shows us where the mines have been placed.
-        System.out.println(mineRow + " -- " + mineCol);
+        System.out.print("Placed mine at " + mineRow + " - " + mineCol + "\n");
+        System.out.println("Mine status: " + board[mineRow][mineCol].getIsMine() + "\n");
+        k++; //Only increment if a mine was successfully placed
       }     
     }
 
@@ -94,5 +95,16 @@ public class GameBoard {
   public void findEmptyCells(){
         
   }
-    
+  
+  /*
+  * This function is mostly for debugging purposes
+  */
+  public void displayBoard(){
+     for (int i = 0; i < numRows; i++){
+      for (int j = 0; j < numCols; j++){
+        System.out.print(board[i][j].getIsMine() + " | ");
+      }
+      System.out.print("\n");
+     }
+  }
 }

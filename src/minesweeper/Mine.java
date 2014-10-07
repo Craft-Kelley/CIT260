@@ -28,6 +28,13 @@ public class Mine extends Square{
     else System.out.println("take another turn");   
   }
 
+  /*
+    * Getter for isMine
+    */
+    public boolean getIsMine(){
+      return isMine;
+    }
+
   
   public void Mine(){
     isMine = true;

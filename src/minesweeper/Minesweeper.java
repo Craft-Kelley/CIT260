@@ -23,6 +23,7 @@ public class Minesweeper {
     public static void main(String[] args) {
       GameBoard board = new GameBoard(3, 3, 1);
       board.buildBoard();
+      board.displayBoard();
     }
     
     /*

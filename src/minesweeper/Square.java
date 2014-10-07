@@ -11,7 +11,7 @@ public abstract class Square {
     
     //Abstract functions  -- to be defined in subclasses
     public abstract void onClick(); //Defines behaviour when square is clicked
-
+    public abstract boolean getIsMine();
     
     /*
     * Getter for isClicked
@@ -39,26 +39,12 @@ public abstract class Square {
     }
     
     /*
-    * Setter for isMine
+    * Setter for isFlagged
     */
     public void setIsFlagged(boolean flag){
       isFlagged = flag;
     }
-    
-    /*
-    * Getter for isMine
-    */
-    public boolean getIsMine(){
-      return isMine;
-    }
-    
-    /*
-    * Setter for isMine
-    */
-    public void setIsMine(boolean mine){
-      isMine = mine;
-    }
-    
+       
     /**
      *This function allows the status of the square to be retrieved
      **/     
