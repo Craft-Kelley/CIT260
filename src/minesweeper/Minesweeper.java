@@ -1,21 +1,35 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package minesweeper;
 
 /**
- *
- * @author Kelley
+ *  Project: Minesweeper
+ * 
+ *  Authors:
+ *    Kelley Craft
+ *    Jacky Northgrave
+ *    Summer Smith
+ *    Jonathan Crawford
+ *    Casey Ames
+ * 
+ *  Summary:
+ *    This is a simple game ... (INSERT GAME SUMMARY HERE)
  */
 public class Minesweeper {
-
+    public String level;
+    private int minesLeft;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
     }
     
+    /*
+    * StartGame provides startup protocols for a new game
+    */
+    public static void startGame(){
+      Player player1 = new Player();
+      
+      //Logic:
+      //Display main menu
+      //Redirect based on menu selections
+    }
 }
