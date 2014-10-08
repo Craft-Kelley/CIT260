@@ -39,7 +39,7 @@ public class EmptySquare extends Square{
   /*
   * Setter for
   */
-  public void setNumtouching(int touching){
+  public void setNumTouching(int touching){
     numTouching = touching;
   }
   

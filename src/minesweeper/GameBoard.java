@@ -84,15 +84,21 @@ public class GameBoard {
         if(board[i][j] == null){
           //put an empty square in it.
           board[i][j] = new EmptySquare();
-          
-          //TODO:
-          //Calculate the number of mines the square is touching
-          //board[i][j].setNumTouching(0);
+          board[i][j].setNumTouching(calcNumTouching(board[i][j]));
         }
       }
     }
   }
     
+  /**
+   * This will calculate the number of mines the passed in cell is touching
+   */
+  int calcNumTouching(Square cell){
+    int count = 0;
+    
+    
+    return count;
+  }
   /**
   * This function will find and reveal
   * all of the adjacent empty cells
