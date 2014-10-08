@@ -29,6 +29,10 @@ public class Minesweeper {
       Minesweeper game = new Minesweeper();
       game.getName();
       game.displayHelp();
+      
+      Player player = new Player(5, 13);
+      player.playerStatistics();
+      
     }
     
     /*
