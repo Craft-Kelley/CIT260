@@ -80,7 +80,7 @@ public class Player {
   */
   public void playerStatistics(){
     int total = numWins + numLosses;
-    if (total == 0){
+    if (numWins==0 && numLosses==0){
       System.out.println("====================================================");
       System.out.print("\tNo games have been played by this player\n");
       System.out.print("\t--Game must be played to recieve stats-- \n");
