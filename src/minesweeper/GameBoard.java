@@ -107,7 +107,7 @@ public class GameBoard {
     if (col == 0 || col == numCols - 1){
     
     }
-    
+
     else{
       //Check all squares around given location. 
       for (int i = (rowStart); i <= (rowStart + 2); i++){
