@@ -99,11 +99,12 @@ public class GameBoard {
     int colStart = col - 1;
       
     System.out.println("Cell row: " + row + " col: " + col);
-    if (row == 0){
+    //If the row is at the edge of the board
+    if (row == 0 || row == numRows - 1){
       
     }
-    
-    if (col == 0){
+    //If the col is at the edge of the board 
+    if (col == 0 || col == numCols - 1){
     
     }
     
