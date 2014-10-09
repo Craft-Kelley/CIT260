@@ -25,13 +25,11 @@ public class Minesweeper {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-      Minesweeper game = new Minesweeper();
-      game.getName();
-      game.displayHelp();
-      
-      Player player = new Player(5, 13);
-      player.playerStatistics();
+    public static void main(String[] args) {      
+      GameBoard board = new GameBoard(3, 3, 1);
+      board.buildBoard();
+      board.displayBoard();
+      System.out.println("count = " + board.calcNumTouching(1, 1));
       
     }
     

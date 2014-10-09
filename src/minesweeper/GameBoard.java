@@ -84,7 +84,7 @@ public class GameBoard {
         if(board[i][j] == null){
           //put an empty square in it.
           board[i][j] = new EmptySquare();
-          board[i][j].setNumTouching(calcNumTouching(board[i][j]));
+          //board[i][j].setNumTouching(calcNumTouching(i, j));
         }
       }
     }
@@ -93,10 +93,31 @@ public class GameBoard {
   /**
    * This will calculate the number of mines the passed in cell is touching
    */
-  int calcNumTouching(Square cell){
+  public int calcNumTouching(int row, int col){
     int count = 0;
+    int rowStart = row - 1;
+    int colStart = col - 1;
+      
+    System.out.println("Cell row: " + row + " col: " + col);
+    if (row == 0){
+      
+    }
     
+    if (col == 0){
     
+    }
+    
+    else{
+      //Check all squares around given location. 
+      for (int i = (rowStart); i <= (rowStart + 2); i++){
+        for (int j = (colStart); j <= (colStart + 2); j++){          
+          //Check mine status
+          if(board[i][j].getIsMine())
+            count++;
+        }      
+      }
+    }
+          
     return count;
   }
   /**
