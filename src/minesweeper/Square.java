@@ -108,7 +108,7 @@ public abstract class Square {
                   + "\t You have " + totalFlags + "squares flagged.");
       }
        boolean gameStatus;
-        gameStatus = (boolean)(goodFlags == totalFlags && totalFlags == numMines);
+        gameStatus = (boolean)(goodFlags == totalFlags & totalFlags == numMines);
     
       
       System.out.println("game is won =" + gameStatus); //primarily for testing
