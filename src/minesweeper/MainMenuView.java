@@ -12,18 +12,23 @@ import java.util.ArrayList;
  * @author Jacky Northgrave
  */
 public class MainMenuView {
-  
-    String menuName;
+  String menuName = "Main Menu";
   String greeting= "This is the Main Menu Page.";
-  private ArrayList <String> menuItems = null;
-    /*
-  * Constructor with parameters
+  private final static String[][] menuItems = {
+        {"New Game"},
+        {"Options"},
+        {"Player Statistics"},
+        {"Help"}
+    };
+  
+  /*
+  * Constructor 
   */
-  MainMenuView(String name, ArrayList <String> items){
-    this.menuName = name;
-    this.menuItems = items;
+  MainMenuView(){
+    display();
   }
-      /**
+  
+  /**
   * This function will display the menu information
   */ 
   public void display(){

@@ -14,6 +14,7 @@ package minesweeper;
  *    This is a simple game ... (INSERT GAME SUMMARY HERE)
  */
 public class Minesweeper {
+
     public String level;
     private int minesLeft;
     String name = "John Doe";
@@ -21,6 +22,7 @@ public class Minesweeper {
             + "You will be playing individually. The objective of the game \n "
             + "is to find the empty squares while avoiding the mines.\n "
             + "Good Luck!";
+    static Player player;
     
     /**
      * @param args the command line arguments
@@ -28,15 +30,21 @@ public class Minesweeper {
     public static void main(String[] args) {      
       HelpMenuView helpMenuView = new HelpMenuView();
       helpMenuView.displayOptions();
+
+      
     }
+    
     /*
     * StartGame provides startup protocols for a new game
     */
     public static void startGame(){
-      Player player1 = new Player();
+      player = new Player();
       
-      //Logic:
       //Display main menu
+      MainMenuControl mainMenu = new MainMenuControl();
+      
+      
+      
       //Redirect based on menu selections
     }
     
