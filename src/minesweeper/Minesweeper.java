@@ -29,7 +29,6 @@ public class Minesweeper {
       HelpMenuView helpMenuView = new HelpMenuView();
       helpMenuView.displayOptions();
     }
-    
     /*
     * StartGame provides startup protocols for a new game
     */

@@ -10,15 +10,16 @@ import java.util.Scanner;
  *
  * @author Jacky Northgrave
  */
-public class HelpMenuView {
-        
-    private final static String[][] menuItems = {
-        {"M", "Main Menu"},
-        {"D", "Display Instructions"},
-        {"Q", "Quit Help"}
+public class GameMenuView {
+    
+        private final static String[][] menuItems = {
+        {"N", "New Game"},
+        {"S", "Player Statistics"},
+        {"H", "Help"},
+        {"Q", "Quit"}
     };
 
-    private HelpMenuControl helpMenuControl = new HelpMenuControl ();
+    private GameMenuControl gameMenuControl = new GameMenuControl ();
     
     //display the options menu
  
@@ -36,12 +37,14 @@ public class HelpMenuView {
             input = input.trim().toUpperCase();
         
             switch (input) {
-                case "M":
-                    MainMenuControl mainMenu = new MainMenuControl();
-                    ///mainMenu.displayMainMenu();
+                case "N":
+                    gameMenuControl.startNewGame();
                     break;
-                case "D":
-                    this.helpMenuControl.displayInstructions();
+                case "S":
+                    gameMenuControl.displayPlayerStatistics();
+                    break;
+                case "H":
+                    gameMenuControl.displayHelpMenu();
                     break;
                 case "Q":
                     break;
@@ -56,9 +59,9 @@ public class HelpMenuView {
     }
     public final void displayOptions(){
         System.out.println("\n\t==============================");
-        System.out.println("\tHelp Options:");
+        System.out.println("\tGame Options:");
         
-        for (int i = 0; i < HelpMenuView.menuItems.length; i++){
+        for (int i = 0; i < GameMenuView.menuItems.length; i++){
             System.out.println("\t" + menuItems [i][0] + "\t" + menuItems[i][1]);
         }
         System.out.println("\t==============================\n");    
