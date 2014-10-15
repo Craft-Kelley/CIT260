@@ -24,10 +24,10 @@ public class Timer {
      * The period of the timer in milliseconds.
      * @param parent
      * @param style
-     */
+     
     
 	public Timer (Composite parent, int style) {
-    super (parent, style);
+     super (parent, style);
     final Display display = getDisplay ();
 	      runnable = new Runnable () {
                   @Override
@@ -68,7 +68,7 @@ public class Timer {
 
 /**
  * Starts the counter.  If the counter was stopped,
- * it will start drawing again begining at the same
+ * it will start drawing again beginning at the same
  * point where it stopped.
  */
 	  public void start () {

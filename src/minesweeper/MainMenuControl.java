@@ -7,7 +7,7 @@ package minesweeper;
 
 /**
  *
- * @author mattnorthgrave
+ * @author Jacky Northgrave
  */
 public class MainMenuControl {
     
