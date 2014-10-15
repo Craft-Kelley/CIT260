@@ -18,6 +18,9 @@ public class GameBoard {
   int gameLevel; //the level the game is on
   int numMines;
   Square[][] board;
+  //these variables are needed for game tracking purposes
+  int goodFlags; //flags on squares that are mines needed for tracking game progress
+  int totalFlags; // total flags needed to compare if player has flagged extra squares that are notmines
   
   /*
   * Constructor with parameters
@@ -177,4 +180,47 @@ public class GameBoard {
       System.out.print("\n");
      }
   }
+  
+  /**
+     * This function calculates game progress by comparing the number of correctly flagged 
+     * squares to the number of mines set in the game.  If all mines are flagged, but extra
+     * squares are also flagged, it will print an error message.  
+     * gameIsWon is a boolean value
+     * @param row the row of the square that has been clicked
+     * @param col the col of the square that has been clicked
+     * @return gameIsWon
+     * @author Kelley
+     */
+    public boolean gameIsWon(int row, int col){
+      //determines if a square is a mine and then appropriately adds one count to 
+      //either good or bad flag count. 
+      if(board[row][col].getIsMine() == true){
+        goodFlags++;
+        totalFlags++;
+      }
+      else {
+        totalFlags++;
+      }
+       
+        
+      //calculates badFlags to meet requirements for lesson03.  Can be removed later
+                 
+      float badFlags;
+      badFlags = (float)(totalFlags-goodFlags);
+              
+      //determines if the player has flagged more squares than mines
+      //prints message to warn player if they exceed the number of mines
+      if (totalFlags > numMines){
+        System.out.print("\tThere are only " + numMines + "mines in the game.\n"
+                          + "\t You have " + totalFlags + "squares flagged.");
+      }
+      
+      boolean gameStatus;
+      gameStatus = (boolean)(goodFlags == totalFlags & totalFlags == numMines);
+    
+      
+      System.out.println("game is won =" + gameStatus); //primarily for testing
+      
+      return gameStatus;      //returns the value for gameIsWon() to where it was called from
+    }
 }
