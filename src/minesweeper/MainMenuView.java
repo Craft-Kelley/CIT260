@@ -9,7 +9,6 @@ package minesweeper;
  *
  * @author Jacky Northgrave
  */
-public class HelpMenuControl {
+public class MainMenuView {
     
-
 }

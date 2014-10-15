@@ -7,9 +7,8 @@ package minesweeper;
 
 /**
  *
- * @author Jacky Northgrave
+ * @author mattnorthgrave
  */
-public class HelpMenuControl {
+public class MainMenuControl {
     
-
 }
