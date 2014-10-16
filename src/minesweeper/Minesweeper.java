@@ -22,19 +22,20 @@ public class Minesweeper {
     static int boardRows = 3;
     static int boardCols = 3;
     static int gameLevel = 1;
+    static Minesweeper instance = new Minesweeper();
         
     /*
     * Singleton -- maintains only one instance of the 
     *              Minesweeper class
     */
-    Minesweeper getInstance(){
-      return this;
+    public static Minesweeper getInstance(){
+      return instance;
     }
     
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {      
+    public static void main(String[] args) { 
       HelpMenuView helpMenuView = new HelpMenuView();
       helpMenuView.displayOptions();
 
@@ -43,7 +44,7 @@ public class Minesweeper {
       MainMenuView mainMenu = new MainMenuView();
       player = new Player();
       
-      if (mainMenu.getInput(player, boardRows, boardCols, gameLevel));
+      if (mainMenu.getInput(player, instance));
         startGame();
       
     }
