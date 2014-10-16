@@ -18,11 +18,18 @@ public class Minesweeper {
     public String level;
     private int minesLeft;
     String name = "John Doe";
-    String instructions = "Welcome to the game of Minesweeper. \n"
-            + "You will be playing individually. The objective of the game \n "
-            + "is to find the empty squares while avoiding the mines.\n "
-            + "Good Luck!";
     static Player player;
+    static int boardRows = 3;
+    static int boardCols = 3;
+    static int gameLevel = 1;
+        
+    /*
+    * Singleton -- maintains only one instance of the 
+    *              Minesweeper class
+    */
+    Minesweeper getInstance(){
+      return this;
+    }
     
     /**
      * @param args the command line arguments
@@ -32,6 +39,13 @@ public class Minesweeper {
       helpMenuView.displayOptions();
 
       
+      //Display main menu
+      MainMenuView mainMenu = new MainMenuView();
+      player = new Player();
+      
+      if (mainMenu.getInput(player, boardRows, boardCols, gameLevel));
+        startGame();
+      
     }
     
     /*
@@ -40,10 +54,11 @@ public class Minesweeper {
     public static void startGame(){
       player = new Player();
       
-      //Display main menu
-      MainMenuControl mainMenu = new MainMenuControl();
       
       
+      GameBoard board = new GameBoard(boardRows, boardCols, gameLevel);
+      board.buildBoard();
+      board.displayBoard();
       
       //Redirect based on menu selections
     }
@@ -53,7 +68,29 @@ public class Minesweeper {
     }
    
     public void displayHelp(){
-      System.out.println(instructions);
+      System.out.println("Welcome to the game of Minesweeper. \n"
+            + "You will be playing individually. The objective of the game \n "
+            + "is to find the empty squares while avoiding the mines.\n ");
     }
-      
+    
+    /*
+    * Setter
+    */
+    public void setBoardRows(int rows){
+      boardRows = rows;
+    }
+    
+    /*
+    * Setter
+    */
+    public void setBoardCols(int cols){
+      boardCols = cols;
+    }
+    
+    /*
+    * Setter
+    */
+    public void setGameLevel(int level){
+      gameLevel = level;
+    }
 }
