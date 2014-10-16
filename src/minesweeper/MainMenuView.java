@@ -54,7 +54,7 @@ public class MainMenuView {
           displayList();
           break;
       }
-    } while (!input.equals("S"));
+    } while (!input.equals("S")); //start game returns to minesweeper to start the game
     
     return true;
     
