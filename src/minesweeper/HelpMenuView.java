@@ -37,9 +37,7 @@ public class HelpMenuView {
         
             switch (input) {
                 case "M":
-                    MainMenuControl mainMenu = new MainMenuControl();
-                    ///mainMenu.displayMainMenu();
-                    break;
+                    return;
                 case "D":
                     this.helpMenuControl.displayInstructions();
                     break;

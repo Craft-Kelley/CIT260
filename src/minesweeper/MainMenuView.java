@@ -46,6 +46,8 @@ public class MainMenuView {
           break;
         case "H":  //help
           instance.displayHelp();
+          HelpMenuView helpMenu = new HelpMenuView();
+          helpMenu.getInput();
           break;
         default:
           System.out.println("Invalid input. Please enter a valid command.");
