@@ -11,14 +11,12 @@ package minesweeper;
  */
 public class GameMenuControl {
     
-    public void startNewGame(){
-        
-    }
-    public void displayPlayerStatistics(){
-        
-    }
-    
-    public void displayHelpMenu(){
-        
+     public void displayOptionMenu() {
+        OptionMenuView optionMenu = new OptionMenuView(this.game);
+        optionMenu.getInput();
+    }        
+      public void displayHelpMenu() {
+        HelpMenuView helpMenu = new HelpMenuView();
+        helpMenu.getInput();
     }
 }

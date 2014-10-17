@@ -11,59 +11,65 @@ import java.util.Scanner;
  * @author Jacky Northgrave
  */
 public class GameMenuView {
-    
+        
+        private GameMenuControl gameMenuControl = new GameMenuControl ();
+
         private final static String[][] menuItems = {
-        {"N", "New Game"},
-        {"S", "Player Statistics"},
-        {"H", "Help"},
-        {"Q", "Quit"}
+        {"P", "Player Statistics"},
+        {"O", "Options"},    
+        {"H", "Help"}
     };
 
-    private GameMenuControl gameMenuControl = new GameMenuControl ();
-    
-    //display the options menu
+        public GameMenuView (){
+            this.gameMenuControl = new GameMenuControl();
+        }
+   
  
     //user input
     public void getInput(){
         
         String input; 
         Scanner inFile = new Scanner(System.in);
-        
-        do {
-            
-            this.displayOptions();
+                
+        do {     
+            //display the game menu
+            this.displayGameOptions();
             
             input = inFile.nextLine();
             input = input.trim().toUpperCase();
-        
+    
             switch (input) {
-                case "N":
-                    gameMenuControl.startNewGame();
+                //displays player statistics    
+                case "P":
+                    player.playerStatistics();
                     break;
-                case "S":
-                    gameMenuControl.displayPlayerStatistics();
+                //displays game options
+                case "O":
+                    gameMenuControl.displayOptionMenu();
                     break;
+                //displays help menu
                 case "H":
                     gameMenuControl.displayHelpMenu();
                     break;
-                case "Q":
-                    break;
+                //creates error warning if user enters invalid input    
                 default:
                     System.out.println("Invalid input. Please enter a valid command.");
-                    continue;
+                    displayGameOptions();
+                    break;
             
             }
-        } while (!input.equals("Q"));
+        //starts new minesweeper game    
+        } while (!input.equals("S"));
           
           return;
     }
-    public final void displayOptions(){
+    public void displayGameOptions(){
         System.out.println("\n\t==============================");
-        System.out.println("\tGame Options:");
+        System.out.println("\tGame Menu Options:");
         
-        for (int i = 0; i < GameMenuView.menuItems.length; i++){
-            System.out.println("\t" + menuItems [i][0] + "\t" + menuItems[i][1]);
-        }
+        for (String[] menuItem : menuItems) {
+      System.out.println("\t" + menuItem[0] + "\t" + menuItem[1]);
+    }
         System.out.println("\t==============================\n");    
     }
 }

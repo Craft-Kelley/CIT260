@@ -48,7 +48,9 @@ public class Minesweeper {
         startGame();
       
     }
-    
+        //Display game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayGameOptions();
     /*
     * StartGame provides startup protocols for a new game
     */
