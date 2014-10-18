@@ -41,8 +41,8 @@ public class GameMenuView {
             switch (input) {
                 //displays player statistics    
                 case "P":
-                    Player player = new Player(); //added instance to debug function (kc)
-                    player.playerStatistics();
+                    Player playerName = new Player(); //added instance to debug function (kc)
+                    playerName.playerStatistics();
                     break;
                 //displays game options
                 case "O":
