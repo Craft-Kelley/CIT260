@@ -26,7 +26,7 @@ public class GameMenuView {
    
  
     //user input
-    public void getInput(){
+    public void getInput(Player player){
         
         String input; 
         Scanner inFile = new Scanner(System.in);
