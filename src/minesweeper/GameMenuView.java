@@ -26,7 +26,7 @@ public class GameMenuView {
    
  
     //user input
-    public void getInput(){
+    public void getInput(Player player){
         
         String input; 
         Scanner inFile = new Scanner(System.in);
@@ -41,7 +41,8 @@ public class GameMenuView {
             switch (input) {
                 //displays player statistics    
                 case "P":
-                    player.playerStatistics();
+                    Player playerName = new Player(); //added instance to debug function (kc)
+                    playerName.playerStatistics();
                     break;
                 //displays game options
                 case "O":

@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package minesweeper;
-
 /**
  *
  * @author Jacky Northgrave
@@ -12,8 +11,7 @@ package minesweeper;
 public class GameMenuControl {
     
      public void displayOptionMenu() {
-        OptionMenuView optionMenu = new OptionMenuView(this.game);
-        optionMenu.getInput();
+        OptionMenuView optionMenu = new OptionMenuView();
     }        
       public void displayHelpMenu() {
         HelpMenuView helpMenu = new HelpMenuView();

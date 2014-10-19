@@ -47,10 +47,12 @@ public class Minesweeper {
       if (mainMenu.getInput(player, instance));
         startGame();
       
-    }
-        //Display game menu
+        
+      //Display game menu
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayGameOptions();
+        gameMenu.getInput(player);
+    }
+        
     /*
     * StartGame provides startup protocols for a new game
     */
