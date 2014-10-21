@@ -63,13 +63,14 @@ public class AboutMenuView {
             
     }
     public final void display(){
-        System.out.println("\n\t==================================================");
-        System.out.println("\tEnter the letter for your selection choice");
+        System.out.println("\n====================================================");
+        System.out.println("About this program: ");
+        System.out.println("Enter the letter for your selection choice");
         for (int i = 0; i < AboutMenuView.menuItems.length; i++ ){
-            System.out.println("\t     " + menuItems[i]);
+            System.out.println("\t" + menuItems[i]);
         }
-        System.out.println("\t==================================================\n");
-        
+        System.out.println("\n====================================================");
+        System.out.print("> ");
        
     }
     

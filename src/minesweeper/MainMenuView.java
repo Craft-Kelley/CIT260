@@ -13,6 +13,7 @@ public class MainMenuView {
   String greeting= "This is the Main Menu Page.";
   private final static String[][] menuItems = {
         {"S - Start Game"},
+        {"A - About Program"},
         {"O - Edit Game Options"},
         {"P - Player Statistics"},
         {"H - Help"}
@@ -40,14 +41,21 @@ public class MainMenuView {
       switch (input) {
         case "O":  //options
           editGameOptions(instance);
+          displayList(menuItems, menuName);
+          break;
+        case "A": //About
+          AboutMenuView about = new AboutMenuView();
+          about.getInput();
+          displayList(menuItems, menuName);
           break;
         case "P":  //player statistics
           player.playerStatistics();
+          displayList(menuItems, menuName);
           break;
         case "H":  //help
-          instance.displayHelp();
           HelpMenuView helpMenu = new HelpMenuView();
           helpMenu.getInput();
+          displayList(menuItems, menuName);
           break;
         default:
           System.out.println("Invalid input. Please enter a valid command.");
@@ -65,13 +73,13 @@ public class MainMenuView {
   * strings (menu items) as options for the menu
   */ 
   private void displayList(String[][] list, String name){
-    System.out.println("\n==============================");
+    System.out.println("\n====================================================");
     System.out.println(name);
     
     for (String[] menuItem : list) {
       System.out.println("\t" + menuItem[0]);
     }
-    System.out.println("==============================\n");    
+    System.out.println("\n====================================================");
     System.out.print("> ");
   }
   
