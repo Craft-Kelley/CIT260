@@ -31,7 +31,7 @@ public class MainMenuView {
   public boolean getInput(Player player, Minesweeper instance){
     String input;
     Scanner inFile = new Scanner(System.in);
-    displayList();
+    displayList(menuItems);
     
     do{
       input = inFile.nextLine();
@@ -51,7 +51,7 @@ public class MainMenuView {
           break;
         default:
           System.out.println("Invalid input. Please enter a valid command.");
-          displayList();
+          displayList(menuItems);
           break;
       }
     } while (!input.equals("S")); //start game returns to minesweeper to start the game
@@ -64,13 +64,14 @@ public class MainMenuView {
   * This function will display individual
   * strings (menu items) as options for the menu
   */ 
-  private void displayList(){
+  private void displayList(String[][] list){
     System.out.println(menuName);
-    System.out.println("\n\t==============================");
+    System.out.println("\n==============================");
 
-    for (String[] menuItem : menuItems) {
-      System.out.println("\t" + menuItem[0] + "\t" + menuItem[1]);
+    for (String[] menuItem : list) {
+      System.out.println("\t" + menuItem[0]);
     }
+    System.out.println("\n==============================");
   }
   
   /*
@@ -85,13 +86,62 @@ public class MainMenuView {
   *                 game settings
   */
   private void editGameOptions(Minesweeper instance){
+    String[][] editItems = {
+        {"r - edit number of rows"},
+        {"c - edit number of columns"},
+        {"g - edit game level"},
+        {"m - return to main menu"}
+    };
+    String input;
+    Scanner inFile = new Scanner(System.in);
+    displayList(editItems);
+    
+    do{
+      input = inFile.nextLine();
+      input = input.trim().toUpperCase();
+       
+      switch (input) {
+        case "r":  //edit number of rows
+          instance.setBoardRows(getInt("Please enter the number of rows: ", 1000));
+          break;
+        case "c":  //edit number of cols
+          instance.setBoardCols(getInt("Please enter the number of columns: ", 1000));
+          break;
+        case "g":  //edit game level
+          String levelPrompt = "Please select difficulty level: \n"
+                               + "1 - Easy\n"
+                               + "2 - Medium\n"
+                               + "3 - Difficult\n"
+                               + "> ";
+          instance.setGameLevel(getInt(levelPrompt, 3));
+          break;
+        default:
+          System.out.println("Invalid input. Please enter a valid command.");
+          displayList(editItems);
+          break;
+      }
+    } while (!input.equals("M")); //start game returns to minesweeper to start the game
     
   }
   
   /*
-  * displays the available selections for editing the game.
+  * Prompts the user, returns user input.  User input must be 
+  * an integer.
+  * 
   */
-  public void displayEditOptions(){
+  public int getInt(String prompt, int limit){
+    int input = 0;
     
+    //Output prompt
+    System.out.println(prompt);
+    
+    //Get input
+    
+    //Verify that input is an int
+    
+    //Verify that the input is less that the limit
+        
+    return input;
   }
+
 }

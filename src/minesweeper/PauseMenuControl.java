@@ -20,19 +20,13 @@ public class PauseMenuControl {
 
  boolean paused;
       
-    /*if(PauseMenuControl(VK_SPACE) {
-    if(paused == true) {
+   // if(PauseMenuControl(VK_SPACE) {
+    /*if(paused == true) {
         paused = false;
         }
     else if(!paused){
         paused = true;
     }
-
-
-    private static class VK_SPACE {
-
-        public VK_SPACE() {
-        }
-    }
+*/
   }
 
