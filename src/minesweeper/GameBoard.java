@@ -130,33 +130,37 @@ public class GameBoard {
     
   /**
    * This will calculate the number of mines the passed in cell is touching
+   * @param row the row of the cell to be checked 
+   * @param col the col of the cell to be checked
    */
   public int calcNumTouching(int row, int col){
     int count = 0;
     int rowStart = row - 1;
     int colStart = col - 1;
-      
-    System.out.println("Cell row: " + row + " col: " + col);
-    //If the row is at the edge of the board
-    if (row == 0 || row == numRows - 1){
-      
-    }
-    //If the col is at the edge of the board 
-    if (col == 0 || col == numCols - 1){
+    int rowFinish = row + 1;
+    int colFinish = col + 1;
     
-    }
+    if (row == 0 )
+      rowStart = 0;   
+    if (row == numRows - 1)
+      rowFinish = row;
+   
 
-    else{
+    if (col == 0)
+      colStart = 0;
+    if (col == numCols - 1) 
+      colFinish = col;
+
       //Check all squares around given location. 
-      for (int i = (rowStart); i <= (rowStart + 2); i++){
-        for (int j = (colStart); j <= (colStart + 2); j++){          
+      for (int i = (rowStart); i <= (rowFinish); i++){
+        for (int j = (colStart); j <= (colFinish); j++){          
           //Check mine status
           if(board[i][j].getIsMine())
             count++;
         }      
       }
-    }
-          
+    
+      
     return count;
   }
   /**

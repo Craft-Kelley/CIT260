@@ -58,6 +58,7 @@ public class Minesweeper {
       GameBoard board = new GameBoard(boardRows, boardCols, gameLevel);
       board.buildBoard();
       board.displayBoard();
+
       
       //while loop -- get input
       
