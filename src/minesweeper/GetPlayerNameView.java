@@ -26,13 +26,11 @@ public class GetPlayerNameView {
                                //found in the input
         
     do {
-      if (goodInput) //If this is our first time through the loop, just output prompt
-        System.out.println("Please enter name: ");
-      else if (!goodInput){ //If this not our first time through the loop,
+      if (!goodInput){ //If this not our first time through the loop,
         //Output error message before re-promtping for name
         System.out.println("ERROR: Name should contain only alpha caracters.  No numbers or special caracters accepted.");
-        System.out.println("Please enter name: ");
       }
+      System.out.println("Please enter name: ");
       
       //get value entered by user
       input = inFile.nextLine();            
