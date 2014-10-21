@@ -22,28 +22,35 @@ public class GetPlayerNameView {
   public String getInput() {
     Scanner inFile = new Scanner(System.in);
     String input = "";
-    boolean goodInput = true;  //This should only change if a non-letter is 
-                               //found in the input
+    boolean goodInput = true;  //This should only change if invalid input is 
+                               //detected
         
-    do {
-      if (!goodInput){ //If this not our first time through the loop,
-        //Output error message before re-promtping for name
-        System.out.println("ERROR: Name should contain only alpha caracters.  No numbers or special characters accepted.");
-      }
-      System.out.println("Please enter name: ");
+     while(!goodInput){
+       //Prompt for name
+       System.out.println("Please enter name: ");
       
       //get value entered by user
       input = inFile.nextLine();            
       char[] chars = input.toCharArray();
       
-      //Verify that input contains only letters
-      for (char c : chars) {
-        if(!Character.isLetter(c)) {
-         goodInput = false; //If a non-letter is found, prompt for input again
+      //If the user did not enter input....
+      if (chars.length < 1)
+        goodInput = false;
+      
+      else{
+        //Verify that input contains only letters
+        for (char c : chars) {
+         if(!Character.isLetter(c)) {
+           goodInput = false; //If a non-letter is found, prompt for input again
+          }
         }
-      }
+      } 
        
-    } while(!goodInput); 
+      //If we have bad input, output error message
+      if (!goodInput){
+        System.out.println("ERROR: Name should contain only alpha caracters.  No numbers or special characters accepted.");
+      }
+    } 
             
     //Once we are outside of the loop, we have good input.
     //Output the greeting message and end the function.
