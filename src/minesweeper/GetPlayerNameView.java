@@ -12,38 +12,45 @@ import java.util.Scanner;
  */
 public class GetPlayerNameView {
     public GetPlayerNameView() {
+      
     }
-//get input from user
-    public String getInput() {
-        Scanner inFile = new Scanner(System.in);
-        String getInput;
-        int Llama = 0;
-   
-    /*insert code for letters only
-    public boolean isAlpha(getInput) {
-        char[] chars = getInput.toCharArray();
-
     
-    for (char c : chars) {
-        if(!Character.isLetter(c)) {
-            return false;
-        }
-    }
-    return true;
-    */
-        while(Llama < 1) {
-            System.out.println("Please enter name");
-            //get value entered by user
-            getInput = inFile.nextLine();
-            
-        if(getInput.length() > 0) {
-            System.out.println("Welcome:" + getInput);
-        }
+
+  /*
+  * Get user input
+  */
+  public String getInput() {
+    Scanner inFile = new Scanner(System.in);
+    String input = "";
+    boolean goodInput = true;  //This should only change if a non-letter is 
+                               //found in the input
         
-        else {
-            continue;
+    do {
+      if (goodInput) //If this is our first time through the loop, just output prompt
+        System.out.println("Please enter name: ");
+      else if (!goodInput){ //If this not our first time through the loop,
+        //Output error message before re-promtping for name
+        System.out.println("ERROR: Name should contain only alpha caracters.  No numbers or special caracters accepted.");
+        System.out.println("Please enter name: ");
+      }
+      
+      //get value entered by user
+      input = inFile.nextLine();            
+      char[] chars = input.toCharArray();
+      
+      //Verify that input contains only letters
+      for (char c : chars) {
+        if(!Character.isLetter(c)) {
+         goodInput = false; //If a non-letter is found, prompt for input again
         }
-}   
-        return null;
-    }
+      }
+       
+    } while(!goodInput); 
+            
+    //Once we are outside of the loop, we have good input.
+    //Output the greeting message and end the function.
+    System.out.println("Welcome: " + input);
+    return input;
+  }
+
 }
