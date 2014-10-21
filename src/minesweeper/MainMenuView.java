@@ -13,7 +13,7 @@ public class MainMenuView {
   String greeting= "This is the Main Menu Page.";
   private final static String[][] menuItems = {
         {"S - Start Game"},
-        {"O - Options"},
+        {"O - Edit Game Options"},
         {"P - Player Statistics"},
         {"H - Help"}
     };
@@ -31,7 +31,7 @@ public class MainMenuView {
   public boolean getInput(Player player, Minesweeper instance){
     String input;
     Scanner inFile = new Scanner(System.in);
-    displayList(menuItems);
+    displayList(menuItems, menuName);
     
     do{
       input = inFile.nextLine();
@@ -51,7 +51,7 @@ public class MainMenuView {
           break;
         default:
           System.out.println("Invalid input. Please enter a valid command.");
-          displayList(menuItems);
+          displayList(menuItems, menuName);
           break;
       }
     } while (!input.equals("S")); //start game returns to minesweeper to start the game
@@ -64,14 +64,15 @@ public class MainMenuView {
   * This function will display individual
   * strings (menu items) as options for the menu
   */ 
-  private void displayList(String[][] list){
-    System.out.println(menuName);
+  private void displayList(String[][] list, String name){
     System.out.println("\n==============================");
-
+    System.out.println(name);
+    
     for (String[] menuItem : list) {
       System.out.println("\t" + menuItem[0]);
     }
-    System.out.println("\n==============================");
+    System.out.println("==============================\n");    
+    System.out.print("> ");
   }
   
   /*
@@ -86,6 +87,7 @@ public class MainMenuView {
   *                 game settings
   */
   private void editGameOptions(Minesweeper instance){
+    String name = "Game Options";
     String[][] editItems = {
         {"r - edit number of rows"},
         {"c - edit number of columns"},
@@ -94,7 +96,7 @@ public class MainMenuView {
     };
     String input;
     Scanner inFile = new Scanner(System.in);
-    displayList(editItems);
+    displayList(editItems, name);
     
     do{
       input = inFile.nextLine();
@@ -117,7 +119,7 @@ public class MainMenuView {
           break;
         default:
           System.out.println("Invalid input. Please enter a valid command.");
-          displayList(editItems);
+          displayList(editItems, name);
           break;
       }
     } while (!input.equals("M")); //start game returns to minesweeper to start the game

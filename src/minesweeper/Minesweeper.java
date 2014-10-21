@@ -36,11 +36,7 @@ public class Minesweeper {
      * @param args the command line arguments
      */
     public static void main(String[] args) { 
-      HelpMenuView helpMenuView = new HelpMenuView();
-      helpMenuView.displayOptions();
-
-      
-      //Display main menu
+//Display main menu
       MainMenuView mainMenu = new MainMenuView();
       player = new Player();
       
