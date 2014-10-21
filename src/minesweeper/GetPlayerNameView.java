@@ -28,7 +28,7 @@ public class GetPlayerNameView {
     do {
       if (!goodInput){ //If this not our first time through the loop,
         //Output error message before re-promtping for name
-        System.out.println("ERROR: Name should contain only alpha caracters.  No numbers or special caracters accepted.");
+        System.out.println("ERROR: Name should contain only alpha caracters.  No numbers or special characters accepted.");
       }
       System.out.println("Please enter name: ");
       
