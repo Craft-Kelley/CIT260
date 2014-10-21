@@ -7,7 +7,7 @@ package minesweeper;
 public abstract class Square {
     boolean isClicked;
     boolean isFlagged;
-    int numTouching;
+    int numTouching = 0;
     
     //Abstract functions  -- to be defined in subclasses
     public abstract void onClick(); //Defines behaviour when square is clicked
@@ -36,6 +36,13 @@ public abstract class Square {
   */
   public void setNumTouching(int touching){
     numTouching = touching;
+  }
+  
+    /*
+  * Getter for numTouching
+  */
+  public int getNumTouching(){
+    return numTouching;
   }
     
     /*

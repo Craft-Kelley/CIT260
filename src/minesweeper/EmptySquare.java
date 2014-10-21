@@ -55,6 +55,7 @@ public class EmptySquare extends Square{
   */  
   @Override
   public void onClick() {
+    //Display number of mines touching
     
   }
 

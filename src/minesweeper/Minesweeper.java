@@ -44,10 +44,6 @@ public class Minesweeper {
         startGame();
       
         
-      //Display game menu
-        displayInstructions();
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.getInput(player);
     }
         
     /*
@@ -56,13 +52,18 @@ public class Minesweeper {
     public static void startGame(){
       player = new Player();
       
-      
+      System.out.println("Hit P to access pause menu");
+      System.out.println("Hit R to give up and reveal the board");
       
       GameBoard board = new GameBoard(boardRows, boardCols, gameLevel);
       board.buildBoard();
       board.displayBoard();
       
-      //Redirect based on menu selections
+      //while loop -- get input
+      
+      //input options include P - pause, R - reveal board, Q - quit, G - guess square
+      // (use game menu)
+      
     }
     
     public void getName(){
@@ -72,8 +73,8 @@ public class Minesweeper {
     public static void displayInstructions(){
       System.out.println("*****************************************************");
       System.out.println("*  Welcome to the game of Minesweeper. \n"
-            + "*  You will be playing individually. The objective of the game \n "
-            + "*  is to find the empty squares while avoiding the mines.\n ");
+            + "*  You will be playing individually. The objective of the game \n"
+            + "*  is to find the empty squares while avoiding the mines.\n");
       System.out.println("*****************************************************");
     }
     

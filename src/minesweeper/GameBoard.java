@@ -31,53 +31,51 @@ public class GameBoard {
     gameLevel = level;
   }
   
-    /*
-    * Calculates the number of mines that should
-    * be placed on the board, based on the level
-    * of difficulty the user has selected.
-    */
-    private void calcNumMines(){
-    //calculate the number of mines by using 25% of total number of boxes
-    //beginner: 5 rows 5 columns, 6 mines
-    if (numCols==5 && numRows==5){
-    double calcNumMine = (double) (25.0 *(numCols * numRows))/100;
-    int roundedCalcNumMine = (int)calcNumMine;
+  /*
+  * Calculates the number of mines that should
+  * be placed on the board, based on the level
+  * of difficulty the user has selected.
+  */
+  private int calcNumMines(){
+    //beginner
+    if (gameLevel == 1){
+      double calcNumMine = (double) (25.0 *(numCols * numRows))/100;
+      int roundedCalcNumMine = (int)calcNumMine;
     
-    System.out.println("===================================");
-    System.out.print("\tNumber of Mines on \n");
-    System.out.print("\tBeginner Game Board:" + roundedCalcNumMine);
-    System.out.println("===================================");
-}
-    else {
-    System.out.println("Beginning Level Error"); 
-}
-    //intermediate: 10 rows 10 columns, 25 mines
-    if (numCols==10 && numRows==10){
-        double calcNumMine = (double) (25.0 *(numCols + numRows))/100;
-        int roundedCalcNumMine = (int) calcNumMine;
+      System.out.println("===================================");
+      System.out.println("\tNumber of Mines on beginner Game Board:" + roundedCalcNumMine);
+      System.out.println("===================================");
+      
+      return roundedCalcNumMine;
+    }
+    
+    //intermediate
+    else if (gameLevel == 2){
+      double calcNumMine = (double) (50.0 *(numCols + numRows))/100;
+      int roundedCalcNumMine = (int) calcNumMine;
         
-    System.out.println("===================================");
-    System.out.print("\tNumber of Mines on \n");
-    System.out.print("\tIntermediate Game Board:" + roundedCalcNumMine);
-    System.out.println("==================================="); 
-}
-    else {
-    System.out.println("Intermediate Level Error");
-}
-    //expert: 15 rows 15 columns, 56 mines
-    if (numCols==15 && numRows==15){
-        double calcNumMine = (double) (25.0 * (numCols + numRows))/100;
-        int roundedCalcNumMine = (int) calcNumMine;
+      System.out.println("===================================");
+      System.out.println("\tNumber of Mines on beginner Game Board:" + roundedCalcNumMine);
+      System.out.println("===================================");
+      return roundedCalcNumMine;
+    }
+    
+    //expert
+    else if (gameLevel == 3){
+      double calcNumMine = (double) (75.0 * (numCols + numRows))/100;
+      int roundedCalcNumMine = (int) calcNumMine;
         
-    System.out.println("===================================");
-    System.out.print("\tNumber of Mines on \n");
-    System.out.print("\tExpert Game Board:" + roundedCalcNumMine);
-    System.out.println("==================================="); 
-}
+      System.out.println("===================================");
+      System.out.println("Number of Mines on beginner Game Board:" + roundedCalcNumMine);
+      System.out.println("===================================");
+      return roundedCalcNumMine;
+    }
     else{
-    System.out.println("Expert Level Error");
- }
-}
+      System.out.println("ERROR: Unable to calculate number of mines");
+    }
+    
+    return 1;
+  }
 
   
   /*
@@ -86,7 +84,7 @@ public class GameBoard {
   * while others are not mines.
   */
   void buildBoard(){
-    calcNumMines();
+    numMines = calcNumMines();
     int mineRow = 0;
     int mineCol = 0;
     board = new Square[numRows][numCols];
@@ -163,9 +161,12 @@ public class GameBoard {
   }
   /**
   * This function will find and reveal
-  * all of the adjacent empty cells
+  * all of the empty cells adjacent to the 
+  * current row and column
+  * @param curRow - the row of the cell we are checking around
+  * @param curSquare - the col of the cell we are checking around
   */     
-  public void findEmptyCells(){
+  public void findEmptyCells(int curRow, int curCol){
         
   }
   
@@ -175,7 +176,29 @@ public class GameBoard {
   public void displayBoard(){
      for (int i = 0; i < numRows; i++){
       for (int j = 0; j < numCols; j++){
-        System.out.print(board[i][j].getIsMine() + " | ");
+        if(board[i][j].isClicked){
+            System.out.print(board[i][j].getNumTouching() + " | ");                   
+        }
+        else if (board[i][j].isFlagged){
+          System.out.print(">" + " | ");
+        }
+        else
+          System.out.print(" " + " | ");
+      }
+      System.out.print("\n");
+     }
+  }
+  
+  /*
+  * this function reveals the board as true/false squares
+  */
+  public void revealBoard(){
+    for (int i = 0; i < numRows; i++){
+      for (int j = 0; j < numCols; j++){
+        if (board[i][j].getIsMine() == true)
+          System.out.print("t" + " | ");
+        else 
+          System.out.print("f" + " | ");
       }
       System.out.print("\n");
      }

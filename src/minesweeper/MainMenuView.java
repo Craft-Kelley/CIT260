@@ -57,6 +57,8 @@ public class MainMenuView {
           helpMenu.getInput();
           displayList(menuItems, menuName);
           break;
+        case "S": //Start game
+          break;
         default:
           System.out.println("Invalid input. Please enter a valid command.");
           displayList(menuItems, menuName);
@@ -111,13 +113,13 @@ public class MainMenuView {
       input = input.trim().toUpperCase();
        
       switch (input) {
-        case "r":  //edit number of rows
+        case "R":  //edit number of rows
           instance.setBoardRows(getInt("Please enter the number of rows: ", 1000));
           break;
-        case "c":  //edit number of cols
+        case "C":  //edit number of cols
           instance.setBoardCols(getInt("Please enter the number of columns: ", 1000));
           break;
-        case "g":  //edit game level
+        case "G":  //edit game level
           String levelPrompt = "Please select difficulty level: \n"
                                + "1 - Easy\n"
                                + "2 - Medium\n"
@@ -143,7 +145,7 @@ public class MainMenuView {
     int input = 0;
     
     //Output prompt
-    System.out.println(prompt);
+    System.out.print(prompt);
     
     //Get input
     
