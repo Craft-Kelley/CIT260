@@ -119,6 +119,7 @@ public class GameBoard {
    * This will calculate the number of mines the passed in cell is touching
    * @param row the row of the cell to be checked 
    * @param col the col of the cell to be checked
+   * @return count the number of mines the given cell is touching
    */
   public int calcNumTouching(int row, int col){
     int count = 0;
@@ -139,15 +140,14 @@ public class GameBoard {
       colFinish = col;
 
       //Check all squares around given location. 
-      for (int i = (rowStart); i <= (rowFinish); i++){
-        for (int j = (colStart); j <= (colFinish); j++){          
-          //Check mine status
-          if(board[i][j].getIsMine())
-            count++;
-        }      
-      }
+    for (int i = (rowStart); i <= (rowFinish); i++){
+      for (int j = (colStart); j <= (colFinish); j++){          
+        //Check mine status
+        if(board[i][j].getIsMine())
+          count++;
+      }      
+    }
     
-      
     return count;
   }
   /**
