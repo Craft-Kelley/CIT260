@@ -139,7 +139,8 @@ public class MainMenuView {
   /*
   * Prompts the user, returns user input.  User input must be 
   * an integer.
-  * 
+  * @param prompt the prompt to display to the user to get the int
+  * @param limit the upper bound of the int (the highest number the int can be)
   */
   public int getInt(String prompt, int limit){
     int input = 0;
