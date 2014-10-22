@@ -41,11 +41,7 @@ public class GameBoard {
     if (gameLevel == 1){
       double calcNumMine = (double) (25.0 *(numCols * numRows))/100;
       int roundedCalcNumMine = (int)calcNumMine;
-    
-      System.out.println("===================================");
-      System.out.println("\tNumber of Mines on beginner Game Board:" + roundedCalcNumMine);
-      System.out.println("===================================");
-      
+          
       return roundedCalcNumMine;
     }
     
@@ -54,9 +50,6 @@ public class GameBoard {
       double calcNumMine = (double) (50.0 *(numCols + numRows))/100;
       int roundedCalcNumMine = (int) calcNumMine;
         
-      System.out.println("===================================");
-      System.out.println("\tNumber of Mines on beginner Game Board:" + roundedCalcNumMine);
-      System.out.println("===================================");
       return roundedCalcNumMine;
     }
     
@@ -65,9 +58,6 @@ public class GameBoard {
       double calcNumMine = (double) (75.0 * (numCols + numRows))/100;
       int roundedCalcNumMine = (int) calcNumMine;
         
-      System.out.println("===================================");
-      System.out.println("Number of Mines on beginner Game Board:" + roundedCalcNumMine);
-      System.out.println("===================================");
       return roundedCalcNumMine;
     }
     else{
@@ -108,9 +98,6 @@ public class GameBoard {
         //put a mine in that location.
         board[mineRow][mineCol] = new Mine();
                
-        //For debugging...Shows us where the mines have been placed.
-        System.out.print("Placed mine at " + mineRow + " - " + mineCol + "\n");
-        System.out.println("Mine status: " + board[mineRow][mineCol].getIsMine() + "\n");
         k++; //Only increment if a mine was successfully placed
       }     
     }
