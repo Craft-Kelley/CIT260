@@ -149,17 +149,23 @@ public class MainMenuView {
     //Output prompt
     System.out.print(prompt);
         
+        //Verify that input is an int
+        if (!setBoardRows.isNumeric())
+            return false;
+        
         //Input must be greater than zero and cannot be empty
         if (setBoardRows == null || setBoardRows.length() == 0)
             return false;
         
         //Verify that the input is less that the limit
         for (int i = 0; i < setBoardRows.length(1000); i++) {
- 
-        //Verify that input is an int
-        if (!Character.isDigit())
-            return false;
+            if (setBoardRows >= 1 && setBoardRows <=1000)
+                System.out.println("Number of Rows:" + setBoardRows);
+            else{
+                System.out.println("Invalid Input. Rows must be greater than 0 and less than 1000");
+            }
         }
+        
         //Get input
         return input;
         }
