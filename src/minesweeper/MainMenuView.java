@@ -145,16 +145,32 @@ public class MainMenuView {
   public int getInt(String prompt, int limit){
     int input = 0;
     
+    
     //Output prompt
     System.out.print(prompt);
-    
-    //Get input
-    
-    //Verify that input is an int
-    
-    //Verify that the input is less that the limit
         
-    return input;
-  }
+        //Input must be greater than zero and cannot be empty
+        if (setBoardRows == null || setBoardRows.length() == 0)
+            return false;
+        
+        //Verify that the input is less that the limit
+        for (int i = 0; i < setBoardRows.length(1000); i++) {
+ 
+        //Verify that input is an int
+        if (!Character.isDigit())
+            return false;
+        }
+        //Get input
+        return input;
+        }
 
 }
+/* public final void displayOptions(){
+        System.out.println("\n====================================================");
+        System.out.println("Help Options:");
+        
+        for (int i = 0; i < HelpMenuView.menuItems.length; i++){
+            System.out.println("\t" + menuItems [i][0] + "\t" + menuItems[i][1]);
+        }
+        System.out.println("\n====================================================");  
+        System.out.print("> "); */
