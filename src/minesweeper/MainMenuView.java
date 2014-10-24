@@ -144,30 +144,34 @@ public class MainMenuView {
   */
   public int getInt(String prompt, int limit){
     int input = 0;
-    
-    
-    //Output prompt
-    System.out.print(prompt);
-        
-        //Verify that input is an int
-        if (!setBoardRows.isNumeric())
-            return false;
-        
-        //Input must be greater than zero and cannot be empty
-        if (setBoardRows == null || setBoardRows.length() == 0)
-            return false;
-        
-        //Verify that the input is less that the limit
-        for (int i = 0; i < setBoardRows.length(1000); i++) {
-            if (setBoardRows >= 1 && setBoardRows <=1000)
-                System.out.println("Number of Rows:" + setBoardRows);
-            else{
-                System.out.println("Invalid Input. Rows must be greater than 0 and less than 1000");
-            }
-        }
-        
-        //Get input
-        return input;
-        }
 
-}
+    //Get input
+    Scanner inFile = new Scanner(System.in);
+    boolean goodInput = true;
+    
+    System.out.print("Input: ");
+    System.out.print(input);
+    
+    for (int i = 0; !goodInput; i++);
+    
+    //Display prompt
+    System.out.println();
+    
+    //Verify that the input is less than the limit
+    if (input < limit){
+        System.out.println("Error: Must be a number less than" + limit);
+        goodInput = false;
+    }    
+    //Verify that input is an int    
+    else if (!input.isDigit){ 
+    //^^^^^^NOT SURE HOW TO MAKE THE INPUT AS ONLY AN INT
+        System.out.println("Error: Input must be a number");
+        goodInput = false;
+    } 
+    else{
+        goodInput = true;
+    }          
+    return input;
+    }
+   }
+ 
