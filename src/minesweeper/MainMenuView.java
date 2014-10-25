@@ -148,30 +148,28 @@ public class MainMenuView {
     //Get input
     Scanner inFile = new Scanner(System.in);
     boolean goodInput = true;
-    
+    try {
     System.out.print("Input: ");
-    System.out.print(input);
-    
-    for (int i = 0; !goodInput; i++);
+    input = inFile.nextInt();
     
     //Display prompt
     System.out.println();
     
-    //Verify that the input is less than the limit
-    if (input < limit){
-        System.out.println("Error: Must be a number less than" + limit);
-        goodInput = false;
-    }    
-    //Verify that input is an int    
-    else if (!input.isDigit){ 
-    //^^^^^^NOT SURE HOW TO MAKE THE INPUT AS ONLY AN INT
-        System.out.println("Error: Input must be a number");
-        goodInput = false;
-    } 
-    else{
-        goodInput = true;
+     }catch (Exception e){
+     System.out.println("Error: Must enter a number less than " + limit);
+     goodInput = false;
+    }  
+    
+    for (int i = 0; goodInput; i++);
+    System.out.println();
+
+    //Verify that input is less than limit 
+   if (input < limit){
+        System.out.println("Error: Must enter a number less than" + limit);
+
     }          
     return input;
     }
    }
- 
+
+
