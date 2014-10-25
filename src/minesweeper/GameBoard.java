@@ -158,8 +158,39 @@ public class GameBoard {
   * @param curSquare - the col of the cell we are checking around
   */     
   public void findEmptyCells(int curRow, int curCol){
-        
-  }
+    
+    //set block of squares to be checked and account for edges of the board
+    
+    int rowStart = curRow - 1;
+    int colStart = curCol - 1;
+    int rowFinish = curRow + 1;
+    int colFinish = curCol + 1;
+    
+    if (curRow == 0 )
+      rowStart = 0;   
+    if (curRow == numRows - 1)
+      rowFinish = curRow;
+   
+
+    if (curCol == 0)
+      colStart = 0;
+    if (curCol == numCols - 1) 
+      colFinish = curCol;  
+    
+     //open all squares surrounding the square with 0 numTouching 
+    for (int i = (rowStart); i <= (rowFinish); i++){
+      for (int j = (colStart); j <= (colFinish); j++){          
+        //change clicked status
+          int x = board[i][j].numTouching;
+        if(x == 0) {
+            board[i][j].isClicked = true;
+        }
+               
+      }  
+      displayBoard();
+    }
+  }  
+  
   
   /*
   * This function is mostly for debugging purposes
