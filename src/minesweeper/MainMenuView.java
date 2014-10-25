@@ -156,7 +156,7 @@ public class MainMenuView {
     System.out.println();
     
      }catch (Exception e){
-     System.out.println("Error: Must enter a number less than " + limit);
+     System.out.println("Error: Must enter a number");
      goodInput = false;
     }  
     
