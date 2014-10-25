@@ -13,10 +13,13 @@ package minesweeper;
  *  Summary:
  *    This is a simple game ... (INSERT GAME SUMMARY HERE)
  */
+
+import java.util.Scanner;
+
 public class Minesweeper {
 
     public String level;
-    private int minesLeft;
+    static int minesLeft;
     String name = "John Doe";
     static Player player;
     static int boardRows = 3;
@@ -59,12 +62,37 @@ public class Minesweeper {
       board.buildBoard();
       board.displayBoard();
 
-      
       //while loop -- get input
-      
+      //Continue game until all mines have been found
+    for (int i = minesLeft; i != 0; i--) {
+        Scanner inFile = new Scanner(System.in);
+      String start = inFile.nextLine();
+    		
+    //Use scanner to get input, just like you did in the group project
+   
+    while (start != "Q") ; 
+      //Put in a switch statement
+      switch (start) {
+          case "G": // guess square
+           //will insert game play here
+           break;
+         case "P": // pause
+            System.out.println("Paused Game");
+           break;
+         case "R": //reveal board, 
+             System.out.println("ReveaL Board");
+            break;
+	 case "Q": //quit, 
+             System.out.println("Quit Game");		 
+            break;
+        case "D": // display board
+             System.out.println("Display Board");		 
+            break;
+              
       //input options include P - pause, R - reveal board, Q - quit, G - guess square
       // (use game menu)
       
+    }
     }
     
     public void getName(){
