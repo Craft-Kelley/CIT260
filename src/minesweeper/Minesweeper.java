@@ -94,6 +94,7 @@ public class Minesweeper {
       
     }
     }
+    }
     
     public void getName(){
       System.out.println(name);
