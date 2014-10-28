@@ -43,6 +43,8 @@ public class Minesweeper {
       MainMenuView mainMenu = new MainMenuView();
       player = new Player();
       
+
+      
       if (mainMenu.getInput(player, instance));
         startGame();
       

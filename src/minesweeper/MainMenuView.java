@@ -16,6 +16,7 @@ public class MainMenuView {
         {"A - About Program"},
         {"O - Edit Game Options"},
         {"P - Player Statistics"},
+        {"G - Show High Scores"},
         {"H - Help"}
     };
   
@@ -51,6 +52,11 @@ public class MainMenuView {
         case "P":  //player statistics
           player.playerStatistics();
           displayList(menuItems, menuName);
+          break;
+        case "G": //show high score 
+          HighScore scores = new HighScore();
+          scores.readFile();
+          scores.displayHighScores();
           break;
         case "H":  //help
           HelpMenuView helpMenu = new HelpMenuView();
@@ -171,5 +177,7 @@ public class MainMenuView {
     return input;
     }
    }
+
+
 
 
