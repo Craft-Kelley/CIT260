@@ -13,8 +13,8 @@ import java.util.ArrayList;
  */
 public class HighScore {
   
-ArrayList <String> names;
-ArrayList <Integer> scores;
+ArrayList <String> names = new ArrayList();
+ArrayList <Integer> scores = new ArrayList();
   
   /*
   *
