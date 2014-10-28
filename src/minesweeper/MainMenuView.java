@@ -57,6 +57,7 @@ public class MainMenuView {
           HighScore scores = new HighScore();
           scores.readFile();
           scores.displayHighScores();
+          displayList(menuItems, menuName);
           break;
         case "H":  //help
           HelpMenuView helpMenu = new HelpMenuView();
