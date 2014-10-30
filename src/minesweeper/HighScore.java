@@ -41,25 +41,23 @@ ArrayList <Integer> scores = new ArrayList();
   */
   private void sortNames(){
     int j;
-    boolean order = true;
-    String nameKey;
+    int i;
     int scoreKey;
+    String nameKey;
     
-    while(order){
-        order = false;
-        for( j = 0; j < names.length - 1; j++){
+        for( i = 0; i < names.length - 1; i++){
             nameKey = names.get(j);
             scoreKey = scores.get(j);
-               
-            if(names.get(j).compareToIgnoreCase(names.get(j+1)) > 0){
+        for(j = i +1; j < names.length; j++){    
+            if(names.get(i).compareToIgnoreCase(names.get(j)) > 0){
              
-                //need code for swapping and proving order = true
-                
-                
-            }
+            //need code for swapping and proving order = true
+
+          }
         }
-    } 
+     } 
   }
+  
   
   /*
   * Sorts the scores from high to low
