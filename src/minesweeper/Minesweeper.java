@@ -82,7 +82,7 @@ public class Minesweeper {
             System.out.println("Paused Game");
            break;
          case "R": //reveal board, 
-             System.out.println("ReveaL Board");
+             System.out.println("Reveal Board");
             break;
 	 case "Q": //quit, 
              System.out.println("Quit Game");		 
