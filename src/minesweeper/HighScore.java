@@ -10,6 +10,7 @@ import java.util.ArrayList;
 /**
  *This class is responsible for tracking high score data.
  * @author Summer
+ * @author Jacky Northgrave
  */
 public class HighScore {
   
