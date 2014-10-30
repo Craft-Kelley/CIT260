@@ -30,10 +30,7 @@ ArrayList <Integer> scores = new ArrayList();
     for (int i = 0; i < scores.size(); i++){
       System.out.println(names.get(i) + "\t" + scores.get(i));
     }
-    
-    for (int i = 0; i < names.length(); i++){
-      System.out.println(names.get(i) + "\t" + scores.get(i));
-    }
+
   }
   
   /*
@@ -45,10 +42,10 @@ ArrayList <Integer> scores = new ArrayList();
     int scoreKey;
     String nameKey;
     
-        for( i = 0; i < names.length - 1; i++){
+        for( i = 0; i < names.size() - 1; i++){
             nameKey = names.get(i);
             scoreKey = scores.get(i);
-        for(j = i +1; j < names.length; j++){    
+        for(j = i +1; j < names.size();j++){    
             if(names.get(i).compareToIgnoreCase(names.get(j)) > 0){
              
             //need code for swapping and proving order = true
