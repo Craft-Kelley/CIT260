@@ -22,19 +22,42 @@ ArrayList <Integer> scores = new ArrayList();
   public void displayHighScores(){
     System.out.println("High Scores");
     System.out.println("Name\tScore");
+
     
     sortScores();
     
     for (int i = 0; i < scores.size(); i++){
       System.out.println(names.get(i) + "\t" + scores.get(i));
     }
+    
+    for (int i = 0; i < names.length(); i++){
+      System.out.println(names.get(i) + "\t" + scores.get(i));
+    }
   }
   
   /*
-  * Sorts names in descending alphabetical order
+  * Sorts names in alphabetical order
   */
   private void sortNames(){
+    int j;
+    boolean order = true;
+    String nameKey;
+    int scoreKey;
     
+    while(order){
+        order = false;
+        for( j = 0; j < names.length - 1; j++){
+            nameKey = names.get(j);
+            scoreKey = scores.get(j);
+               
+            if(names.get(j).compareToIgnoreCase(names.get(j+1)) > 0){
+             
+                //need code for swapping and proving order = true
+                
+                
+            }
+        }
+    } 
   }
   
   /*
@@ -64,8 +87,7 @@ ArrayList <Integer> scores = new ArrayList();
   */
   public void readFile(){
     names.add("Susan");
-    scores.add(350);
-    
+    scores.add(350);    
     names.add("Jeremy");
     scores.add(300);
     names.add("Kaitlyn");
