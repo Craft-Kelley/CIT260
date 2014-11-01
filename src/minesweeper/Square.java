@@ -6,7 +6,7 @@ package minesweeper;
  */
 public abstract class Square {
     boolean isClicked;
-    boolean isFlagged;
+    static boolean isFlagged;
     int numTouching = 0;
     
     //Abstract functions  -- to be defined in subclasses
