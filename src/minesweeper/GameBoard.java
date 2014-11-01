@@ -282,4 +282,19 @@ public class GameBoard {
         }
     
     }
+    
+    /**
+     * This function will count squares not flagged with a foreach loop
+     */
+    public void countNotFlagged(){
+        int result = 0;
+        for (int i:board){
+            if (Square.isFlagged==false ) {
+                int temp = result;
+                result = temp +1;
+            }
+            
+        }
+    
+    }
 }
