@@ -10,5 +10,9 @@ package minesweeper;
  * @author Jonathan
  */
 public class CalcScore {
-   /* functionCalculate= (calculates a player's score at the end of the game.)*/
+    /*function calculate(minesFlagged, minesUnflagged){
+        var mU= minesUnflagged;
+        var mF= minesFlagged;
+        
+    }*/
 }
