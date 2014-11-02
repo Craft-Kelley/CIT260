@@ -45,12 +45,15 @@ ArrayList <Integer> scores = new ArrayList();
         for( i = 0; i < names.size() - 1; i++){
             nameKey = names.get(i);
             scoreKey = scores.get(i);
-        for(j = i +1; j < names.size();j++){    
+        for(j = i +1; j < names.size();j++){ 
+            //ascending sort
             if(names.get(i).compareToIgnoreCase(names.get(j)) > 0){
-             
-            //need code for swapping and proving order = true
-
-          }
+            names.set(i + 1, names.get(i));
+            scores.set(i + 1, scores.get(i));
+            }
+            //swapping
+            names.set(i+1, nameKey);
+            scores.set(i+1, scoreKey); 
         }
      } 
   }

@@ -130,4 +130,31 @@ public class Minesweeper {
     public void setGameLevel(int level){
       gameLevel = level;
     }
+
+    /*
+    * This is my personal programming assignment -Summer
+    * This function converts a string to chars, then parces
+    * through the chars to find the sum of o's in that phrase.
+    */
+    public void sortLetters(){
+      char[] phrase = new char[31];
+      String sPhrase = "Oh no!  Where are my cheerios?";
+      int sum = 0;
+      char letter = 'o'; //letter to check for 
+      
+      //Change the phrase to lower case
+      sPhrase = sPhrase.toLowerCase();
+      
+      for (int i: phrase){
+        phrase[i] = sPhrase.charAt(i);
+      }
+      
+      for (int i:phrase){
+        if (phrase[i] == letter){
+          sum++;
+        }
+      }
+      
+    }
 }
+
