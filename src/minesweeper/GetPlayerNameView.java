@@ -22,11 +22,13 @@ public class GetPlayerNameView {
   public String getInput() {
     Scanner inFile = new Scanner(System.in);
     String input = "";
-    boolean goodInput = true;  //This should only change if invalid input is 
+    boolean goodInput = false;  //This should only change if invalid input is 
                                //detected
         
      while(!goodInput){
-       //Prompt for name
+        goodInput = true;
+
+//Prompt for name
        System.out.println("Please enter name: ");
       
       //get value entered by user
