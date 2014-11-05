@@ -268,33 +268,6 @@ public class GameBoard {
       
       return gameStatus;      //returns the value for gameIsWon() to where it was called from
     }
-    /**
-     * This function will count flags with a foreach loop
-     */
-    public void countFlags(){
-        int result = 0;
-        for (int i:board){
-            if (Square.isFlagged==true ) {
-                int temp = result;
-                result = temp +1;
-            }
-            
-        }
-    
-    }
-    
-    /**
-     * This function will count squares not flagged with a foreach loop
-     */
-    public void countNotFlagged(){
-        int result = 0;
-        for (int i:board){
-            if (Square.isFlagged==false ) {
-                int temp = result;
-                result = temp +1;
-            }
-            
-        }
-    
-    }
+   
+   
 }
