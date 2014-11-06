@@ -67,7 +67,7 @@ public class Minesweeper {
       //while loop -- get input
       //Continue game until all mines have been found
     for (int i = minesLeft; i != 0; i--) {
-        Scanner inFile = new Scanner(System.in);
+      Scanner inFile = new Scanner(System.in);
       String start = inFile.nextLine();
     		
     //Use scanner to get input, just like you did in the group project
