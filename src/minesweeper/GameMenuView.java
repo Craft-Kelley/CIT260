@@ -15,21 +15,23 @@ public class GameMenuView {
         private GameMenuControl gameMenuControl = new GameMenuControl ();
 
         private final static String[][] menuItems = {
-        {"P", "Player Statistics"},
-        {"O", "Options"},    
-        {"H", "Help"}
+        {"G", "Guess Square"},
+        {"P", "Pause"},
+        {"R", "Reveal Board"},
+        {"Q", "Quit Game"},
+        {"D", "Display the board"}   
     };
 
         public GameMenuView (){
             this.gameMenuControl = new GameMenuControl();
         }
-   
+        
  
     //user input
     public void getInput(Player player){
         
-        String input; 
         Scanner inFile = new Scanner(System.in);
+        String input = inFile.nextLine();
                 
         do {     
             //display the game menu
@@ -39,8 +41,30 @@ public class GameMenuView {
             input = input.trim().toUpperCase();
     
             switch (input) {
-                //displays player statistics    
+                //guess square  
+                case "G":
+                    break;
+                //pause game    
                 case "P":
+                    break;
+                //reveal game board    
+                case "R":
+                gameBoard.revealBoard();
+                    break;
+                //quit game    
+                case "Q":
+                    break;
+                //display game board    
+                case "D":
+                GameBoard board = new GameBoard(boardRows, boardCols, gameLevel);
+                board.displayBoard();
+                    break;
+                default:
+                    System.out.println("Invalid input. Please enter a valid command.");
+                    continue;
+                
+               /* 
+                case "N":
                     Player playerName = new Player(); //added instance to debug function (kc)
                     playerName.playerStatistics();
                     break;
@@ -56,11 +80,11 @@ public class GameMenuView {
                 default:
                     System.out.println("Invalid input. Please enter a valid command.");
                     displayGameOptions();
-                    break;
+                    break;*/
             
             }
-        //starts new minesweeper game    
-        } while (!input.equals("S"));
+        //quit minesweeper game    
+        } while (!input.equals("Q"));
           
           return;
     }
