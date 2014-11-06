@@ -13,7 +13,11 @@ public class HelpMenuControl {
     
     public void displayInstructions(){
         System.out.println(
-            "\tThe game is Minesweeper. It is a one player game. Mines are hidden on a grid of tiles. Tiles will either be blank, numbered or filled with a mine. If you click on a tile with a mine it will end the game. If you click on a tile with a number it will reveal how many mines are touching the tile. "
+            "\tThe game is Minesweeper. It is a one player game. Mines are "
+            + "hidden on a grid of tiles. Tiles will either be blank, numbered "
+            + "or filled with a mine. If you click on a tile with a mine it will "
+            + "end the game. If you click on a tile with a number it will reveal "
+            + "how many mines are touching the tile. "
         );
     }
 }
