@@ -135,8 +135,25 @@ public class GameMenuView {
     * @return false if the coordinates are invalid or could not be converted
     */
     boolean convertCoordinates(char[] coords){
-      
-      return true;
+        GameBoard gb = new GameBoard();
+        char x = coords[0];
+        int y = (int)coords[1];
+        char r = (char)gb.numRows;
+        int c = gb.numCols;
+        int[] convertedCoords = new int[2];
+        if (x < r || x > r){
+            System.out.println("Enter a letter A through " + r);
+            return false;
+        }else if (y < 1 || y > r){
+            System.out.println("Enter a row between 1 and " + c);
+            return false;
+        }else{ 
+            convertedCoords[0] = (int) x;
+            convertedCoords[1] = (int) y;
+            System.out.println("Converted Coordinates are (" + convertedCoords[0] + "," + convertedCoords[1] + ")");
+            return true;
+        }
+     
     }
     
     /*
