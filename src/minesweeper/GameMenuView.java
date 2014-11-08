@@ -39,13 +39,16 @@ public class GameMenuView {
             input = input.trim().toUpperCase();
     
             switch (input) {
-                //guess square  
+                //guess square      
                 case "G":
+                guessSquare();
+                //Having trouble calling the input from user I thought it would be : displayInput();
                     break;
                   
                 //pause game    
                 case "P":
-                  //Call PauseMenuControl (is this working? -- ask Casey) -Summer
+                //Nothing is in the Pause class. I wasn't sure if this was right but I gave it my best attempt
+                PauseMenuView pause = new PauseMenuView();
                     break;
                   
                 //reveal game board    
@@ -59,8 +62,8 @@ public class GameMenuView {
                   
                 //display game board    
                 case "D":
-                  board.displayBoard();
-                  break;
+                    board.displayBoard();
+                    break;
                   
                 default:
                     System.out.println("Invalid input. Please enter a valid command.");
