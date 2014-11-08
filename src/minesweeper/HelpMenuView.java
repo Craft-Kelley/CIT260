@@ -28,6 +28,7 @@ public class HelpMenuView {
         String input; 
         Scanner inFile = new Scanner(System.in);
         
+        
         do {
             
             this.displayOptions();
