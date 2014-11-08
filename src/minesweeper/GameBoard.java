@@ -1,4 +1,4 @@
-package minesweeper;
+spackage minesweeper;
 
 /**
  * This class manages the game board.
