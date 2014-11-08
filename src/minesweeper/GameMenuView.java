@@ -136,11 +136,15 @@ public class GameMenuView {
     */
     boolean convertCoordinates(char[] coords){
         GameBoard gb = new GameBoard();
-        char x = coords[0];
-        int y = (int)coords[1];
-        char r = (char)gb.numRows;
-        int c = gb.numCols;
-        int[] convertedCoords = new int[2];
+        char x = coords[0]; // pulls out the x coordinate
+        int y = (int)coords[1]; //pulls out the y coordinate and casts it to an int
+        char r = (char)(gb.numRows + 16); // creates a variabel equal to the number of rows in the board and converts it to a char equal to a letter in the ASCII characters
+        int c = gb.numCols; //creates a variable equal to the number of columns
+        int[] convertedCoords = new int[2]; //creates variable to hold converted coordinates
+        
+        /*
+        compares x and y coordinate to the r variable above to ensure the selection is within the range of rows in the game. If either is out of range it returns a value of false.  If variable are valid, then it casts them both to an integer in a new array and returns a value of true. 
+        */
         if (x < r || x > r){
             System.out.println("Enter a letter A through " + r);
             return false;
