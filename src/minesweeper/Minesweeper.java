@@ -63,6 +63,8 @@ public class Minesweeper {
       GameBoard board = new GameBoard(boardRows, boardCols, gameLevel);
       board.buildBoard();
       board.displayBoard();
+      
+      GameMenuView gameMenu = new GameMenuView(board);
 
       //while loop -- get input
       //Continue game until all mines have been found
@@ -84,16 +86,12 @@ public class Minesweeper {
          case "R": //reveal board, 
              System.out.println("Reveal Board");
             break;
-	 case "Q": //quit, 
+	        case "Q": //quit, 
              System.out.println("Quit Game");		 
             break;
         case "D": // display board
              System.out.println("Display Board");		 
             break;
-              
-      //input options include P - pause, R - reveal board, Q - quit, G - guess square
-      // (use game menu)
-      
     }
     }
     }

@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class GameMenuView {
         
         private GameMenuControl gameMenuControl = new GameMenuControl ();
-
+        GameBoard board;
         private final static String[][] menuItems = {
         {"G", "Guess Square"},
         {"P", "Pause"},
@@ -22,8 +22,9 @@ public class GameMenuView {
         {"D", "Display the board"}   
     };
 
-        public GameMenuView (){
+        public GameMenuView (GameBoard board){
             this.gameMenuControl = new GameMenuControl();
+            this.board = board;
         }
         
  
@@ -49,14 +50,13 @@ public class GameMenuView {
                     break;
                 //reveal game board    
                 case "R":
-                gameBoard.revealBoard();
+                board.revealBoard();
                     break;
                 //quit game    
                 case "Q":
                     break;
                 //display game board    
                 case "D":
-                GameBoard board = new GameBoard(boardRows, boardCols, gameLevel);
                 board.displayBoard();
                     break;
                 default:
