@@ -37,7 +37,8 @@ public class GameMenuView {
             
             input = inFile.nextLine();
             input = input.trim().toUpperCase();
-    
+            
+            
             switch (input) {
                 //guess square      
                 case "G":
@@ -47,7 +48,10 @@ public class GameMenuView {
                   
                 //pause game    
                 case "P":
-                //Nothing is in the Pause class. I wasn't sure if this was right but I gave it my best attempt
+                /*Nothing is in the Pause class. 
+                *I don't think Casey has worked on it yet. 
+                *I wasn't sure if this was right but I gave it my best attempt
+                */
                 PauseMenuView pause = new PauseMenuView();
                     break;
                   
