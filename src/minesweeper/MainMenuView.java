@@ -17,6 +17,7 @@ public class MainMenuView {
         {"O - Edit Game Options"},
         {"P - Player Statistics"},
         {"G - Show High Scores"},
+        {"Q - Quit game"},
         {"H - Help"}
     };
   
@@ -29,6 +30,8 @@ public class MainMenuView {
   
   /*
   * Gets input from the user
+  * @return true when the player wants to start a game
+  * @return false when the player wants to quit a game
   */
   public boolean getInput(Player player, Minesweeper instance){
     String input;
@@ -66,6 +69,8 @@ public class MainMenuView {
           break;
         case "S": //Start game
           break;
+        case "Q":
+          return false;      
         default:
           System.out.println("Invalid input. Please enter a valid command.");
           displayList(menuItems, menuName);

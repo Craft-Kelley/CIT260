@@ -1,4 +1,4 @@
-spackage minesweeper;
+package minesweeper;
 
 /**
  * This class manages the game board.
@@ -236,22 +236,8 @@ public class GameBoard {
      * @return gameIsWon
      * @author Kelley
      */
-    public boolean gameIsWon(int row, int col){
-      //determines if a square is a mine and then appropriately adds one count to 
-      //either good or bad flag count. 
-      if(board[row][col].getIsMine() == true){
-        goodFlags++;
-        totalFlags++;
-      }
-      else {
-        totalFlags++;
-      }
-       
-        
-      //calculates badFlags to meet requirements for lesson03.  Can be removed later
-                 
-      float badFlags;
-      badFlags = (float)(totalFlags-goodFlags);
+    public boolean gameIsWon(){                 
+      float badFlags = (float)(totalFlags-goodFlags);
               
       //determines if the player has flagged more squares than mines
       //prints message to warn player if they exceed the number of mines
@@ -261,13 +247,42 @@ public class GameBoard {
       }
       
       boolean gameStatus;
-      gameStatus = (boolean)(goodFlags == totalFlags & totalFlags == numMines);
-    
+      gameStatus = (boolean)(goodFlags == totalFlags && totalFlags == numMines);
       
       System.out.println("game is won =" + gameStatus); //primarily for testing
       
       return gameStatus;      //returns the value for gameIsWon() to where it was called from
     }
+    
+    
+    /*
+    * Defines behavior when a square is clicked
+    * @return true if the game is still in play
+    * @return false if the game is over
+    */
+   boolean clickSquare(int row, int col){
+     if (board[row][col].getIsMine()){
+      board[row][col].onClick();
+      return false;
+     }
+     else {
+      board[row][col].setNumTouching(calcNumTouching(row, col));
+      findEmptyCells(row, col);
+      board[row][col].onClick();
+     }
+     
+     return true;
+   }
    
+   /*
+   * Keeps track of flagged squares
+   */
+   void flagSquare(int row, int col){
+    board[row][col].setIsFlagged(true);
+    totalFlags++; 
+    
+    if (board[row][col].getIsMine())
+     goodFlags++;
+   }
    
 }

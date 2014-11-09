@@ -11,8 +11,8 @@ import java.util.Scanner;
  * @author Jacky Northgrave
  */
 public class GameMenuView {
-        GameBoard board; //This will be passed in from the Minesweeper class
-        private final static String[][] menuItems = {
+    GameBoard board; //This will be passed in from the Minesweeper class
+    private final static String[][] menuItems = {
         {"G", "Guess Square"},
         {"P", "Pause"},
         {"R", "Reveal Board"},
@@ -20,81 +20,50 @@ public class GameMenuView {
         {"D", "Display the board"}   
     };
 
-        public GameMenuView (GameBoard board){
-            this.board = board;
-        }
+   /*
+   * Constructor
+   */
+   public GameMenuView(GameBoard board){
+      this.board = board;
+   }
         
  
-    //user input
-    public void getInput(Player player){
+  /*
+  * gets input from the user to direct game play
+   */
+    public void getInput(Player player){      
+      Scanner inFile = new Scanner(System.in);
+      String input = inFile.nextLine();
+                
+      do { 
+        if (board.gameIsWon())
+          break;
         
-        Scanner inFile = new Scanner(System.in);
-        String input = inFile.nextLine();
+        //display the game menu
+        this.displayGameOptions(menuItems);
+            
+        input = inFile.nextLine();
+        input = input.trim().toUpperCase();
                 
-        do {     
-            //display the game menu
-            this.displayGameOptions();
-            
-            input = inFile.nextLine();
-            input = input.trim().toUpperCase();
-            
-            
-            switch (input) {
-                //guess square      
-                case "G":
-                guessSquare();
-                //Having trouble calling the input from user I thought it would be : displayInput();
-                    break;
-                  
-                //pause game    
-                case "P":
-                /*Nothing is in the Pause class. 
-                *I don't think Casey has worked on it yet. 
-                *I wasn't sure if this was right but I gave it my best attempt
-                */
-                PauseMenuView pause = new PauseMenuView();
-                    break;
-                  
-                //reveal game board    
-                case "R":
-                board.revealBoard();
-                    break;
-                  
-                //quit game    
-                case "Q":
-                    break;
-                  
-                //display game board    
-                case "D":
-                    board.displayBoard();
-                    break;
-                  
-                default:
-                    System.out.println("Invalid input. Please enter a valid command.");
-                    continue;
-                
-               /* 
-                case "N":
-                    Player playerName = new Player(); //added instance to debug function (kc)
-                    playerName.playerStatistics();
-                    break;
-                //displays game options
-                case "O":
-                    gameMenuControl.displayOptionMenu();
-                    break;
-                //displays help menu
-                case "H":
-                    gameMenuControl.displayHelpMenu();
-                    break;
-                //creates error warning if user enters invalid input    
-                default:
-                    System.out.println("Invalid input. Please enter a valid command.");
-                    displayGameOptions();
-                    break;*/
-            
-            }
-        //quit minesweeper game    
-        } while (!input.equals("Q"));
+        switch (input) {     
+          case "G"://guess square
+            guessSquare();
+            break;
+          case "P"://pause game  
+            PauseMenuView pause = new PauseMenuView();
+            break;
+          case "R"://reveal game board    
+            board.revealBoard();
+            break;
+          case "Q"://quit game  
+            break;  
+         case "D"://display game board
+            board.displayBoard();
+            break;           
+          default:
+            System.out.println("Invalid input. Please enter a valid command.");
+            } 
+        } while (!input.equals("Q"));         //quit minesweeper game   
           
           return;
     }
@@ -102,11 +71,11 @@ public class GameMenuView {
     /*
     * displays the items in the menuItems array
     */
-    public void displayGameOptions(){
+    public void displayGameOptions(String[][] items){
         System.out.println("\n\t==============================");
         System.out.println("\tGame Menu Options:");
         
-        for (String[] menuItem : menuItems) {
+        for (String[] menuItem : items) {
       System.out.println("\t" + menuItem[0] + "\t" + menuItem[1]);
     }
         System.out.println("\t==============================\n");    
@@ -116,16 +85,47 @@ public class GameMenuView {
     * Prompts the user for the coordinates they wish to guess
     */
     void guessSquare(){
+      String[][] guessItems = {
+        {"C", "- Click Square"},
+        {"F", "- Flag Square"},
+        {"R", "- Return to game menu"}
+       };
+      
+      char[] coords = new char[2];
+      getCords(coords);
+      
+      Scanner inFile = new Scanner(System.in);
+      String input = inFile.nextLine();
+                
+      this.displayGameOptions(guessItems);
+            
+      input = inFile.nextLine();
+      input = input.trim().toUpperCase();
+        
+      if (input.equals("C")){
+        board.clickSquare(coords[1], coords[2]);
+      }
+      else if (input.equals("F")){
+        board.flagSquare(coords[1], coords[2]);
+      }
+      else if (input.equals("R") == false){
+        System.out.println("Invalid input. Please enter a valid command.");
+      }
+
+    }
+  
+    /*
+    * get coords prompts the user for coordinates.
+    * @param coords  - an array of size 2 to be filled with the user input
+    */
+    void getCords(char[] coords){
       Scanner inFile = new Scanner(System.in);
       String input = inFile.nextLine();
       
-      char[] coords = new char[2];
-      
-      
       do{
         System.out.println("Coordinates: ");
-         input = inFile.nextLine();
-         input = input.trim().toUpperCase();
+        input = inFile.nextLine();
+        input = input.trim().toUpperCase();
         
         for (int i: coords){
           coords[i] = input.charAt(i);
@@ -133,7 +133,6 @@ public class GameMenuView {
         
       }while(!convertCoordinates(coords));
     }
-      
     
     /*
     *Converts coordinates (i.e. A1) to numbers (i.e. 1-1)
@@ -142,7 +141,7 @@ public class GameMenuView {
     * @return false if the coordinates are invalid or could not be converted
     */
     boolean convertCoordinates(char[] coords){
-        GameBoard gb = new GameBoard();
+        GameBoard gb = new GameBoard(3, 3, 3); //Added params to make it valid...
         char x = coords[0]; // pulls out the x coordinate
         int y = (int)coords[1]; //pulls out the y coordinate and casts it to an int
         char r = (char)(gb.numRows + 16); // creates a variabel equal to the number of rows in the board and converts it to a char equal to a letter in the ASCII characters

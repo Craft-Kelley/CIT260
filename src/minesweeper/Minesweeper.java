@@ -44,11 +44,11 @@ public class Minesweeper {
       player = new Player();
       
 
-      
-      if (mainMenu.getInput(player, instance));
+      //Continue prompting from the main menu until the player decides to quit.
+      while(mainMenu.getInput(player, instance))
         startGame();
       
-        
+      System.out.println("Thanks for playing!");
     }
         
     /*
@@ -57,43 +57,15 @@ public class Minesweeper {
     public static void startGame(){
       player = new Player();
       
-      System.out.println("Hit P to access pause menu");
-      System.out.println("Hit R to give up and reveal the board");
       
       GameBoard board = new GameBoard(boardRows, boardCols, gameLevel);
       board.buildBoard();
-      board.displayBoard();
       
-      GameMenuView gameMenu = new GameMenuView(board);
+      GameMenuView game = new GameMenuView(board);
+      game.getInput(player);
+      
+      System.out.println("Game Over!");
 
-      //while loop -- get input
-      //Continue game until all mines have been found
-    for (int i = minesLeft; i != 0; i--) {
-        Scanner inFile = new Scanner(System.in);
-      String start = inFile.nextLine();
-    		
-    //Use scanner to get input, just like you did in the group project
-   
-    while (start != "Q") ; 
-      //Put in a switch statement
-      switch (start) {
-          case "G": // guess square
-           //will insert game play here
-           break;
-         case "P": // pause
-            System.out.println("Paused Game");
-           break;
-         case "R": //reveal board, 
-             System.out.println("Reveal Board");
-            break;
-	        case "Q": //quit, 
-             System.out.println("Quit Game");		 
-            break;
-        case "D": // display board
-             System.out.println("Display Board");		 
-            break;
-    }
-    }
     }
     
     public void getName(){
@@ -129,30 +101,5 @@ public class Minesweeper {
       gameLevel = level;
     }
 
-    /*
-    * This is my personal programming assignment -Summer
-    * This function converts a string to chars, then parces
-    * through the chars to find the sum of o's in that phrase.
-    */
-    public void sortLetters(){
-      char[] phrase = new char[31];
-      String sPhrase = "Oh no!  Where are my cheerios?";
-      int sum = 0;
-      char letter = 'o'; //letter to check for 
-      
-      //Change the phrase to lower case
-      sPhrase = sPhrase.toLowerCase();
-      
-      for (int i: phrase){
-        phrase[i] = sPhrase.charAt(i);
-      }
-      
-      for (int i:phrase){
-        if (phrase[i] == letter){
-          sum++;
-        }
-      }
-      
-    }
 }
 
