@@ -141,11 +141,11 @@ public class GameMenuView {
     * @return false if the coordinates are invalid or could not be converted
     */
     boolean convertCoordinates(char[] coords){
-        GameBoard gb = new GameBoard(3, 3, 3); //Added params to make it valid...
+       
         char x = coords[0]; // pulls out the x coordinate
         int y = (int)coords[1]; //pulls out the y coordinate and casts it to an int
-        char r = (char)(gb.numRows + 16); // creates a variabel equal to the number of rows in the board and converts it to a char equal to a letter in the ASCII characters
-        int c = gb.numCols; //creates a variable equal to the number of columns
+        char r = (char)(board.numRows + 16); // creates a variabel equal to the number of rows in the board and converts it to a char equal to a letter in the ASCII characters
+        int c = board.numCols; //creates a variable equal to the number of columns
         int[] convertedCoords = new int[2]; //creates variable to hold converted coordinates
         
         /*
