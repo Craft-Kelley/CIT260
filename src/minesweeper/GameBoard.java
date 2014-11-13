@@ -9,10 +9,11 @@ package minesweeper;
      board.displayBoard();
  */
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class GameBoard {
+public class GameBoard implements Serializable{
   int numCols;
   int numRows;
   int gameLevel; //the level the game is on
@@ -30,6 +31,14 @@ public class GameBoard {
     numRows = rows;
     gameLevel = level;
   }
+  
+  @Override
+  public String toString(){
+    String theString = "duh";
+    
+    return theString;
+  } 
+ 
   
   /*
   * Calculates the number of mines that should
