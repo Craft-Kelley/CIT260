@@ -14,19 +14,19 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class GameBoard implements Serializable{
-  int numCols;
-  int numRows;
-  int gameLevel; //the level the game is on
-  int numMines;
-  Square[][] board;
+  private int numCols;
+  private int numRows;
+  private int gameLevel; //the level the game is on
+  private int numMines;
+  public Square[][] board;
   //these variables are needed for game tracking purposes
-  int goodFlags; //flags on squares that are mines needed for tracking game progress
-  int totalFlags; // total flags needed to compare if player has flagged extra squares that are notmines
+  private int goodFlags; //flags on squares that are mines needed for tracking game progress
+  private int totalFlags; // total flags needed to compare if player has flagged extra squares that are notmines
   
   /*
   * Constructor with parameters
   */
-  GameBoard(int cols, int rows, int level){
+  public GameBoard(int cols, int rows, int level){
     numCols = cols;
     numRows = rows;
     gameLevel = level;
@@ -39,6 +39,19 @@ public class GameBoard implements Serializable{
     return theString;
   } 
  
+  /*
+  *getter for numCols 
+  */
+  public int getNumCols(){
+  return numCols;
+  }
+  
+  /*
+  *getter for numRows
+  */
+  public int getNumRows(){
+  return numRows;
+  }
   
   /*
   * Calculates the number of mines that should
@@ -82,7 +95,7 @@ public class GameBoard implements Serializable{
   * squares, some of which are assigned to be mines,
   * while others are not mines.
   */
-  void buildBoard(){
+  public void buildBoard(){
     numMines = calcNumMines();
     int mineRow = 0;
     int mineCol = 0;
@@ -130,7 +143,7 @@ public class GameBoard implements Serializable{
    * @param col the col of the cell to be checked
    * @return count the number of mines the given cell is touching
    */
-  public int calcNumTouching(int row, int col){
+  private int calcNumTouching(int row, int col){
     int count = 0;
     int rowStart = row - 1;
     int colStart = col - 1;
@@ -166,7 +179,7 @@ public class GameBoard implements Serializable{
   * @param curRow - the row of the cell we are checking around
   * @param curSquare - the col of the cell we are checking around
   */     
-  public void findEmptyCells(int curRow, int curCol){
+  private void findEmptyCells(int curRow, int curCol){
     
     //set block of squares to be checked and account for edges of the board
     
@@ -269,7 +282,7 @@ public class GameBoard implements Serializable{
     * @return true if the game is still in play
     * @return false if the game is over
     */
-   boolean clickSquare(int row, int col){
+   public boolean clickSquare(int row, int col){
      if (board[row][col].getIsMine()){
       board[row][col].onClick();
       return false;
@@ -286,7 +299,7 @@ public class GameBoard implements Serializable{
    /*
    * Keeps track of flagged squares
    */
-   void flagSquare(int row, int col){
+   public void flagSquare(int row, int col){
     board[row][col].setIsFlagged(true);
     totalFlags++; 
     
