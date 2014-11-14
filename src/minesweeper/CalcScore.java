@@ -5,11 +5,13 @@
  */
 package minesweeper;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Jonathan
  */
-public class CalcScore {
+public class CalcScore  implements Serializable{
     /*function calculate(minesFlagged, minesUnflagged){
         var mU= minesUnflagged;
         var mF= minesFlagged;

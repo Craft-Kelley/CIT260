@@ -1,5 +1,6 @@
 package minesweeper;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,7 +9,7 @@ import java.util.Scanner;
  * @author Jacky Northgrave
  * @author Summer Smith
  */
-public class MainMenuView {
+public class MainMenuView  implements Serializable{
   String menuName = "Main Menu";
   String greeting= "This is the Main Menu Page.";
   private final static String[][] menuItems = {
