@@ -1,10 +1,12 @@
 package minesweeper;
 
+import java.io.Serializable;
+
 /**
  * Square class will define a square on the playing board - KC
  * @author Kelley Craft
  */
-public abstract class Square {
+public abstract class Square implements Serializable{
     boolean isClicked;
     static boolean isFlagged;
     int numTouching = 0;
