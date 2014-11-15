@@ -4,13 +4,15 @@
  * and open the template in the editor.
  */
 package minesweeper;
+
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *
  * @author Casey
  */
-public class GetPlayerNameView {
+public class GetPlayerNameView implements Serializable{
     public GetPlayerNameView() {
       
     }
@@ -19,7 +21,7 @@ public class GetPlayerNameView {
   /*
   * Get user input
   */
-  public String getInput() {
+  public String getInput () {
     Scanner inFile = new Scanner(System.in);
     String input = "";
     boolean goodInput = false;  //This should only change if invalid input is 
