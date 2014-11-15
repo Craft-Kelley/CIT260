@@ -19,7 +19,7 @@ public class HelpMenuView implements Serializable{
         {"Q", "Quit Help"}
     };
 
-    private static HelpMenuControl helpMenuControl = new HelpMenuControl ();
+    private  HelpMenuControl helpMenuControl = new HelpMenuControl ();
     
     //display the options menu
  
@@ -64,4 +64,22 @@ public class HelpMenuView implements Serializable{
         System.out.println("\n====================================================");  
         System.out.print("> ");
     }
+    
+    /**
+ *
+ * @author Jacky Northgrave
+ */
+public class HelpMenuControl {
+    
+    public  void displayInstructions(){
+        System.out.println(
+            "\tThe game is Minesweeper. It is a one player game. Mines are "
+            + "hidden on a grid of tiles. Tiles will either be blank, numbered "
+            + "or filled with a mine. If you click on a tile with a mine it will "
+            + "end the game. If you click on a tile with a number it will reveal "
+            + "how many mines are touching the tile. "
+        );
+    }
+}
+
 }
