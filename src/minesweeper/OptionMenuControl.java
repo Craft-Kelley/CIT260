@@ -5,11 +5,13 @@
  */
 package minesweeper;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Jonathan
  */
-public class OptionMenuControl {
+public class OptionMenuControl implements Serializable{
     public void alterDifficulty(int difficulty){
         //get difficulty change
     }
