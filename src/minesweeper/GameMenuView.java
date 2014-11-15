@@ -5,12 +5,13 @@
  */
 package minesweeper;
 
+import java.io.Serializable;
 import java.util.Scanner;
 /**
  *
  * @author Jacky Northgrave
  */
-public class GameMenuView {
+public class GameMenuView implements Serializable{
     GameBoard board; //This will be passed in from the Minesweeper class
     private final static String[][] menuItems = {
         {"G", "Guess Square"},
@@ -27,7 +28,12 @@ public class GameMenuView {
       this.board = board;
    }
         
- 
+  @Override
+  public String toString(){
+    String theString = "duh";
+    
+    return theString;
+  }
   /*
   * gets input from the user to direct game play
    */
@@ -84,7 +90,7 @@ public class GameMenuView {
     /*
     * Prompts the user for the coordinates they wish to guess
     */
-    void guessSquare(){
+    private void guessSquare(){
       String[][] guessItems = {
         {"C", "- Click Square"},
         {"F", "- Flag Square"},
@@ -118,7 +124,7 @@ public class GameMenuView {
     * get coords prompts the user for coordinates.
     * @param coords  - an array of size 2 to be filled with the user input
     */
-    void getCords(char[] coords){
+    private void getCords(char[] coords){
       Scanner inFile = new Scanner(System.in);
       String input = inFile.nextLine();
       
@@ -169,7 +175,7 @@ public class GameMenuView {
     /*
     * verifies that the coordinates are inside the boundaries of the board array
     */
-    void checkCoordinates(int input[]){
+    private void checkCoordinates(int input[]){
       
     }
     
