@@ -22,7 +22,7 @@ public class AboutMenuView implements Serializable {
     
     //Create instance of AboutMenuControl class
     
-    private static final AboutMenuControl aboutMenuControl = new AboutMenuControl();
+    private  final AboutMenuControl aboutMenuControl = new AboutMenuControl();
     
     //default constructor
     
@@ -75,6 +75,36 @@ public class AboutMenuView implements Serializable {
        
     }
     
+public class AboutMenuControl  {
+    public AboutMenuControl(){
+        
+    }
+
+public void displayDevelopers(){
+    System.out.println();
+    this.displayAboutBorder();
+    System.out.print("\t\tGroup 1\n"
+            + "\n Casey Ames"
+            + "\n Kelley Craft"
+            + "\n Jonathan Crawford"
+            + "\n Jacky Northgrave"
+            + "\n Summer Smith");
+    displayAboutBorder();
+}
     
+public void displayCourse(){
+    System.out.println();
+    displayAboutBorder();
+    System.out.println("\n\t CIT-260 section 03"
+            + "\n\t Instructor:  Dr. Aaron Wester"
+            + "\n\t AKA Brother Wester");
+    displayAboutBorder();
+}
+    
+private void displayAboutBorder(){
+    System.out.println("\n++++++++++++++++++++++++++++++++++++++");
+}
+}
+
     
 }
