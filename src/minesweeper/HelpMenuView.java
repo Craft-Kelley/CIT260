@@ -6,11 +6,12 @@
 package minesweeper;
 
 import java.util.Scanner;
+import java.io.Serializable;
 /**
  *
  * @author Jacky Northgrave
  */
-public class HelpMenuView {
+public class HelpMenuView implements Serializable{
         
     private final static String[][] menuItems = {
         {"M", "Main Menu"},
@@ -18,7 +19,7 @@ public class HelpMenuView {
         {"Q", "Quit Help"}
     };
 
-    private HelpMenuControl helpMenuControl = new HelpMenuControl ();
+    private static HelpMenuControl helpMenuControl = new HelpMenuControl ();
     
     //display the options menu
  
@@ -53,7 +54,7 @@ public class HelpMenuView {
           
       return;
     }
-    public final void displayOptions(){
+    private static final void displayOptions(){
         System.out.println("\n====================================================");
         System.out.println("Help Options:");
         

@@ -11,7 +11,7 @@ package minesweeper;
  */
 public class HelpMenuControl {
     
-    public void displayInstructions(){
+    public static void displayInstructions(){
         System.out.println(
             "\tThe game is Minesweeper. It is a one player game. Mines are "
             + "hidden on a grid of tiles. Tiles will either be blank, numbered "

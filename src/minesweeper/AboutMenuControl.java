@@ -5,11 +5,12 @@
  */
 package minesweeper;
 
+
 /**
  *
  * @author Kelley
  */
-public class AboutMenuControl {
+public class AboutMenuControl  {
     public AboutMenuControl(){
         
     }
@@ -26,7 +27,7 @@ public void displayDevelopers(){
     displayAboutBorder();
 }
     
-public void displayCourse(){
+public static void displayCourse(){
     System.out.println();
     displayAboutBorder();
     System.out.println("\n\t CIT-260 section 03"
@@ -35,7 +36,7 @@ public void displayCourse(){
     displayAboutBorder();
 }
     
-public void displayAboutBorder(){
+private static void displayAboutBorder(){
     System.out.println("\n++++++++++++++++++++++++++++++++++++++");
 }
 }

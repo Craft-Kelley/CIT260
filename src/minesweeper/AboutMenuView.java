@@ -6,12 +6,13 @@
 package minesweeper;
 
 import java.util.Scanner;
+import java.io.Serializable;
 
 /**
  *
  * @author Kelley
  */
-public class AboutMenuView {
+public class AboutMenuView implements Serializable {
     
     private final static String[] menuItems = {
         ("D = Developers"),
@@ -21,7 +22,7 @@ public class AboutMenuView {
     
     //Create instance of AboutMenuControl class
     
-    private AboutMenuControl aboutMenuControl = new AboutMenuControl();
+    private static final AboutMenuControl aboutMenuControl = new AboutMenuControl();
     
     //default constructor
     
@@ -62,7 +63,7 @@ public class AboutMenuView {
             return;
             
     }
-    public final void display(){
+    private static final void display(){
         System.out.println("\n====================================================");
         System.out.println("About this program: ");
         System.out.println("Enter the letter for your selection choice");
