@@ -5,10 +5,12 @@
  */
 package minesweeper;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Jonathan
  */
-public class OptionMenuView {
+public class OptionMenuView implements Serializable{
     OptionMenuControl optionControl = new OptionMenuControl();
 }
