@@ -5,6 +5,7 @@
  */
 package minesweeper;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -12,14 +13,22 @@ import java.util.ArrayList;
  * @author Summer
  * @author Jacky Northgrave
  */
-public class HighScore {
+public class HighScore implements Serializable{
   
-ArrayList <String> names = new ArrayList();
-ArrayList <Integer> scores = new ArrayList();
+private ArrayList <String> names = new ArrayList();
+private ArrayList <Integer> scores = new ArrayList();
   
   /*
   *
   */
+
+  @Override
+  public String toString(){
+    String theString = "duh";
+    
+    return theString;
+  } 
+  
   public void displayHighScores(){
     System.out.println("High Scores");
     System.out.println("Name\tScore");
