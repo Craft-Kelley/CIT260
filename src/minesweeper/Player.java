@@ -9,7 +9,9 @@ package minesweeper;
  * The player class keeps track of user information
  * @author Jacky Northgrave
  */
-public class Player {
+import java.io.Serializable;
+
+public class Player implements Serializable{
     
   public static final String PLAYER_ONE = "PLAYER";
   public String name;
@@ -23,7 +25,13 @@ public class Player {
     numWins = 0;
     numLosses = 0;
   }
+ 
+    @Override
+  public String toString(){
+    String theString = "duh";
     
+    return theString;
+  } 
   /*
   * Constructor with parameters
   */
@@ -36,42 +44,42 @@ public class Player {
   *This function allows the game to retrieve the player's name
   * and set it within the game    
   */
-  public String getName() {
+  private String getName() {
     return name;
   }
   
   /*
   * Setter for name
   */
-  public void setName(String name) {
+  private void setName(String name) {
     this.name = name;
   }
 
    /*
   * getter for numWins
   */
-  public long getIntWins() {
+  private long getIntWins() {
     return numWins;
   }
     
   /*
   * Setter for numWins
   */
-  public void setIntWins(int wins) {
+  private void setIntWins(int wins) {
     this.numWins = wins;
   }
   
   /*
   * getter for numLosses
   */
-  public long getIntLosses() {
+  private long getIntLosses() {
     return numLosses;
   }
     
   /*
   * Setter for numLosses variable
   */
-  public void setIntLosses(int losses) {
+  private void setIntLosses(int losses) {
     this.numLosses = losses;
   }
  
