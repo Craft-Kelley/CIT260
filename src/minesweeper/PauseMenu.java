@@ -9,9 +9,9 @@ package minesweeper;
  *
  * @author Casey
  */
-public class PauseMenuControl {
+public class PauseMenu {
 
- PauseMenuControl(){
+ PauseMenu(){
  } 
  
  /*
@@ -20,7 +20,7 @@ public class PauseMenuControl {
 
  boolean paused;
       
-   // if(PauseMenuControl(VK_SPACE) {
+   // if(PauseMenu(VK_SPACE) {
     /*if(paused == true) {
         paused = false;
         }

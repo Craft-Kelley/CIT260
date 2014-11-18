@@ -11,6 +11,6 @@ import java.io.Serializable;
  *
  * @author Jonathan
  */
-public class OptionMenuView implements Serializable{
-    OptionMenuControl optionControl = new OptionMenuControl();
+public class OptionMenu implements Serializable{
+    //Need default constructor
 }

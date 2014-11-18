@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author Jacky Northgrave
  * @author Summer Smith
  */
-public class MainMenuView  implements Serializable{
+public class MainMenu  implements Serializable{
   String menuName = "Main Menu";
   String greeting= "This is the Main Menu Page.";
   private final static String[][] menuItems = {
@@ -25,7 +25,7 @@ public class MainMenuView  implements Serializable{
   /*
   * Constructor 
   */
-  MainMenuView(){
+  MainMenu(){
     
   }  
   
@@ -49,7 +49,7 @@ public class MainMenuView  implements Serializable{
           displayList(menuItems, menuName);
           break;
         case "A": //About
-          AboutMenuView about = new AboutMenuView();
+          AboutMenu about = new AboutMenu();
           about.getInput();
           displayList(menuItems, menuName);
           break;
@@ -64,7 +64,7 @@ public class MainMenuView  implements Serializable{
           displayList(menuItems, menuName);
           break;
         case "H":  //help
-          HelpMenuView helpMenu = new HelpMenuView();
+          HelpMenu helpMenu = new HelpMenu();
           helpMenu.getInput();
           displayList(menuItems, menuName);
           break;
@@ -109,9 +109,9 @@ public class MainMenuView  implements Serializable{
   * @param instance used to access the setters to change the actual
   *                 game settings
   */
-  private void editGameOptions(Minesweeper instance){
-    String name = "Game Options";
-    String[][] editItems = {
+  private void editGameOptions(Minesweeper instance){ //MOVE getInput
+    String name = "Game Options";  //MOVE to default constructor
+    String[][] editItems = { //MOVE this to default constructor (like it's done in the HelpMenu)
         {"r - edit number of rows"},
         {"c - edit number of columns"},
         {"g - edit game level"},
@@ -155,7 +155,7 @@ public class MainMenuView  implements Serializable{
   * @param prompt the prompt to display to the user to get the int
   * @param limit the upper bound of the int (the highest number the int can be)
   */
-  public int getInt(String prompt, int limit){
+  public int getInt(String prompt, int limit){ //MOVE
     int input = 0;
 
     //Get input

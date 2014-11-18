@@ -40,7 +40,7 @@ public class Minesweeper {
      */
     public static void main(String[] args) { 
 //Display main menu
-      MainMenuView mainMenu = new MainMenuView();
+      MainMenu mainMenu = new MainMenu();
       player = new Player();
       
 
@@ -61,7 +61,7 @@ public class Minesweeper {
       GameBoard board = new GameBoard(boardRows, boardCols, gameLevel);
       board.buildBoard();
       
-      GameMenuView game = new GameMenuView(board);
+      GameMenu game = new GameMenu(board);
       game.getInput(player);
       
       System.out.println("Game Over!");

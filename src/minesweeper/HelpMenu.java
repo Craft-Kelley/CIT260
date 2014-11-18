@@ -6,24 +6,35 @@
 package minesweeper;
 
 import java.util.Scanner;
-import java.io.Serializable;
 /**
  *
  * @author Jacky Northgrave
  */
-public class HelpMenuView implements Serializable{
+public class HelpMenu extends Menu{
         
-    private final static String[][] menuItems = {
-        {"M", "Main Menu"},
-        {"D", "Display Instructions"},
-        {"Q", "Quit Help"}
-    };
 
     private  HelpMenuControl helpMenuControl = new HelpMenuControl ();
     
-    //display the options menu
- 
-    //user input
+    
+    /*
+    * Default Constructor
+    */
+    public HelpMenu(){
+      String[] items = {
+        ("M - Main Menu"),
+        ("D - Display Instructions"),
+        ("Q - Quit Help")
+      };
+
+      setMenuItems(items);
+      
+      setMenuName("Help Menu");
+    }
+    
+    /*
+    * Gets user input
+    */
+    @Override
     public void getInput(){
         
         String input; 
@@ -32,7 +43,7 @@ public class HelpMenuView implements Serializable{
         
         do {
             
-            this.displayOptions();
+            displayOptions();
             
             input = inFile.nextLine();
             input = input.trim().toUpperCase();
@@ -54,21 +65,11 @@ public class HelpMenuView implements Serializable{
           
       return;
     }
-    private static final void displayOptions(){
-        System.out.println("\n====================================================");
-        System.out.println("Help Options:");
-        
-        for (int i = 0; i < HelpMenuView.menuItems.length; i++){
-            System.out.println("\t" + menuItems [i][0] + "\t" + menuItems[i][1]);
-        }
-        System.out.println("\n====================================================");  
-        System.out.print("> ");
-    }
-    
-    /**
- *
- * @author Jacky Northgrave
- */
+   
+  /**
+  *
+  * @author Jacky Northgrave
+  */
 public class HelpMenuControl {
     
     public  void displayInstructions(){

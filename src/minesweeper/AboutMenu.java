@@ -6,39 +6,41 @@
 package minesweeper;
 
 import java.util.Scanner;
-import java.io.Serializable;
 
 /**
  *
  * @author Kelley
  */
-public class AboutMenuView implements Serializable {
+public class AboutMenu extends Menu {
+
+    //Create instance of AboutMenuControl class    
+    private  final AboutMenuControl aboutMenuControl = new AboutMenuControl();
     
-    private final static String[] menuItems = {
+    /*
+    * Default constructor
+    */
+    public AboutMenu(){
+      String[] items = {
         ("D = Developers"),
         ("C = Course Information"),
         ("Q = Quit About Menu")
-    };
-    
-    //Create instance of AboutMenuControl class
-    
-    private  final AboutMenuControl aboutMenuControl = new AboutMenuControl();
-    
-    //default constructor
-    
-    public AboutMenuView(){
-        
+      };
+      setMenuItems(items);
+      
+      setMenuName("About Menu");
     }
     
-    //display menu and get user input
-    
+    /*
+    * Get user input to direct menu
+    */
+    @Override
     public void getInput(){
         
         String select;
         Scanner inFile = new Scanner(System.in);
         
         do {
-            this.display(); //display item
+            displayOptions(); //display item
             
             //get selection entered
             select = inFile.nextLine();
@@ -63,27 +65,17 @@ public class AboutMenuView implements Serializable {
             return;
             
     }
-    private static final void display(){
-        System.out.println("\n====================================================");
-        System.out.println("About this program: ");
-        System.out.println("Enter the letter for your selection choice");
-        for (int i = 0; i < AboutMenuView.menuItems.length; i++ ){
-            System.out.println("\t" + menuItems[i]);
-        }
-        System.out.println("\n====================================================");
-        System.out.print("> ");
-       
-    }
+
     
 public class AboutMenuControl  {
     public AboutMenuControl(){
         
     }
 
-public void displayDevelopers(){
-    System.out.println();
-    this.displayAboutBorder();
-    System.out.print("\t\tGroup 1\n"
+    public void displayDevelopers(){
+      System.out.println();
+      this.displayAboutBorder();
+      System.out.print("\t\tGroup 1\n"
             + "\n Casey Ames"
             + "\n Kelley Craft"
             + "\n Jonathan Crawford"

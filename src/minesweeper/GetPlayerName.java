@@ -12,8 +12,8 @@ import java.util.Scanner;
  *
  * @author Casey
  */
-public class GetPlayerNameView implements Serializable{
-    public GetPlayerNameView() {
+public class GetPlayerName implements Serializable{
+    public GetPlayerName() {
       
     }
     

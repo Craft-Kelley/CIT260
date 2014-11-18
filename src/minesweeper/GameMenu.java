@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Jacky Northgrave
  */
-public class GameMenuView implements Serializable{
+public class GameMenu implements Serializable{
     GameBoard board; //This will be passed in from the Minesweeper class
     private final static String[][] menuItems = {
         {"G", "Guess Square"},
@@ -24,7 +24,7 @@ public class GameMenuView implements Serializable{
    /*
    * Constructor
    */
-   public GameMenuView(GameBoard board){
+   public GameMenu(GameBoard board){
       this.board = board;
    }
         
@@ -56,7 +56,7 @@ public class GameMenuView implements Serializable{
             guessSquare();
             break;
           case "P"://pause game  
-            PauseMenuView pause = new PauseMenuView();
+            PauseMenu pause = new PauseMenu();
             break;
           case "R"://reveal game board    
             board.revealBoard();
