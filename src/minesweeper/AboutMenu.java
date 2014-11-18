@@ -12,7 +12,12 @@ import java.util.Scanner;
  * @author Kelley
  */
 public class AboutMenu extends Menu {
-
+  private final static String[] menuItems ={
+        ("D = Developers"),
+        ("C = Course Information"),
+        ("Q = Quit About Menu")
+      };
+          
     //Create instance of AboutMenuControl class    
     private  final AboutMenuControl aboutMenuControl = new AboutMenuControl();
     
@@ -20,12 +25,7 @@ public class AboutMenu extends Menu {
     * Default constructor
     */
     public AboutMenu(){
-      String[] items = {
-        ("D = Developers"),
-        ("C = Course Information"),
-        ("Q = Quit About Menu")
-      };
-      setMenuItems(items);
+      super(AboutMenu.menuItems);
       
       setMenuName("About Menu");
     }
