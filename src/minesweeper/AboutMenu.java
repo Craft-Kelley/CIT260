@@ -17,6 +17,7 @@ public class AboutMenu extends Menu {
         ("C = Course Information"),
         ("Q = Quit About Menu")
       };
+  private final static String menuName = "AboutMenu";
           
     //Create instance of AboutMenuControl class    
     private  final AboutMenuControl aboutMenuControl = new AboutMenuControl();
@@ -25,9 +26,7 @@ public class AboutMenu extends Menu {
     * Default constructor
     */
     public AboutMenu(){
-      super(AboutMenu.menuItems);
-      
-      setMenuName("About Menu");
+      super(AboutMenu.menuItems, AboutMenu.menuName);
     }
     
     /*
