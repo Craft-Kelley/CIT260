@@ -12,14 +12,14 @@ import java.util.Scanner;
 public class MainMenu  implements Serializable{
   String menuName = "Main Menu";
   String greeting= "This is the Main Menu Page.";
-  private final static String[][] menuItems = {
-        {"S - Start Game"},
-        {"A - About Program"},
-        {"O - Edit Game Options"},
-        {"P - Player Statistics"},
-        {"G - Show High Scores"},
-        {"Q - Quit game"},
-        {"H - Help"}
+  private final static String[] menuItems = {
+        ("S - Start Game"),
+        ("A - About Program"),
+        ("O - Edit Game Options"),
+        ("P - Player Statistics"),
+        ("G - Show High Scores"),
+        ("Q - Quit game"),
+        ("H - Help")
     };
   
   /*
