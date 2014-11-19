@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Tyler
+ * @author Summer
  */
 public abstract class Menu implements Serializable{
  static String[] menuItems = null;
@@ -18,14 +18,14 @@ public abstract class Menu implements Serializable{
  public abstract void getInput();
  
  /*
- * Setter for menu items
- * @param items - a 1-dimensional array of items to fill the menu
- *                Items array
+ * Default constructor
  */
- public void setMenuItems(String[] items){
-   for (int i = 0; i < items.length; i++)
+ public Menu(String[] items, String name){
+  for (int i = 0; i < items.length; i++)
      menuItems[i] = items[i];
+  menuName = name;
  }
+ 
  
  /*
  * Setter for menu name
