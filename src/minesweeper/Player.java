@@ -15,8 +15,8 @@ public class Player implements Serializable{
     
   public static final String PLAYER_ONE = "PLAYER";
   public String name;
-  int numWins;
-  int numLosses;    
+  static int numWins;
+  static int numLosses;    
 
   /*
   * Default constructor
@@ -86,7 +86,7 @@ public class Player implements Serializable{
   /*
   * This function calculates the winning percentage of the player
   */
-  public void playerStatistics(){
+  public static void playerStatistics(){
     int total = numWins + numLosses;
     if (numWins==0 && numLosses==0){
       System.out.println("====================================================");

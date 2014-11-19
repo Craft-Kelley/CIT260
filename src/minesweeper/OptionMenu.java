@@ -15,19 +15,7 @@ import java.util.Scanner;
 public class OptionMenu implements Serializable{
     //Need default constructor
      /**
-  * This function will display individual
-  * strings (menu items) as options for the menu
-  */ 
-  private void displayList(String[][] list, String name){
-    System.out.println("\n====================================================");
-    System.out.println(name);
-    
-    for (String[] menuItem : list) {
-      System.out.println("\t" + menuItem[0]);
-    }
-    System.out.println("\n====================================================");
-    System.out.print("> ");
-  }
+
   
   /*
   * This is a sub-menu of the main menu.  It allows the user to
