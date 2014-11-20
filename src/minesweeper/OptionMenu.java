@@ -5,54 +5,64 @@
  */
 package minesweeper;
 
-import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
  *
- * @author Jonathan
+ * @author Jacky Northgrave
  */
-public class OptionMenu implements Serializable{
-    //Need default constructor
-     /**
-
+public class OptionMenu extends Menu{
+  private final static String[] menuItems = { 
+        ("R - Edit number of rows"),
+        ("C - Edit number of columns"),
+        ("G - Edit game level"),
+        ("M - Return to main menu")
+    };
   
-  /*
-  * This is a sub-menu of the main menu.  It allows the user to
-  * select game edit options.
+  private final static String menuName = "OptionMenu";
+    
+    /*
+    * Default Constructor
+    */
+    public OptionMenu(){
+        super(OptionMenu.menuItems, OptionMenu.menuName);
+    }
+    
+ /* It allows the user to select game edit options.
   * In this case, the selections are editing the number of rows,
   * editing the number of columns, and editing the game level. 
   * The game level is limited to 1, 2, or 3, while the number of
   * rows and columns on the board is not limited. 
   *
   * @param instance used to access the setters to change the actual
-  *                 game settings
+  * game settings.
+  *  
+  * Get user input to direct menu  
+  *  
   */
-  private void editGameOptions(Minesweeper instance){ //MOVE getInput
-    String name = "Game Options";  //MOVE to default constructor
-    String[][] editItems = { //MOVE this to default constructor (like it's done in the HelpMenu)
-        {"r - edit number of rows"},
-        {"c - edit number of columns"},
-        {"g - edit game level"},
-        {"m - return to main menu"}
-    };
-    String input;
-    Scanner inFile = new Scanner(System.in);
-    displayList(editItems, name);
-    
+    @Override 
+    public void getInput(){
+        
+        String input;
+        Scanner inFile = new Scanner(System.in);
+        displayOptions(menuItems);
+
     do{
+      displayOptions();
+        
       input = inFile.nextLine();
       input = input.trim().toUpperCase();
        
       switch (input) {
-        case "R":  //edit number of rows
+        case "R":  //Edit number of rows
           instance.setBoardRows(getInt("Please enter the number of rows: ", 1000));
           break;
-        case "C":  //edit number of cols
+        case "C":  //Edit number of cols
           instance.setBoardCols(getInt("Please enter the number of columns: ", 1000));
           break;
-        case "G":  //edit game level
-          String levelPrompt = "Please select difficulty level: \n"
+        case "G":  //Edit game level
+          String levelPrompt = "Please select level of difficulty: \n"
                                + "1 - Easy\n"
                                + "2 - Medium\n"
                                + "3 - Difficult\n"
@@ -61,10 +71,10 @@ public class OptionMenu implements Serializable{
           break;
         default:
           System.out.println("Invalid input. Please enter a valid command.");
-          displayList(editItems, name);
+          displayOptions(menuItems);
           break;
       }
-    } while (!input.equals("M")); //start game returns to minesweeper to start the game
+    } while (!input.equals("M")); //Start game returns to minesweeper to start the game
     
   }
   
@@ -81,7 +91,7 @@ public class OptionMenu implements Serializable{
     Scanner inFile = new Scanner(System.in);
     boolean goodInput = true;
     try {
-    System.out.print("Input: ");
+    System.out.print("Input:");
     input = inFile.nextInt();
     
     //Display prompt
