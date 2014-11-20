@@ -45,8 +45,8 @@ public class Minesweeper {
       
 
       //Continue prompting from the main menu until the player decides to quit.
-      while(mainMenu.getInput(player, instance))
-        startGame();
+      mainMenu.getInput(instance);
+      startGame();
       
       System.out.println("Thanks for playing!");
     }

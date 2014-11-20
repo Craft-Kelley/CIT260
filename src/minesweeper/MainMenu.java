@@ -10,9 +10,8 @@ import java.util.Scanner;
  * @author Summer Smith
  */
 public class MainMenu extends Menu{
-  String menuName = "Main Menu";
+  private final static String menuName = "Main Menu";
   String greeting= "This is the Main Menu Page.";
- 
   private final static String[] menuItems = {
         ("S - Start Game"),
         ("A - About Program"),
@@ -26,8 +25,8 @@ public class MainMenu extends Menu{
   /*
   * Constructor 
   */
-  MainMenu(){
-    
+  public void MainMenu(){
+    super(MainMenu.menuItems, MainMenu.menuName);
   }  
   
   /*
@@ -35,8 +34,7 @@ public class MainMenu extends Menu{
   * @return true when the player wants to start a game
   * @return false when the player wants to quit a game
   */
-  @Override
-  public void getInput(){
+  public void getInput(Minesweeper instance){
     String input;
     Scanner inFile = new Scanner(System.in);
     displayOptions(menuItems);
@@ -47,7 +45,7 @@ public class MainMenu extends Menu{
        
       switch (input) {
         case "O":  //options
-          OptionMenu option = new OptionMenu();
+          OptionMenu option = new OptionMenu(instance);
           displayOptions(menuItems);
           break;
         case "A": //About

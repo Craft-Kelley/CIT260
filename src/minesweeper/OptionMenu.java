@@ -1,11 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package minesweeper;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -19,14 +13,17 @@ public class OptionMenu extends Menu{
         ("G - Edit game level"),
         ("M - Return to main menu")
     };
+  private final static String menuName = "Options Menu";
   
-  private final static String menuName = "OptionMenu";
+  Minesweeper instance;
+  
     
     /*
     * Default Constructor
     */
-    public OptionMenu(){
+    public OptionMenu(Minesweeper theInstance){
         super(OptionMenu.menuItems, OptionMenu.menuName);
+        instance = theInstance;
     }
     
  /* It allows the user to select game edit options.

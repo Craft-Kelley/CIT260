@@ -11,24 +11,24 @@ import java.util.Scanner;
  * @author Jacky Northgrave
  */
 public class HelpMenu extends Menu{
-        
+      private final static String[] menuItems = {
+        ("M - Main Menu"),
+        ("D - Display Instructions"),
+        ("Q - Quit Help")
+      };
+      
+      private final static String menuName = "Help Menu";
+         
 
-    private  HelpMenuControl helpMenuControl = new HelpMenuControl ();
+    private final HelpMenuControl helpMenuControl = new HelpMenuControl ();
     
     
     /*
     * Default Constructor
     */
     public HelpMenu(){
-      String[] items = {
-        ("M - Main Menu"),
-        ("D - Display Instructions"),
-        ("Q - Quit Help")
-      };
+      super(HelpMenu.menuItems, HelpMenu.menuName);
 
-      setMenuItems(items);
-      
-      setMenuName("Help Menu");
     }
     
     /*
