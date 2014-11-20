@@ -25,7 +25,7 @@ public class MainMenu extends Menu{
   /*
   * Constructor 
   */
-  public void MainMenu(){
+  public MainMenu(){
     super(MainMenu.menuItems, MainMenu.menuName);
   }  
   
