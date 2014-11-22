@@ -77,27 +77,15 @@ public class GameMenu extends Menu{
           return;
     }
     
-    /*
-    * displays the items in the menuItems array
-    */
-    public void displayGameOptions(String[][] items){
-        System.out.println("\n\t==============================");
-        System.out.println("\tGame Menu Options:");
-        
-        for (String[] menuItem : items) {
-      System.out.println("\t" + menuItem[0] + "\t" + menuItem[1]);
-    }
-        System.out.println("\t==============================\n");    
-    }
-    
+  
     /*
     * Prompts the user for the coordinates they wish to guess
     */
     private void guessSquare(){
-      String[][] guessItems = {
-        {"C = - Click Square"},
-        {"F = - Flag Square"},
-        {"R = - Return to game menu"}
+      String[] guessItems = {
+        ("C = - Click Square"),
+        ("F = - Flag Square"),
+        ("R = - Return to game menu")
        };
       
       char[] coords = new char[2];
@@ -106,7 +94,7 @@ public class GameMenu extends Menu{
       Scanner inFile = new Scanner(System.in);
       String input = inFile.nextLine();
                 
-      this.displayGameOptions(guessItems);
+      displayOptions(guessItems);
             
       input = inFile.nextLine();
       input = input.trim().toUpperCase();
