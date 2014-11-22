@@ -21,8 +21,8 @@ public abstract class Menu implements Serializable{
  * Default constructor
  */
  public Menu(String[] items, String name){
-  for (int i = 0; i < items.length; i++)
-     menuItems[i] = items[i];
+  //for (int i = 0; i < items.length; i++)
+    // menuItems[i] = items[i];
   menuName = name;
  }
  
