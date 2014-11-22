@@ -12,12 +12,12 @@ import java.util.Scanner;
  */
 public class GameMenu extends Menu{
     GameBoard board; //This will be passed in from the Minesweeper class
-    private final static String[][] menuItems = {
-        {"G = Guess Square"},
-        {"P = Pause"},
-        {"R = Reveal Board"},
-        {"Q = Quit Game"},
-        {"D = Display the board"}   
+    private final static String[] menuItems = {
+        ("G = Guess Square"),
+        ("P = Pause"),
+        ("R = Reveal Board"),
+        ("Q = Quit Game"),
+        ("D = Display the board")   
     };
     
     private final static String menuName = "GameMenu";
@@ -47,7 +47,7 @@ public class GameMenu extends Menu{
           break;
         
         //display the game menu
-        do {
+
             
             displayOptions();
             
