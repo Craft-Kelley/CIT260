@@ -15,7 +15,7 @@ public abstract class Menu implements Serializable{
  static String[] menuItems = null;
  static String menuName = null;
  
- public abstract void getInput();
+ public void getInput(){};
  
  /*
  * Default constructor
