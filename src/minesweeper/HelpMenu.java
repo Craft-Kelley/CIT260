@@ -41,15 +41,14 @@ public class HelpMenu extends Menu{
 
     }
     public void displayInstructions(){
-    System.out.println(
-            "\tThe game is Minesweeper. It is a one player game. Mines are "
+    String how ="\tThe game is Minesweeper. It is a one player game. Mines are "
             + "\nhidden on a grid of tiles. Tiles will either be blank, numbered "
             + "\nor filled with a mine. If you click on a tile with a mine it will "
             + "\nend the game. If you click on a tile with a number it will reveal "
-            + "\nhow many mines are touching the tile. "
-        );
-    getInput();
-    HelpMenu help = new HelpMenu();
+            + "\nhow many mines are touching the tile. ";
+    displayOptions(how);    
+    //getInput();
+    //HelpMenu help = new HelpMenu();
     }
     /*
     * Gets user input

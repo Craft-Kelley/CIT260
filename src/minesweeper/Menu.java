@@ -51,6 +51,9 @@ public abstract class Menu implements Serializable{
                 
         
                       }
+ /*
+ * reusable getInput code for a more simplified input need.  No parameters required.
+ */
  public void getInput(){
 
      String select;
@@ -61,6 +64,8 @@ public abstract class Menu implements Serializable{
      
  
  };  
+ 
+ 
  /*
  * Setter for menu name
  * @param name - a string to be set as the menuName
@@ -97,8 +102,12 @@ public abstract class Menu implements Serializable{
     System.out.println("\n====================================================");
     System.out.print("> ");    
   }
- 
- void displayOptions(String item){
+ /*
+ * displayOption works with a string to create a nice display
+ * @param String item (not an array)
+ * 
+ */
+ public void displayOptions(String item){
      String output = item;
  System.out.println("\n====================================================");
  System.out.println(output);

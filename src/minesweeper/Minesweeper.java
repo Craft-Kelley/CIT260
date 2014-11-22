@@ -72,13 +72,8 @@ public class Minesweeper {
       System.out.println(name);
     }
    
-    public static void displayInstructions(){
-      System.out.println("*****************************************************");
-      System.out.println("*  Welcome to the game of Minesweeper. \n"
-            + "*  You will be playing individually. The objective of the game \n"
-            + "*  is to find the empty squares while avoiding the mines.\n");
-      System.out.println("*****************************************************");
-    }
+    
+    
     
     /*
     * Setter
