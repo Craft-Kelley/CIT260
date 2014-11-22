@@ -5,27 +5,28 @@
  */
 package minesweeper;
 
-import java.io.Serializable;
 import java.util.Scanner;
 /**
  *
  * @author Jacky Northgrave
  */
-public class GameMenu implements Serializable{
+public class GameMenu extends Menu{
     GameBoard board; //This will be passed in from the Minesweeper class
     private final static String[][] menuItems = {
-        {"G", "Guess Square"},
-        {"P", "Pause"},
-        {"R", "Reveal Board"},
-        {"Q", "Quit Game"},
-        {"D", "Display the board"}   
+        {"G = Guess Square"},
+        {"P = Pause"},
+        {"R = Reveal Board"},
+        {"Q = Quit Game"},
+        {"D = Display the board"}   
     };
-
+    
+    private final static String menuName = "GameMenu";
+    
    /*
    * Constructor
    */
-   public GameMenu(GameBoard board){
-      this.board = board;
+   public GameMenu(){
+      super(GameMenu.menuItems, GameMenu.menuName);
    }
         
   @Override
@@ -46,7 +47,9 @@ public class GameMenu implements Serializable{
           break;
         
         //display the game menu
-        this.displayGameOptions(menuItems);
+        do {
+            
+            displayOptions();
             
         input = inFile.nextLine();
         input = input.trim().toUpperCase();
@@ -92,9 +95,9 @@ public class GameMenu implements Serializable{
     */
     private void guessSquare(){
       String[][] guessItems = {
-        {"C", "- Click Square"},
-        {"F", "- Flag Square"},
-        {"R", "- Return to game menu"}
+        {"C = - Click Square"},
+        {"F = - Flag Square"},
+        {"R = - Return to game menu"}
        };
       
       char[] coords = new char[2];
