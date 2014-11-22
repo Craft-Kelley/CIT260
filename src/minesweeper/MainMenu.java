@@ -27,14 +27,15 @@ public class MainMenu extends Menu{
   */
   public MainMenu(){
     super(MainMenu.menuItems, MainMenu.menuName);
-  }  
+    String select = super.getInput(menuItems);
+   
   
   /*
   * Gets input from the user
   * @return true when the player wants to start a game
   * @return false when the player wants to quit a game
   */
-  public void getInput(Minesweeper instance){
+ /* public void getInput(Minesweeper instance){
     String input;
     Scanner inFile = new Scanner(System.in);
     displayOptions(menuItems);
@@ -42,27 +43,27 @@ public class MainMenu extends Menu{
     do{
       input = inFile.nextLine();
       input = input.trim().toUpperCase();
-       
-      switch (input) {
+       */
+switch (select) {
         case "O":  //options
-          OptionMenu option = new OptionMenu(instance);
+          OptionMenu option = new OptionMenu();
           displayOptions(menuItems);
           break;
         case "A": //About
           AboutMenu about = new AboutMenu();
-          about.getInput();
-          displayOptions(menuItems);
+          //getInput(menuItems);
+          //displayOptions(menuItems);
           break;
         case "P":  //player statistics
           Player.playerStatistics();
-          displayOptions(menuItems);
-          break;
+          getInput();
+          MainMenu menu = new MainMenu();
         case "G": //show high score 
           HighScore scores = new HighScore();
           scores.readFile();
           scores.displayHighScores();
-          displayOptions(menuItems);
-          break;
+          getInput();
+          MainMenu main = new MainMenu();
         case "H":  //help
           HelpMenu helpMenu = new HelpMenu();
           helpMenu.getInput();
@@ -79,10 +80,10 @@ public class MainMenu extends Menu{
           displayOptions(menuItems);
           break;
       }
-    } while (!input.equals("S")); //start game returns to minesweeper to start the game
+    } //while (!input.equals("S")); //start game returns to minesweeper to start the game
   }
 
-   }
+   
 
 
 

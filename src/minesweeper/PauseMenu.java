@@ -9,9 +9,15 @@ package minesweeper;
  *
  * @author Casey
  */
-public class PauseMenu {
-
- PauseMenu(){
+public class PauseMenu extends Menu {
+private static final String menuItems[] = {""};// allows Menu superclass
+ private static final String menuName = "Game Paused";//for Menu superclass
+ /*
+ *Constructor
+ */
+ public PauseMenu(){
+     super(PauseMenu.menuItems,PauseMenu.menuName);//Constructing Menu 
+     getInput();
  } 
  
  /*

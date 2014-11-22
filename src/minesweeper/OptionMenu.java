@@ -7,13 +7,13 @@ import java.util.Scanner;
  * @author Jacky Northgrave
  */
 public class OptionMenu extends Menu{
-  private final static String[] menuItems = { 
-        ("R - Edit number of rows"),
-        ("C - Edit number of columns"),
+  public final static String[] menuItems = { 
+        //("R - Edit number of rows"),
+        //("C - Edit number of columns"),
         ("G - Edit game level"),
         ("M - Return to main menu")
     };
-  private final static String menuName = "Options Menu";
+  public final static String menuName = "Options Menu";
   
   Minesweeper instance;
   
@@ -21,9 +21,58 @@ public class OptionMenu extends Menu{
     /*
     * Default Constructor
     */
-    public OptionMenu(Minesweeper theInstance){
+    public OptionMenu() {
         super(OptionMenu.menuItems, OptionMenu.menuName);
-        instance = theInstance;
+       // instance = theInstance;
+        String select = getInput(menuItems);
+        switch (select){
+           /* case "R":
+                gameRows;
+            case"C":
+                gameCols    ;*/
+            case "G":
+                gameLevel();
+            case "M":
+                MainMenu main = new MainMenu();
+        }
+    }
+        
+     /*
+        *game Level options 
+        */   
+    public void gameLevel() {
+    int easy[] = {3,3,1};//stores values in an array to represent rows, cols, and mines
+    int medium[] = {5,5,3};
+    int hard[] = {10,10,20};
+    
+    String items[]={
+        ("E = Easy"),
+        ("M = Medium"),
+        ("H = Hard"),
+    };  
+    String name = "Pick a level - Easy, Medium, or Hard";
+    String select = getInput(items);
+    switch (select){
+        case "E":
+            Minesweeper.boardRows = (easy[0]);
+            Minesweeper.boardCols = (easy[1]);
+            Minesweeper.gameLevel = (easy[2]);
+            
+        case "M":
+            Minesweeper.boardRows = (medium[0]);
+            Minesweeper.boardCols = (medium[1]);
+            Minesweeper.gameLevel = (medium[2]);
+            
+        case "H":
+            Minesweeper.boardRows = (hard[0]);
+            Minesweeper.boardCols = (hard[1]);
+            Minesweeper.gameLevel = (hard[2]);
+            
+        default:
+            System.out.println("Please enter E for Easy, M for Medium or H for Hard");
+            getInput(items);
+            MainMenu main = new MainMenu();
+    }
     }
     
  /* It allows the user to select game edit options.
@@ -37,7 +86,7 @@ public class OptionMenu extends Menu{
   *  
   * Get user input to direct menu  
   *  
-  */
+  *
     @Override 
     public void getInput(){
         
@@ -80,7 +129,7 @@ public class OptionMenu extends Menu{
   * an integer.
   * @param prompt the prompt to display to the user to get the int
   * @param limit the upper bound of the int (the highest number the int can be)
-  */
+  *
   public int getInt(String prompt, int limit){ //MOVE
     int input = 0;
 
@@ -108,5 +157,5 @@ public class OptionMenu extends Menu{
 
     }          
     return input;
-    }
+    }*/
 }

@@ -45,8 +45,8 @@ public class Minesweeper {
       
 
       //Continue prompting from the main menu until the player decides to quit.
-      mainMenu.getInput(instance);
-      startGame();
+     // mainMenu.getInput(instance);
+     // startGame();
       
       System.out.println("Thanks for playing!");
     }
@@ -61,10 +61,10 @@ public class Minesweeper {
       GameBoard board = new GameBoard(boardRows, boardCols, gameLevel);
       board.buildBoard();
       
-      GameMenu game = new GameMenu(board);
-      game.getInput(player);
+      GameMenu game = new GameMenu();
+//      game.getInput();
       
-      System.out.println("Game Over!");
+   //   System.out.println("Game Over!");
 
     }
     

@@ -27,13 +27,30 @@ public class AboutMenu extends Menu {
     */
     public AboutMenu(){
       super(AboutMenu.menuItems, AboutMenu.menuName);
+      String select = getInput(menuItems);
+            switch(select){
+                case "D":
+                    aboutMenuControl.displayDevelopers();
+                    break;
+                case "C":
+                    aboutMenuControl.displayCourse();
+                    break;
+                case "Q":
+                    MainMenu mainMenu = new MainMenu();
+                    break;
+                default:
+                    System.out.println("Invalid choice.  Please enter D, C, or Q.");
+                    getInput(menuItems);
+        }  
+
+      /*
     }
     
     /*
     * Get user input to direct menu
     */
-    @Override
-    public void getInput(){
+    //@Override
+   /* public void getInput(){
         
         String select;
         Scanner inFile = new Scanner(System.in);
@@ -63,9 +80,9 @@ public class AboutMenu extends Menu {
             
             return;
             
-    }
+    }*/
 
-    
+    } 
 public class AboutMenuControl  {
     public AboutMenuControl(){
         
@@ -73,7 +90,7 @@ public class AboutMenuControl  {
 
     public void displayDevelopers(){
       System.out.println();
-      this.displayAboutBorder();
+      displayAboutBorder();
       System.out.print("\t\tGroup 1\n"
             + "\n Casey Ames"
             + "\n Kelley Craft"
@@ -81,6 +98,9 @@ public class AboutMenuControl  {
             + "\n Jacky Northgrave"
             + "\n Summer Smith");
     displayAboutBorder();
+  
+    getInput();
+    AboutMenu about = new AboutMenu();
 }
     
 public void displayCourse(){
@@ -90,6 +110,8 @@ public void displayCourse(){
             + "\n\t Instructor:  Dr. Aaron Wester"
             + "\n\t AKA Brother Wester");
     displayAboutBorder();
+        getInput();
+    AboutMenu about = new AboutMenu();
 }
     
 private void displayAboutBorder(){

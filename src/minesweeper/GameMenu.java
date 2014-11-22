@@ -26,7 +26,11 @@ public class GameMenu extends Menu{
    * Constructor
    */
    public GameMenu(){
-      super(GameMenu.menuItems, GameMenu.menuName);
+      super(menuItems, menuName);
+      String select = getInput(menuItems);
+      //displayOptions(menuItems);
+    
+      /*getInput();
    }
         
   @Override
@@ -37,30 +41,26 @@ public class GameMenu extends Menu{
   }
   /*
   * gets input from the user to direct game play
-   */
-    public void getInput(Player player){      
-      Scanner inFile = new Scanner(System.in);
-      String input = inFile.nextLine();
-                
+   
+    public void getInput(Player player){   
+        String input = "D";
+        Scanner inFile = new Scanner(System.in);
+        //displayOptions(menuItems);        
       do { 
-        if (board.gameIsWon())
-          break;
-        
-        //display the game menu
+       if (board.gameIsWon())
+       //   break;
+          */
 
-            
-            displayOptions();
-            
-        input = inFile.nextLine();
-        input = input.trim().toUpperCase();
+        /*input = inFile.nextLine();  
+        input = input.trim().toUpperCase();*/
                 
-        switch (input) {     
+        switch (select) {     
           case "G"://guess square
             guessSquare();
             break;
           case "P"://pause game  
             PauseMenu pause = new PauseMenu();
-            break;
+            GameMenu game = new GameMenu();
           case "R"://reveal game board    
             board.revealBoard();
             break;
@@ -72,11 +72,9 @@ public class GameMenu extends Menu{
           default:
             System.out.println("Invalid input. Please enter a valid command.");
             } 
-        } while (!input.equals("Q"));         //quit minesweeper game   
-          
-          return;
+       
     }
-    
+
   
     /*
     * Prompts the user for the coordinates they wish to guess
@@ -90,8 +88,17 @@ public class GameMenu extends Menu{
       
       char[] coords = new char[2];
       getCords(coords);
+      String select = getInput(guessItems);
       
-      Scanner inFile = new Scanner(System.in);
+     switch(select){
+         case "C":
+             board.clickSquare(coords[1], coords[2]);
+         case "F":
+             board.flagSquare(coords[1],coords[2]);
+         case "R":
+             GameMenu game = new GameMenu();
+     }
+     /* Scanner inFile = new Scanner(System.in);
       String input = inFile.nextLine();
                 
       displayOptions(guessItems);
@@ -107,7 +114,7 @@ public class GameMenu extends Menu{
       }
       else if (input.equals("R") == false){
         System.out.println("Invalid input. Please enter a valid command.");
-      }
+      }*/
 
     }
   
@@ -126,6 +133,8 @@ public class GameMenu extends Menu{
         
         for (int i: coords){
           coords[i] = input.charAt(i);
+          
+          System.out.println((int)coords[0] + (int) coords[1] + "  wahoo  ");//for testing purposes
         }
         
       }while(!convertCoordinates(coords));
@@ -139,27 +148,27 @@ public class GameMenu extends Menu{
     */
     boolean convertCoordinates(char[] coords){
        
-        char x = coords[0]; // pulls out the x coordinate
+        int x = (int)coords[0]; // pulls out the x coordinate
         int y = (int)coords[1]; //pulls out the y coordinate and casts it to an int
-        char r = (char)(board.getNumRows() + 16); // creates a variabel equal to the number of rows in the board and converts it to a char equal to a letter in the ASCII characters
-        int c = board.getNumCols(); //creates a variable equal to the number of columns
+        int r = Minesweeper.boardRows; // gets number of rows
+        int c = Minesweeper.boardCols; //creates a variable equal to the number of columns
         int[] convertedCoords = new int[2]; //creates variable to hold converted coordinates
         
         /*
         compares x and y coordinate to the r variable above to ensure the selection is within the range of rows in the game. If either is out of range it returns a value of false.  If variable are valid, then it casts them both to an integer in a new array and returns a value of true. 
         */
-        if (x < r || x > r){
-            System.out.println("Enter a letter A through " + r);
+      /*  if (x < r || x > r){
+            System.out.println("Enter a letter A through " + (char)r);
             return false;
-        }else if (y < 1 || y > r){
-            System.out.println("Enter a row between 1 and " + c);
+        }else if (y < 1 || y > c){
+            System.out.println("Enter a column between 1 and " + c);
             return false;
         }else{ 
             convertedCoords[0] = (int) x;
             convertedCoords[1] = (int) y;
             System.out.println("Converted Coordinates are (" + convertedCoords[0] + "," + convertedCoords[1] + ")");
-            return true;
-        }
+          */  return true;
+       // }
      
     }
     

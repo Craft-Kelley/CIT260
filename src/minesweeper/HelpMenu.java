@@ -20,7 +20,7 @@ public class HelpMenu extends Menu{
       private final static String menuName = "Help Menu";
          
 
-    private final HelpMenuControl helpMenuControl = new HelpMenuControl ();
+  //  private final HelpMenuControl helpMenuControl = new HelpMenuControl ();
     
     
     /*
@@ -28,12 +28,32 @@ public class HelpMenu extends Menu{
     */
     public HelpMenu(){
       super(HelpMenu.menuItems, HelpMenu.menuName);
+      String select = getInput(menuItems);
+      switch (select) {
+          case "M":
+              MainMenu main = new MainMenu();
+        case"D": 
+            displayInstructions();
+        case "Q":
+            MainMenu menu = new MainMenu();
+            
+      }
 
     }
-    
+    public void displayInstructions(){
+    System.out.println(
+            "\tThe game is Minesweeper. It is a one player game. Mines are "
+            + "\nhidden on a grid of tiles. Tiles will either be blank, numbered "
+            + "\nor filled with a mine. If you click on a tile with a mine it will "
+            + "\nend the game. If you click on a tile with a number it will reveal "
+            + "\nhow many mines are touching the tile. "
+        );
+    getInput();
+    HelpMenu help = new HelpMenu();
+    }
     /*
     * Gets user input
-    */
+    *
     @Override
     public void getInput(){
         
@@ -64,13 +84,12 @@ public class HelpMenu extends Menu{
         } while (!input.equals("Q"));
           
       return;
-    }
-   
+    }*/
   /**
   *
   * @author Jacky Northgrave
   */
-public class HelpMenuControl {
+/*public class HelpMenuControl {
     
     public  void displayInstructions(){
         System.out.println(
@@ -80,7 +99,7 @@ public class HelpMenuControl {
             + "end the game. If you click on a tile with a number it will reveal "
             + "how many mines are touching the tile. "
         );
-    }
+    }*/
 }
 
-}
+
