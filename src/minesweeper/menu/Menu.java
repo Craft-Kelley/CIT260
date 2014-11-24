@@ -8,12 +8,14 @@ package minesweeper.menu;
 import java.io.Serializable;
 import java.util.Scanner;
 import minesweeper.Minesweeper;
+import minesweeper.interfaces.DisplayInfo;
+import minesweeper.interfaces.EnterInfo;
 
 /**
  *
  * @author Summer
  */
-public class Menu implements Serializable{
+public class Menu implements Serializable, DisplayInfo, EnterInfo{
  static String[] menuItems = null;
  static String menuName = null;
    Minesweeper instance;
