@@ -42,7 +42,7 @@ public class Menu implements Serializable{
         Scanner inFile = new Scanner(System.in);
         
         do {
-            displayOptions(items); //display item
+            display(items); //display item
             
             //get selection entered
             select = inFile.nextLine();
@@ -80,7 +80,7 @@ public class Menu implements Serializable{
  /*
  * Displays the menu items in a standard way
  */
- void displayOptions(){
+ public void display(){
     System.out.println("\n====================================================");
     System.out.println(menuName + ":");
     System.out.println("Enter the letter for your selection choice.");
@@ -94,7 +94,7 @@ public class Menu implements Serializable{
   /*
  * Displays the menu items in a standard way
  */
- void displayOptions(String[] items){
+ void display(String[] items){
     System.out.println("\n====================================================");
     System.out.println(menuName + ":");
     System.out.println("Enter the letter for your selection choice.");
@@ -109,7 +109,7 @@ public class Menu implements Serializable{
  * @param String item (not an array)
  * 
  */
- public void displayOptions(String item){
+ public void display(String item){
      String output = item;
  System.out.println("\n====================================================");
  System.out.println(output);
