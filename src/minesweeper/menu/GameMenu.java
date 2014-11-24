@@ -66,13 +66,13 @@ public class GameMenu extends Menu{
             GameMenu game = new GameMenu();
           case "R"://reveal game board    
             //board.revealBoard();//debugging
-            displayOptions("A Work In Progress");
+            display("A Work In Progress");
             break;
           case "Q"://quit game  
             break;  
          case "D"://display game board
             //board.displayBoard();//debugging
-             displayOptions("A Work In Progress");
+             display("A Work In Progress");
             break;           
           default:
             System.out.println("Invalid input. Please enter a valid command.");
