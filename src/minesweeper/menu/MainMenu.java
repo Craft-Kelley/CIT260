@@ -51,7 +51,7 @@ public class MainMenu extends Menu{
 switch (select) {
         case "O":  //options
           OptionMenu option = new OptionMenu();
-          displayOptions(menuItems);
+          display(menuItems);
           break;
         case "A": //About
           AboutMenu about = new AboutMenu();
@@ -71,7 +71,7 @@ switch (select) {
         case "H":  //help
           HelpMenu helpMenu = new HelpMenu();
           helpMenu.getInput();
-          displayOptions(menuItems);
+          display(menuItems);
           break;
         case "S": //Start game
           Minesweeper.startGame();
@@ -81,7 +81,7 @@ switch (select) {
           break;
         default:
           System.out.println("Invalid input. Please enter a valid command.");
-          displayOptions(menuItems);
+          display(menuItems);
           break;
       }
     } //while (!input.equals("S")); //start game returns to minesweeper to start the game
