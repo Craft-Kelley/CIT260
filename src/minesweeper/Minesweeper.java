@@ -78,24 +78,32 @@ public class Minesweeper {
     
     
     /*
-    * Setter
+    * Setter and getter for rows
     */
     public void setBoardRows(int rows){
       boardRows = rows;
     }
+    public int getBoardRows(){
+        return boardRows;
+    }
     
     /*
-    * Setter
+    * Setter and getter for cols
     */
     public void setBoardCols(int cols){
       boardCols = cols;
     }
-    
+    public int getBoardCols(){
+        return boardCols;
+    }
     /*
-    * Setter
-    */
+    * Setter and getter for level
+    */ 
     public void setGameLevel(int level){
       gameLevel = level;
+    }
+    public int getGameLevel(){
+        return gameLevel;
     }
 
 }

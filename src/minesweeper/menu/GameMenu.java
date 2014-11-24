@@ -24,6 +24,7 @@ public class GameMenu extends Menu{
     
     private final static String menuName = "GameMenu";
     
+    
    /*
    * Constructor
    */
@@ -154,8 +155,8 @@ public class GameMenu extends Menu{
        
         int x = (int)coords[0]; // pulls out the x coordinate
         int y = (int)coords[1]; //pulls out the y coordinate and casts it to an int
-        int r = Minesweeper.boardRows; // gets number of rows
-        int c = Minesweeper.boardCols; //creates a variable equal to the number of columns
+        int r = instance.getBoardRows(); // gets number of rows
+        int c = instance.getBoardCols(); //creates a variable equal to the number of columns
         int[] convertedCoords = new int[2]; //creates variable to hold converted coordinates
         
         /*
