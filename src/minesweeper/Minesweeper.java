@@ -14,6 +14,8 @@ package minesweeper;
  *    This is a simple game ... (INSERT GAME SUMMARY HERE)
  */
 
+import minesweeper.menu.MainMenu;
+import minesweeper.menu.GameMenu;
 import java.util.Scanner;
 
 public class Minesweeper {

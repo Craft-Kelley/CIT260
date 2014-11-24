@@ -1,6 +1,7 @@
-package minesweeper;
+package minesweeper.menu;
 
 import java.util.Scanner;
+import minesweeper.Minesweeper;
 
 /**
  *
@@ -15,7 +16,7 @@ public class OptionMenu extends Menu{
     };
   public final static String menuName = "Options Menu";
   
-  Minesweeper instance;
+
   
     
     /*
@@ -54,19 +55,22 @@ public class OptionMenu extends Menu{
     String select = getInput(items);
     switch (select){
         case "E":
-            Minesweeper.boardRows = (easy[0]);
-            Minesweeper.boardCols = (easy[1]);
-            Minesweeper.gameLevel = (easy[2]);
+            instance.setBoardRows(easy[0]);
+            instance.setBoardCols(easy[1]);
+            instance.setGameLevel(easy[2]);
+            instance.getClass();
+            
+
             
         case "M":
-            Minesweeper.boardRows = (medium[0]);
-            Minesweeper.boardCols = (medium[1]);
-            Minesweeper.gameLevel = (medium[2]);
+            instance.setBoardRows(medium[0]);
+            instance.setBoardCols(medium[1]);
+            instance.setGameLevel(medium[2]);
             
         case "H":
-            Minesweeper.boardRows = (hard[0]);
-            Minesweeper.boardCols = (hard[1]);
-            Minesweeper.gameLevel = (hard[2]);
+            instance.setBoardRows(hard[0]);
+            instance.setBoardCols(hard[1]);
+            instance.setGameLevel(hard[2]);
             
         default:
             System.out.println("Please enter E for Easy, M for Medium or H for Hard");

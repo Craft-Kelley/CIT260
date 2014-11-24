@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package minesweeper;
+package minesweeper.menu;
 
 import java.io.Serializable;
 import java.util.Scanner;
+import minesweeper.Minesweeper;
 
 /**
  *
@@ -15,6 +16,7 @@ import java.util.Scanner;
 public abstract class Menu implements Serializable{
  static String[] menuItems = null;
  static String menuName = null;
+   Minesweeper instance;
  
 // public void getInput(){};
  

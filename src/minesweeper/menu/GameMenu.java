@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package minesweeper;
+package minesweeper.menu;
 
 import java.util.Scanner;
+import minesweeper.GameBoard;
+import minesweeper.Minesweeper;
 /**
  *
  * @author Jacky Northgrave

@@ -1,8 +1,12 @@
-package minesweeper;
+package minesweeper.menu;
+
+import minesweeper.HighScore;
+import minesweeper.Minesweeper;
+import minesweeper.Player;
 
 
-import java.util.ArrayList;
-import java.util.Scanner;
+//import java.util.ArrayList;
+//import java.util.Scanner;
 
 /**
  *
