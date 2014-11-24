@@ -13,7 +13,7 @@ import minesweeper.Minesweeper;
  *
  * @author Summer
  */
-public abstract class Menu implements Serializable{
+public class Menu implements Serializable{
  static String[] menuItems = null;
  static String menuName = null;
    Minesweeper instance;
