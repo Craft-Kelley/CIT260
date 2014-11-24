@@ -46,7 +46,7 @@ public class HelpMenu extends Menu{
             + "\nor filled with a mine. If you click on a tile with a mine it will "
             + "\nend the game. If you click on a tile with a number it will reveal "
             + "\nhow many mines are touching the tile. ";
-    displayOptions(how);    
+    display(how);    
     //getInput();
     //HelpMenu help = new HelpMenu();
     }
