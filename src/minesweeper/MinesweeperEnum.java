@@ -28,6 +28,6 @@ public void display() {
 }
 /*I was supposed to take something from here and put it in the other 
 classes somehow and get the program to run with the enum. It runs but 
-I do not know what nor how to put the connection into the other classes.*/
+I do not know what nor how to put the connection into the other classes. - Jonathan*/
 }
 
