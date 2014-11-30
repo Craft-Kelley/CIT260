@@ -16,9 +16,13 @@ import minesweeper.interfaces.EnterInfo;
  * @author Summer
  * @author Jacky 
  */
-
 // public void getInput(){};
+ public class Menu implements Serializable, DisplayInfo, EnterInfo{
+ static String[] menuItems = null;
+ static String menuName = null;
+   Minesweeper instance;
  
+   
  /*
  * Default constructor
  */
