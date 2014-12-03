@@ -3,23 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Exceptions;
+package Exceptions1;
 
 /**
  *
- * @author Kelley
+ * @author Casey
  */
-public class MenuExceptions extends Exception {
-    public MenuExceptions() {
+public class MenuExceptions1 extends Exception {
+    public MenuExceptions1() {
  
 }
-    public MenuExceptions(String message) {
+    public MenuExceptions1(String message) {
         super(message);
     } 
-    public MenuExceptions(String message, Throwable cause) {
+    public MenuExceptions1(String message, Throwable cause) {
         super(message, cause);
     } 
-    public MenuExceptions(Throwable cause) {
+    public MenuExceptions1(Throwable cause) {
         super(cause);
     } 
 }
+
+
