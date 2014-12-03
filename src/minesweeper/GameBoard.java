@@ -12,6 +12,7 @@ package minesweeper;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
+import Exceptions.MenuExceptions;
 
 public class GameBoard implements Serializable{
   private int numCols;
@@ -58,7 +59,7 @@ public class GameBoard implements Serializable{
   * be placed on the board, based on the level
   * of difficulty the user has selected.
   */
-  private int calcNumMines(){
+  private int calcNumMines() throws MenuExceptions{
     //beginner
     if (gameLevel == 1){
       double calcNumMine = (double) (25.0 *(numCols * numRows))/100;
@@ -83,11 +84,10 @@ public class GameBoard implements Serializable{
       return roundedCalcNumMine;
     }
     else{
-      System.out.println("ERROR: Unable to calculate number of mines");
+      throw new MenuExceptions("ERROR: Unable to calculate number of mines");
     }
     
-    return 1;
-  }
+    }
 
   
   /*
@@ -96,6 +96,7 @@ public class GameBoard implements Serializable{
   * while others are not mines.
   */
   public void buildBoard(){
+      try {
     numMines = calcNumMines();
     int mineRow = 0;
     int mineCol = 0;
@@ -135,6 +136,12 @@ public class GameBoard implements Serializable{
         }
       }
     }
+      } catch (MenuExceptions E) {
+          System.out.println(E.getMessage());
+      }
+      finally{
+          System.out.println("Final");
+      }
   }
     
   /**

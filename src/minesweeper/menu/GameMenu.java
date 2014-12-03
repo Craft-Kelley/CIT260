@@ -102,6 +102,9 @@ public class GameMenu extends Menu{
              board.flagSquare(coords[1],coords[2]);
          case "R":
              GameMenu game = new GameMenu();
+             break;
+         default:
+             throw new IllegalArgumentException("Invaild Input");
      }
      /* Scanner inFile = new Scanner(System.in);
       String input = inFile.nextLine();
