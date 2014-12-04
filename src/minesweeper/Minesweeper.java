@@ -11,7 +11,12 @@ package minesweeper;
  *    Casey Ames
  * 
  *  Summary:
- *    This is a simple game ... (INSERT GAME SUMMARY HERE)
+ *    This is a simple game. Minesweeper is has evolved 
+ *    since the 1960's into the game that it is today. It 
+ *    is a single player puzzle video game. The objective is
+ *    to clear a game board containing hidden "mines" without
+ *    detonating any of them, with help from clues about the 
+ *    number of neighboring mines in each field. 
  */
 
 import minesweeper.menu.MainMenu;
