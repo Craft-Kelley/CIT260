@@ -38,9 +38,10 @@ public class OptionMenu extends Menu{
         }
     }
         
-     /*
+        /*
         *game Level options 
-        */   
+        * updated by Kelley commenting out again for exceptions project
+        *
     public void gameLevel() {
     int easy[] = {3,3,1};//stores values in an array to represent rows, cols, and mines
     int medium[] = {5,5,3};
@@ -78,7 +79,9 @@ public class OptionMenu extends Menu{
             MainMenu main = new MainMenu();
     }
     }
-   
+   */
+    
+    
   /*It allows the user to select game edit options.
   * In this case, the selections are editing the number of rows,
   * editing the number of columns, and editing the game level. 
