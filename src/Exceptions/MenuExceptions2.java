@@ -9,17 +9,17 @@ package Exceptions;
  *
  * @author Kelley
  */
-public class MenuExceptions extends Exception {
-    public MenuExceptions() {
+public class MenuExceptions2 extends Exception {
+    public MenuExceptions2() {
  
 }
-    public MenuExceptions(String message) {
+    public MenuExceptions2(String message) {
         super(message);
     } 
-    public MenuExceptions(String message, Throwable cause) {
+    public MenuExceptions2(String message, Throwable cause) {
         super(message, cause);
     } 
-    public MenuExceptions(Throwable cause) {
+    public MenuExceptions2(Throwable cause) {
         super(cause);
     } 
 }
