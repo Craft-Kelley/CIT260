@@ -7,7 +7,8 @@ package minesweeper.exceptions;
 
 /**
  *
- * @author mattnorthgrave
+ * @author Jacky Northgrave
+ * 
  */
 public class BoardExceptions extends Exception {
      public BoardExceptions() {
