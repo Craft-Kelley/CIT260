@@ -12,7 +12,7 @@ package minesweeper;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
-import Exceptions.MenuExceptions;
+import minesweeper.exceptions.MenuExceptions;
 
 public class GameBoard implements Serializable{
   private int numCols;
@@ -123,8 +123,8 @@ public class GameBoard implements Serializable{
                
         k++; //Only increment if a mine was successfully placed
       }     
-    }
-
+    } 
+    
     //Fill in empty squares
     for (int i = 0; i < numRows; i++){
       for (int j = 0; j < numCols; j++){
@@ -143,7 +143,7 @@ public class GameBoard implements Serializable{
           System.out.println("Final");
       }
   }
-    
+  
   /**
    * This will calculate the number of mines the passed in cell is touching
    * @param row the row of the cell to be checked 
