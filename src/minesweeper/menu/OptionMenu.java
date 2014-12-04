@@ -27,10 +27,10 @@ public class OptionMenu extends Menu{
        // instance = theInstance;
         String select = getInput(menuItems);
         switch (select){
-           /* case "R":
+         /*   case "R":
                 gameRows;
             case"C":
-                gameCols    ;*/
+                gameCols; */
             case "G":
                 gameLevel();
             case "M":
@@ -78,7 +78,7 @@ public class OptionMenu extends Menu{
             MainMenu main = new MainMenu();
     }
     }
-    
+   
   /*It allows the user to select game edit options.
   * In this case, the selections are editing the number of rows,
   * editing the number of columns, and editing the game level. 
