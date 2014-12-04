@@ -9,8 +9,8 @@ import minesweeper.Minesweeper;
  */
 public class OptionMenu extends Menu{
   public final static String[] menuItems = { 
-        //("R - Edit number of rows"),
-        //("C - Edit number of columns"),
+        ("R - Edit number of rows"),
+        ("C - Edit number of columns"),
         ("G - Edit game level"),
         ("M - Return to main menu")
     };
@@ -79,7 +79,7 @@ public class OptionMenu extends Menu{
     }
     }
     
- /* It allows the user to select game edit options.
+  /*It allows the user to select game edit options.
   * In this case, the selections are editing the number of rows,
   * editing the number of columns, and editing the game level. 
   * The game level is limited to 1, 2, or 3, while the number of
@@ -90,16 +90,18 @@ public class OptionMenu extends Menu{
   *  
   * Get user input to direct menu  
   *  
-  *
+  */
+    
+  // Commmented out begins here... 
     @Override 
     public void getInput(){
         
         String input;
         Scanner inFile = new Scanner(System.in);
-        displayOptions(menuItems);
+        display(menuItems);
 
     do{
-      displayOptions();
+      display();
         
       input = inFile.nextLine();
       input = input.trim().toUpperCase();
@@ -121,19 +123,19 @@ public class OptionMenu extends Menu{
           break;
         default:
           System.out.println("Invalid input. Please enter a valid command.");
-          displayOptions(menuItems);
+          display(menuItems);
           break;
       }
     } while (!input.equals("M")); //Start game returns to minesweeper to start the game
     
   }
   
-  /*
-  * Prompts the user, returns user input.  User input must be 
+  
+ /* Prompts the user, returns user input.  User input must be 
   * an integer.
   * @param prompt the prompt to display to the user to get the int
   * @param limit the upper bound of the int (the highest number the int can be)
-  *
+  */
   public int getInt(String prompt, int limit){ //MOVE
     int input = 0;
 
@@ -161,5 +163,6 @@ public class OptionMenu extends Menu{
 
     }          
     return input;
-    }*/
+    }
+  //Commented out ends here...
 }
