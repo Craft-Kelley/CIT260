@@ -2,6 +2,7 @@ package minesweeper.menu;
 
 import java.util.Scanner;
 import minesweeper.Minesweeper;
+import minesweeper.exceptions.BoardExceptions;
 
 /**
  *
@@ -26,15 +27,15 @@ public class OptionMenu extends Menu{
         super(OptionMenu.menuItems, OptionMenu.menuName);
        // instance = theInstance;
         String select = getInput(menuItems);
-        switch (select){
-         /*   case "R":
-                gameRows;
+       switch (select){ /*
+            case "R":
+                setBoardRows;
             case"C":
-                gameCols; */
+                gameCols; 
             case "G":
-                gameLevel();
+               gameLevel();
             case "M":
-                MainMenu main = new MainMenu();
+                MainMenu main = new MainMenu();*/
         }
     }
         
@@ -139,7 +140,7 @@ public class OptionMenu extends Menu{
   * @param prompt the prompt to display to the user to get the int
   * @param limit the upper bound of the int (the highest number the int can be)
   */
-  public int getInt(String prompt, int limit){ //MOVE
+  public int getInt(String prompt, int limit) throws BoardExceptions{ //MOVE
     int input = 0;
 
     //Get input
@@ -153,7 +154,7 @@ public class OptionMenu extends Menu{
     System.out.println();
     
      }catch (Exception e){
-     System.out.println("Error: Must enter a number");
+     System.out.println(e.getMessage());
      goodInput = false;
     }  
     
