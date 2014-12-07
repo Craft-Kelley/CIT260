@@ -59,7 +59,9 @@ public class GameMenu extends Menu{
                 
         switch (select) {     
           case "G"://guess square
-            guessSquare();
+              try{guessSquare();}
+              catch(ArrayIndexOutOfBoundsException e){
+              System.out.println("Error with the coordinates");};
             break;
           case "P"://pause game  
             PauseMenu pause = new PauseMenu();
@@ -92,7 +94,12 @@ public class GameMenu extends Menu{
        };
       
       char[] coords = new char[2];
-      getCords(coords);
+      try {
+          getCords(coords);
+      }
+      catch(NullPointerException e) {
+      System.out.println("the game did not pass a value to the coordinates");
+      }
       String select = getInput(guessItems);
       
      switch(select){
@@ -130,7 +137,7 @@ public class GameMenu extends Menu{
     * get coords prompts the user for coordinates.
     * @param coords  - an array of size 2 to be filled with the user input
     */
-    private void getCords(char[] coords){
+    private String getCords(char[] coords){
       Scanner inFile = new Scanner(System.in);
       String input = inFile.nextLine();
       
@@ -146,6 +153,7 @@ public class GameMenu extends Menu{
         }
         
       }while(!convertCoordinates(coords));
+      return (input);
     }
     
     /*
