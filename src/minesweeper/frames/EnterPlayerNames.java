@@ -7,7 +7,7 @@ package minesweeper.frames;
 
 /**
  *
- * @author mattnorthgrave
+ * @author Jacky Northgrave
  */
 public class EnterPlayerNames extends javax.swing.JFrame {
 
@@ -32,7 +32,7 @@ public class EnterPlayerNames extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jNameTitle = new javax.swing.JLabel();
-        jNameButton = new javax.swing.JButton();
+        jContinue = new javax.swing.JButton();
         jNameTextField = new javax.swing.JTextField();
         jNameLabel = new javax.swing.JLabel();
 
@@ -62,9 +62,9 @@ public class EnterPlayerNames extends javax.swing.JFrame {
         jNameTitle.setForeground(new java.awt.Color(0, 0, 153));
         jNameTitle.setText("Enter the name of the player below:");
 
-        jNameButton.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
-        jNameButton.setForeground(new java.awt.Color(0, 0, 153));
-        jNameButton.setText("Continue");
+        jContinue.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
+        jContinue.setForeground(new java.awt.Color(0, 0, 153));
+        jContinue.setText("Continue");
 
         jNameTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,7 +85,7 @@ public class EnterPlayerNames extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jNameTitle)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jNameButton)
+                        .addComponent(jContinue)
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addComponent(jNameLabel)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -102,7 +102,7 @@ public class EnterPlayerNames extends javax.swing.JFrame {
                     .addComponent(jNameLabel)
                     .addComponent(jNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jNameButton)
+                .addComponent(jContinue)
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -179,8 +179,8 @@ public class EnterPlayerNames extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jContinue;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton jNameButton;
     private javax.swing.JLabel jNameLabel;
     private javax.swing.JTextField jNameTextField;
     private javax.swing.JLabel jNameTitle;

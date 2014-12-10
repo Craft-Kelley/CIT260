@@ -107,7 +107,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jNameTitle" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                              <Component id="jNameButton" min="-2" max="-2" attributes="0"/>
+                              <Component id="jContinue" min="-2" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Component id="jNameLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -130,7 +130,7 @@
                           <Component id="jNameTextField" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jNameButton" min="-2" max="-2" attributes="0"/>
+                      <Component id="jContinue" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="21" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -148,7 +148,7 @@
                 <Property name="text" type="java.lang.String" value="Enter the name of the player below:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jNameButton">
+            <Component class="javax.swing.JButton" name="jContinue">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Menlo" size="13" style="0"/>
