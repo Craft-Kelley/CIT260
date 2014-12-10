@@ -32,11 +32,11 @@ public class MainFrame extends javax.swing.JFrame {
         jpTitle = new javax.swing.JPanel();
         jlTitle = new javax.swing.JLabel();
         jpMenuItems = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        jAbout = new javax.swing.JButton();
+        jOptions = new javax.swing.JButton();
+        jQuit = new javax.swing.JButton();
+        jStart = new javax.swing.JButton();
+        jHelp = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtWelcome = new javax.swing.JTextArea();
 
@@ -81,25 +81,35 @@ public class MainFrame extends javax.swing.JFrame {
 
         jpMenuItems.setBackground(new java.awt.Color(68, 205, 182));
 
-        jButton2.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 0, 153));
-        jButton2.setText("About");
+        jAbout.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
+        jAbout.setForeground(new java.awt.Color(0, 0, 153));
+        jAbout.setText("About");
 
-        jButton3.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(0, 0, 153));
-        jButton3.setText("Options");
+        jOptions.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
+        jOptions.setForeground(new java.awt.Color(0, 0, 153));
+        jOptions.setText("Options");
 
-        jButton4.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(0, 0, 153));
-        jButton4.setText("Quit");
+        jQuit.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
+        jQuit.setForeground(new java.awt.Color(0, 0, 153));
+        jQuit.setText("Quit");
 
-        jButton1.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 153));
-        jButton1.setText("Start");
+        jStart.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
+        jStart.setForeground(new java.awt.Color(0, 0, 153));
+        jStart.setText("Start");
+        jStart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jStartActionPerformed(evt);
+            }
+        });
 
-        jButton5.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(0, 0, 153));
-        jButton5.setText("Help");
+        jHelp.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
+        jHelp.setForeground(new java.awt.Color(0, 0, 153));
+        jHelp.setText("Help");
+        jHelp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jHelpActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpMenuItemsLayout = new javax.swing.GroupLayout(jpMenuItems);
         jpMenuItems.setLayout(jpMenuItemsLayout);
@@ -108,26 +118,26 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpMenuItemsLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jHelp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jQuit, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jOptions, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jAbout, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jStart, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(12, 12, 12))
         );
         jpMenuItemsLayout.setVerticalGroup(
             jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpMenuItemsLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jStart, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jAbout, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jOptions, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4)
+                .addComponent(jQuit)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5)
+                .addComponent(jHelp)
                 .addContainerGap(47, Short.MAX_VALUE))
         );
 
@@ -188,6 +198,14 @@ public class MainFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jHelpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jHelpActionPerformed
+
+    private void jStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jStartActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jStartActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -224,13 +242,13 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jAbout;
+    private javax.swing.JButton jHelp;
+    private javax.swing.JButton jOptions;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton jQuit;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton jStart;
     private javax.swing.JLabel jlTitle;
     private javax.swing.JPanel jpBody;
     private javax.swing.JPanel jpMenuItems;
