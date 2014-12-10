@@ -1,13 +1,15 @@
 package minesweeper.frames;
-    import minesweeper.Minesweeper;
+import minesweeper.Minesweeper;
+import minesweeper.menu.AboutMenu;
 import minesweeper.menu.HelpMenu;
 import minesweeper.menu.MainMenu;
+import minesweeper.menu.OptionMenu;
 /**
  *
  * @author Kelley
  */
 public class MainFrame extends javax.swing.JFrame {
-    MainMenu mainMenu = new MainMenu();
+    MainMenu mainMenu;
     /**
      * Creates new form MainFrame
      */
@@ -211,11 +213,13 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jHelpActionPerformed
-        mainMenu.helpSelected();         
+        HelpMenu helpMenu = new HelpMenu();
+        helpMenu.getInput();      
     }//GEN-LAST:event_jHelpActionPerformed
 
     private void jStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jStartActionPerformed
-        mainMenu.startGame();
+        HelpMenu helpMenu = new HelpMenu();
+         helpMenu.getInput();
     }//GEN-LAST:event_jStartActionPerformed
 
     private void jQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jQuitActionPerformed
@@ -223,11 +227,11 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jQuitActionPerformed
 
     private void jAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAboutActionPerformed
-        mainMenu.aboutSelected();
+       AboutMenu about = new AboutMenu();
     }//GEN-LAST:event_jAboutActionPerformed
 
     private void jOptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jOptionsActionPerformed
-        mainMenu.optionsSelected();
+        OptionMenu option = new OptionMenu();
     }//GEN-LAST:event_jOptionsActionPerformed
 
 

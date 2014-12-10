@@ -47,11 +47,11 @@ public class Minesweeper {
      * @param args the command line arguments
      */
     public static void main(String[] args) { 
-      //MainMenu mainMenu = new MainMenu();
-      //player = new Player();
-     final Minesweeper mine = new Minesweeper(); 
+        //MainMenu mainMenu = new MainMenu();
+        //player = new Player();
+        final Minesweeper mine = new Minesweeper(); 
      
-    try {
+        try {
           java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
@@ -59,12 +59,13 @@ public class Minesweeper {
                mine.mainFrame.setVisible(true);
             }
           });
-    }catch (Throwable e){
-        System.out.println("Unexpected errpr: " + e.getMessage());
-        System.out.println(e.getStackTrace().toString());
-    }
-    finally{
-        if(mine.mainFrame != null){
+        }catch (Throwable e){
+            System.out.println("Unexpected errpr: " + e.getMessage());
+            System.out.println(e.getStackTrace().toString());
+        }
+        finally{
+             System.out.println("Exiting try catch; entering FINALLY");
+            if(mine.mainFrame != null){
             mine.mainFrame.dispose();
         }
     }
