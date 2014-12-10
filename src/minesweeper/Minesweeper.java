@@ -21,7 +21,7 @@ package minesweeper;
 
 import minesweeper.menu.MainMenu;
 import minesweeper.menu.GameMenu;
-import java.util.Scanner;
+import minesweeper.frames.MainFrame;
 
 public class Minesweeper {
 
@@ -33,6 +33,7 @@ public class Minesweeper {
     static int boardCols = 3;
     static int gameLevel = 1;
     static Minesweeper instance = new Minesweeper();
+    MainFrame mainFrame;
         
     /*
     * Singleton -- maintains only one instance of the 
@@ -46,11 +47,28 @@ public class Minesweeper {
      * @param args the command line arguments
      */
     public static void main(String[] args) { 
-//Display main menu
-      MainMenu mainMenu = new MainMenu();
-      player = new Player();
+      //MainMenu mainMenu = new MainMenu();
+      //player = new Player();
+     final Minesweeper mine = new Minesweeper(); 
+     
+    try {
+          java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+               mine.mainFrame = new MainFrame();
+               mine.mainFrame.setVisible(true);
+            }
+          });
+    }catch (Throwable e){
+        System.out.println("Unexpected errpr: " + e.getMessage());
+        System.out.println(e.getStackTrace().toString());
+    }
+    finally{
+        if(mine.mainFrame != null){
+            mine.mainFrame.dispose();
+        }
+    }
       
-
       //Continue prompting from the main menu until the player decides to quit.
      // mainMenu.getInput(instance);
      // startGame();
@@ -61,7 +79,7 @@ public class Minesweeper {
     /*
     * StartGame provides startup protocols for a new game
     */
-    public static void startGame(){
+    public void startGame(){
       player = new Player();
       
       

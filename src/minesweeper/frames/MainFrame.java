@@ -1,16 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package minesweeper.frames;
-
+    import minesweeper.Minesweeper;
+import minesweeper.menu.HelpMenu;
+import minesweeper.menu.MainMenu;
 /**
  *
  * @author Kelley
  */
 public class MainFrame extends javax.swing.JFrame {
-
+    MainMenu mainMenu = new MainMenu();
     /**
      * Creates new form MainFrame
      */
@@ -84,14 +81,29 @@ public class MainFrame extends javax.swing.JFrame {
         jAbout.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
         jAbout.setForeground(new java.awt.Color(0, 0, 153));
         jAbout.setText("About");
+        jAbout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jAboutActionPerformed(evt);
+            }
+        });
 
         jOptions.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
         jOptions.setForeground(new java.awt.Color(0, 0, 153));
         jOptions.setText("Options");
+        jOptions.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jOptionsActionPerformed(evt);
+            }
+        });
 
         jQuit.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
         jQuit.setForeground(new java.awt.Color(0, 0, 153));
         jQuit.setText("Quit");
+        jQuit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jQuitActionPerformed(evt);
+            }
+        });
 
         jStart.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
         jStart.setForeground(new java.awt.Color(0, 0, 153));
@@ -135,10 +147,10 @@ public class MainFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jOptions, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jQuit)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jHelp)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jQuit)
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         jtWelcome.setEditable(false);
@@ -192,54 +204,33 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(jpBody, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jHelpActionPerformed
-        // TODO add your handling code here:
+        mainMenu.helpSelected();         
     }//GEN-LAST:event_jHelpActionPerformed
 
     private void jStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jStartActionPerformed
-        // TODO add your handling code here:
+        mainMenu.startGame();
     }//GEN-LAST:event_jStartActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void jQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jQuitActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jQuitActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainFrame().setVisible(true);
-            }
-        });
-    }
+    private void jAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAboutActionPerformed
+        mainMenu.aboutSelected();
+    }//GEN-LAST:event_jAboutActionPerformed
+
+    private void jOptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jOptionsActionPerformed
+        mainMenu.optionsSelected();
+    }//GEN-LAST:event_jOptionsActionPerformed
+
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jAbout;

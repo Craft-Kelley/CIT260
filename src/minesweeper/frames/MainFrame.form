@@ -53,7 +53,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               <Component id="jpBody" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="13" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -171,10 +171,10 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jOptions" min="-2" pref="32" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jQuit" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="jHelp" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="47" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jQuit" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="80" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -190,6 +190,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="About"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jAboutActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jOptions">
               <Properties>
@@ -201,6 +204,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Options"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jOptionsActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jQuit">
               <Properties>
@@ -212,6 +218,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Quit"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jQuitActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jStart">
               <Properties>
