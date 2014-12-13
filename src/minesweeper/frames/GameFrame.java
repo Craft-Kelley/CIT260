@@ -5,12 +5,12 @@ import minesweeper.menu.PauseMenu;
  *
  * @author Summer
  */
-public class GameBoard extends javax.swing.JPanel {
+public class GameFrame extends javax.swing.JPanel {
 
     /**
      * Creates new form GameBoard
      */
-    public GameBoard() {
+    public GameFrame() {
         initComponents();
     }
 

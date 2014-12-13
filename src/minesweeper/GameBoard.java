@@ -10,12 +10,12 @@ package minesweeper;
  */
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Random;
+import minesweeper.frames.GameFrame;
 import minesweeper.exceptions.MenuExceptions;
 
 public class GameBoard implements Serializable{
   private int numCols;
+  GameFrame gameFrame;
   private int numRows;
   private int gameLevel; //the level the game is on
   private int numMines;
@@ -142,6 +142,25 @@ public class GameBoard implements Serializable{
       finally{
           System.out.println("Final");
       }
+      
+
+      
+       try {
+          java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+               gameFrame = new GameFrame();
+               gameFrame.setVisible(true);
+            }
+          });
+        }catch (Throwable e){
+            System.out.println("Unexpected errpr: " + e.getMessage());
+            System.out.println(e.getStackTrace().toString());
+        }
+        finally{
+             System.out.println("Exiting try catch; entering FINALLY");
+            
+        }
   }
   
   /**
