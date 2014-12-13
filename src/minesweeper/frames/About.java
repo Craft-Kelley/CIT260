@@ -5,6 +5,12 @@
  */
 package minesweeper.frames;
 
+import minesweeper.menu.AboutMenu;
+import minesweeper.frames.AboutSub1;
+import minesweeper.frames.AboutSub2;
+import minesweeper.frames.MainFrame;
+
+
 /**
  *
  * @author Jonathan
@@ -17,7 +23,11 @@ public class About extends javax.swing.JFrame {
     public About() {
         initComponents();
     }
-
+    //private void jbAboutSub1ActionPerformed(java.awt.event.ActionEvent evt) {                                       
+     //  AboutSub1 AboutTheDevelopers = new AboutSub1()
+    //}
+    //Suppoed to make About the Developers button navigate to AboutSub1 page.
+     
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
