@@ -1,7 +1,7 @@
 package minesweeper.menu;
-
-import java.util.Scanner;
 import minesweeper.Minesweeper;
+import minesweeper.frames.OptionFrame;
+import java.util.Scanner;
 
 /**
  *
@@ -17,7 +17,28 @@ public class OptionMenu extends Menu{
   public final static String menuName = "Options Menu";
   
 
-  
+  public static void main(String[] args){
+      final Minesweeper mine = new Minesweeper();
+      
+      try {
+          java.awt.EventQueue.invokeLater(new Runnable(){
+          @Override
+          public void run(){
+              mine.optionFrame = new OptionFrame();
+              mine.optionFrame = setVisible(true);
+          }
+      });
+      } catch (Throwable e){
+          System.out.println("Unexpected error:" + e.getMessage());
+          System.out.println(e.getStackTrace().toString());
+      }
+      finally{
+          System.out.println("Exiting try catch; entering Finally");
+          if(mine.optionFrame != null){
+              mine.optionFrame.dispose();
+          }
+      }
+  }
     
     /*
     * Default Constructor
