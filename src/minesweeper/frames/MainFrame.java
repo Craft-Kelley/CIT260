@@ -5,6 +5,7 @@ import minesweeper.menu.HelpMenu;
 import minesweeper.menu.MainMenu;
 import minesweeper.menu.OptionMenu;
 import minesweeper.menu.StartGame;
+import minesweeper.frames.EnterPlayerNames;
 /**
  *
  * @author Kelley
@@ -217,7 +218,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jHelpActionPerformed
 
     private void jStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jStartActionPerformed
-        StartGame start = new StartGame();
+        EnterPlayerNames enterPlayerNames = new EnterPlayerNames();
     }//GEN-LAST:event_jStartActionPerformed
 
     private void jQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jQuitActionPerformed
