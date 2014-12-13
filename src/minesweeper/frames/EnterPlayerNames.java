@@ -5,6 +5,8 @@
  */
 package minesweeper.frames;
 
+import minesweeper.menu.StartGame;
+
 /**
  *
  * @author Jacky Northgrave
@@ -32,7 +34,7 @@ public class EnterPlayerNames extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jNameTitle = new javax.swing.JLabel();
-        jContinue = new javax.swing.JButton();
+        jContinueButton = new javax.swing.JButton();
         jNameTextField = new javax.swing.JTextField();
         jNameLabel = new javax.swing.JLabel();
 
@@ -62,9 +64,14 @@ public class EnterPlayerNames extends javax.swing.JFrame {
         jNameTitle.setForeground(new java.awt.Color(0, 0, 153));
         jNameTitle.setText("Enter the name of the player below:");
 
-        jContinue.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
-        jContinue.setForeground(new java.awt.Color(0, 0, 153));
-        jContinue.setText("Continue");
+        jContinueButton.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
+        jContinueButton.setForeground(new java.awt.Color(0, 0, 153));
+        jContinueButton.setText("Continue");
+        jContinueButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jContinueButtonActionPerformed(evt);
+            }
+        });
 
         jNameTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,7 +92,7 @@ public class EnterPlayerNames extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jNameTitle)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jContinue)
+                        .addComponent(jContinueButton)
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addComponent(jNameLabel)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -102,7 +109,7 @@ public class EnterPlayerNames extends javax.swing.JFrame {
                     .addComponent(jNameLabel)
                     .addComponent(jNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jContinue)
+                .addComponent(jContinueButton)
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -126,7 +133,7 @@ public class EnterPlayerNames extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,6 +149,10 @@ public class EnterPlayerNames extends javax.swing.JFrame {
     private void jNameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNameTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jNameTextFieldActionPerformed
+
+    private void jContinueButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jContinueButtonActionPerformed
+        StartGame start = new StartGame();
+    }//GEN-LAST:event_jContinueButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,7 +185,7 @@ public class EnterPlayerNames extends javax.swing.JFrame {
     }*/
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jContinue;
+    private javax.swing.JButton jContinueButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jNameLabel;
     private javax.swing.JTextField jNameTextField;
