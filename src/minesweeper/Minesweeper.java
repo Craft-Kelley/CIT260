@@ -60,7 +60,7 @@ public class Minesweeper {
             }
           });
         }catch (Throwable e){
-            System.out.println("Unexpected errpr: " + e.getMessage());
+            System.out.println("Unexpected error: " + e.getMessage());
             System.out.println(e.getStackTrace().toString());
         }
         finally{
