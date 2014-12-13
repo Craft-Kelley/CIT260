@@ -38,10 +38,7 @@ public class OptionMenu extends Menu{
         }
     }
         
-        /*
-        *game Level options 
-        * updated by Kelley commenting out again for exceptions project
-        *
+
     public void gameLevel() {
     int easy[] = {3,3,1};//stores values in an array to represent rows, cols, and mines
     int medium[] = {5,5,3};
@@ -79,8 +76,7 @@ public class OptionMenu extends Menu{
             MainMenu main = new MainMenu();
     }
     }
-   */
-    
+  
     
   /*It allows the user to select game edit options.
   * In this case, the selections are editing the number of rows,
@@ -95,7 +91,7 @@ public class OptionMenu extends Menu{
   *  
   */
     
-  // Commmented out begins here... 
+  /*
     @Override 
     public void getInput(){
         
@@ -134,11 +130,11 @@ public class OptionMenu extends Menu{
   }
   
   
- /* Prompts the user, returns user input.  User input must be 
-  * an integer.
-  * @param prompt the prompt to display to the user to get the int
-  * @param limit the upper bound of the int (the highest number the int can be)
-  */
+   Prompts the user, returns user input.  User input must be 
+   an integer.
+   @param prompt the prompt to display to the user to get the int
+   @param limit the upper bound of the int (the highest number the int can be)
+  
   public int getInt(String prompt, int limit){ //MOVE
     int input = 0;
 
@@ -167,5 +163,5 @@ public class OptionMenu extends Menu{
     }          
     return input;
     }
-  //Commented out ends here...
+  */
 }
