@@ -9,14 +9,17 @@ import java.util.Scanner;
  */
 public class OptionMenu extends Menu{
   public final static String[] menuItems = { 
-        ("R - Edit number of rows"),
-        ("C - Edit number of columns"),
+        //("R - Edit number of rows"),
+        //("C - Edit number of columns"),
         ("G - Edit game level"),
         ("M - Return to main menu")
     };
   public final static String menuName = "Options Menu";
   
 
+ /*
+  * Commented out to debug... I think this  main mehtod should not be here
+  *
   public static void main(String[] args){
       final Minesweeper mine = new Minesweeper();
       
@@ -38,7 +41,7 @@ public class OptionMenu extends Menu{
               mine.optionFrame.dispose();
           }
       }
-  }
+  }*/
     
     /*
     * Default Constructor
@@ -51,11 +54,11 @@ public class OptionMenu extends Menu{
             case "R":
                 setBoardRows;
             case"C":
-                gameCols; 
+                gameCols; */
             case "G":
                gameLevel();
             case "M":
-                MainMenu main = new MainMenu();*/
+                break;
         }
     }
         
