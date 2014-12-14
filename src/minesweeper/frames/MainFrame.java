@@ -218,7 +218,9 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jHelpActionPerformed
 
     private void jStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jStartActionPerformed
+        
         EnterPlayerNames enterPlayerNames = new EnterPlayerNames();
+               enterPlayerNames.setVisible(true);
     }//GEN-LAST:event_jStartActionPerformed
 
     private void jQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jQuitActionPerformed
