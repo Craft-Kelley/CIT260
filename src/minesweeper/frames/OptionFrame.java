@@ -237,14 +237,14 @@ public class OptionFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jEditColumnsButtonActionPerformed
 
     private void jEditGameLevelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEditGameLevelButtonActionPerformed
-        OptionMenu gameLevel = new GameLevel();
-        optionMenu.getInput();
+        OptionMenu option = new OptionMenu();
+        option.getInput();
              
     }//GEN-LAST:event_jEditGameLevelButtonActionPerformed
 
     private void jMainMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMainMenuButtonActionPerformed
         MainMenu menu = new MainMenu();
-        mainMenu.getInput();
+        menu.getInput();
     }//GEN-LAST:event_jMainMenuButtonActionPerformed
 
     private void jQuitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jQuitButtonActionPerformed
