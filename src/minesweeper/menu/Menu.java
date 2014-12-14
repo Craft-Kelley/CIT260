@@ -59,6 +59,7 @@ import minesweeper.interfaces.EnterInfo;
  /*
  * reusable getInput code for a more simplified input need.  No parameters required.
  */
+ @Override
  public void getInput(){
 
      String select;
@@ -83,13 +84,14 @@ import minesweeper.interfaces.EnterInfo;
  /*
  * Displays the menu items in a standard way
  */
+ @Override
  public void display(){
     System.out.println("\n====================================================");
     System.out.println(menuName + ":");
     System.out.println("Enter the letter for your selection choice.");
-    for (int i = 0; i < menuItems.length; i++ ){
-      System.out.println("\t" + menuItems[i]);
-    }
+     for (String menuItem : menuItems) {
+         System.out.println("\t" + menuItem);
+     }
     System.out.println("\n====================================================");
     System.out.print("> ");    
   }
@@ -101,9 +103,9 @@ import minesweeper.interfaces.EnterInfo;
     System.out.println("\n====================================================");
     System.out.println(menuName + ":");
     System.out.println("Enter the letter for your selection choice.");
-    for (int i = 0; i < items.length; i++ ){
-      System.out.println("\t" + items[i]);
-    }
+     for (String item : items) {
+         System.out.println("\t" + item);
+     }
     System.out.println("\n====================================================");
     System.out.print("> ");    
   }
