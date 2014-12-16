@@ -53,7 +53,7 @@ public class EnterPlayerNames extends javax.swing.JFrame {
             .addGap(0, 79, Short.MAX_VALUE)
         );
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Enter Player Names");
 
         jPanel1.setBackground(new java.awt.Color(68, 205, 182));
