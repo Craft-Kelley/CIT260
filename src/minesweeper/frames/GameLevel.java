@@ -153,7 +153,9 @@ public class GameLevel extends javax.swing.JFrame {
     }//GEN-LAST:event_jEasyLevelButtonActionPerformed
 
     private void jMediumLevelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMediumLevelButtonActionPerformed
-        // TODO add your handling code here:
+        IntermediateBoard intermediateBoard= new IntermediateBoard();
+        intermediateBoard.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jMediumLevelButtonActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
