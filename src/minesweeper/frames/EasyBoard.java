@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 package minesweeper.frames;
+
 import minesweeper.frames.GameLevel;
 import minesweeper.menu.MainMenu;
-
 
 /**
  *
@@ -433,7 +433,7 @@ public class EasyBoard extends javax.swing.JFrame {
 
     private void jA1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jA1ButtonActionPerformed
         jA1Button.setText("1");
-       
+
     }//GEN-LAST:event_jA1ButtonActionPerformed
 
     private void jA1ButtonComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jA1ButtonComponentShown
@@ -441,11 +441,14 @@ public class EasyBoard extends javax.swing.JFrame {
     }//GEN-LAST:event_jA1ButtonComponentShown
 
     private void jA3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jA3ButtonActionPerformed
-       jA3Button.setText("1");
+        jA3Button.setText("1");
     }//GEN-LAST:event_jA3ButtonActionPerformed
 
     private void jA5ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jA5ButtonActionPerformed
         jA5Button.setText("*");
+        this.dispose();
+        GameOver over = new GameOver();
+        over.setVisible(true);
     }//GEN-LAST:event_jA5ButtonActionPerformed
 
     private void jA2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jA2ButtonActionPerformed
@@ -484,8 +487,8 @@ public class EasyBoard extends javax.swing.JFrame {
 
     private void jMainMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMainMenuButtonActionPerformed
         MainFrame main = new MainFrame();
-         main.setVisible(true);
-         this.dispose();
+        main.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jMainMenuButtonActionPerformed
 
     private void jQuitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jQuitButtonActionPerformed
