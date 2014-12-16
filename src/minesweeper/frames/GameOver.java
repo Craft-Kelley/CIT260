@@ -116,13 +116,13 @@ public class GameOver extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     Board.board.dispose();
+     this.dispose();
     MainFrame mainFrame = new MainFrame();
     mainFrame.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        this.
+        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
 
