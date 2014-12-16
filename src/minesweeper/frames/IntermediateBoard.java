@@ -69,54 +69,179 @@ public class IntermediateBoard extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(68, 205, 182));
 
         jA1Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jA1Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jA1ButtonActionPerformed(evt);
+            }
+        });
 
         jA2Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jA2Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jA2ButtonActionPerformed(evt);
+            }
+        });
 
         jA3Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jA3Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jA3ButtonActionPerformed(evt);
+            }
+        });
 
         jA4Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jA4Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jA4ButtonActionPerformed(evt);
+            }
+        });
 
         jA5Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jA5Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jA5ButtonActionPerformed(evt);
+            }
+        });
 
         jB1Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jB1Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB1ButtonActionPerformed(evt);
+            }
+        });
 
         jB2Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jB2Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB2ButtonActionPerformed(evt);
+            }
+        });
 
         jB3Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jB3Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB3ButtonActionPerformed(evt);
+            }
+        });
 
         jB4Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jB4Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB4ButtonActionPerformed(evt);
+            }
+        });
 
         jB5Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jB5Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB5ButtonActionPerformed(evt);
+            }
+        });
 
         jC1Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jC1Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jC1ButtonActionPerformed(evt);
+            }
+        });
 
         jC2Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jC2Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jC2ButtonActionPerformed(evt);
+            }
+        });
 
         jC3Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jC3Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jC3ButtonActionPerformed(evt);
+            }
+        });
 
         jC4Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jC4Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jC4ButtonActionPerformed(evt);
+            }
+        });
 
         jC5Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jC5Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jC5ButtonActionPerformed(evt);
+            }
+        });
 
         jD1Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jD1Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jD1ButtonActionPerformed(evt);
+            }
+        });
 
         jD2Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jD2Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jD2ButtonActionPerformed(evt);
+            }
+        });
 
         jD3Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jD3Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jD3ButtonActionPerformed(evt);
+            }
+        });
 
         jD4Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jD4Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jD4ButtonActionPerformed(evt);
+            }
+        });
 
         jD5Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jD5Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jD5ButtonActionPerformed(evt);
+            }
+        });
 
         jE1Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jE1Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jE1ButtonActionPerformed(evt);
+            }
+        });
 
         jE2Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jE2Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jE2ButtonActionPerformed(evt);
+            }
+        });
 
         jE3Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jE3Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jE3ButtonActionPerformed(evt);
+            }
+        });
 
         jE4Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jE4Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jE4ButtonActionPerformed(evt);
+            }
+        });
 
         jE5Button.setFont(new java.awt.Font("Menlo", 0, 24)); // NOI18N
+        jE5Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jE5ButtonActionPerformed(evt);
+            }
+        });
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 153));
 
@@ -266,6 +391,119 @@ public class IntermediateBoard extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jA1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jA1ButtonActionPerformed
+        jA1Button.setText("1");        // TODO add your handling code here:
+    }//GEN-LAST:event_jA1ButtonActionPerformed
+
+    private void jA2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jA2ButtonActionPerformed
+        jA2Button.setText("1");        // TODO add your handling code here:
+    }//GEN-LAST:event_jA2ButtonActionPerformed
+
+    private void jA3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jA3ButtonActionPerformed
+        jA3Button.setText("2");        // TODO add your handling code here:
+    }//GEN-LAST:event_jA3ButtonActionPerformed
+
+    private void jA4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jA4ButtonActionPerformed
+        jA4Button.setText("1");        // TODO add your handling code here:
+    }//GEN-LAST:event_jA4ButtonActionPerformed
+
+    private void jA5ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jA5ButtonActionPerformed
+        jA5Button.setText("1");        // TODO add your handling code here:
+    }//GEN-LAST:event_jA5ButtonActionPerformed
+
+    private void jB1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB1ButtonActionPerformed
+        jB1Button.setText("1");        // TODO add your handling code here:
+    }//GEN-LAST:event_jB1ButtonActionPerformed
+
+    private void jB2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB2ButtonActionPerformed
+        jB2Button.setText("*");
+        this.dispose();
+        GameOver over = new GameOver();
+        over.setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_jB2ButtonActionPerformed
+
+    private void jB3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB3ButtonActionPerformed
+        jB3Button.setText("2");        // TODO add your handling code here:
+    }//GEN-LAST:event_jB3ButtonActionPerformed
+
+    private void jB4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB4ButtonActionPerformed
+        jB4Button.setText("*");
+        this.dispose();
+        GameOver over = new GameOver();
+        over.setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_jB4ButtonActionPerformed
+
+    private void jB5ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB5ButtonActionPerformed
+        jB5Button.setText("1");        // TODO add your handling code here:
+    }//GEN-LAST:event_jB5ButtonActionPerformed
+
+    private void jC1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jC1ButtonActionPerformed
+        jC1Button.setText("2");        // TODO add your handling code here:
+    }//GEN-LAST:event_jC1ButtonActionPerformed
+
+    private void jC2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jC2ButtonActionPerformed
+        jC2Button.setText("2");        // TODO add your handling code here:
+    }//GEN-LAST:event_jC2ButtonActionPerformed
+
+    private void jC3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jC3ButtonActionPerformed
+        jC3Button.setText("2");        // TODO add your handling code here:
+    }//GEN-LAST:event_jC3ButtonActionPerformed
+
+    private void jC4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jC4ButtonActionPerformed
+        jC4Button.setText("2");
+    }//GEN-LAST:event_jC4ButtonActionPerformed
+
+    private void jC5ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jC5ButtonActionPerformed
+        jC5Button.setText("2");        // TODO add your handling code here:
+    }//GEN-LAST:event_jC5ButtonActionPerformed
+
+    private void jD1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jD1ButtonActionPerformed
+        jD1Button.setText("1");        // TODO add your handling code here:
+    }//GEN-LAST:event_jD1ButtonActionPerformed
+
+    private void jD2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jD2ButtonActionPerformed
+        jD2Button.setText("*");
+        this.dispose();
+        GameOver over = new GameOver();
+        over.setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_jD2ButtonActionPerformed
+
+    private void jD3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jD3ButtonActionPerformed
+        jD3Button.setText("2");        // TODO add your handling code here:
+    }//GEN-LAST:event_jD3ButtonActionPerformed
+
+    private void jD4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jD4ButtonActionPerformed
+        jD4Button.setText("*");
+        this.dispose();
+        GameOver over = new GameOver();
+        over.setVisible(true);
+// TODO add your handling code here:
+    }//GEN-LAST:event_jD4ButtonActionPerformed
+
+    private void jD5ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jD5ButtonActionPerformed
+        jD5Button.setText("1");        // TODO add your handling code here:
+    }//GEN-LAST:event_jD5ButtonActionPerformed
+
+    private void jE1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jE1ButtonActionPerformed
+        jE1Button.setText("1");        // TODO add your handling code here:
+    }//GEN-LAST:event_jE1ButtonActionPerformed
+
+    private void jE2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jE2ButtonActionPerformed
+        jE2Button.setText("1");        // TODO add your handling code here:
+    }//GEN-LAST:event_jE2ButtonActionPerformed
+
+    private void jE3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jE3ButtonActionPerformed
+        jE3Button.setText("2");        // TODO add your handling code here:
+    }//GEN-LAST:event_jE3ButtonActionPerformed
+
+    private void jE4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jE4ButtonActionPerformed
+        jE4Button.setText("1");        // TODO add your handling code here:
+    }//GEN-LAST:event_jE4ButtonActionPerformed
+
+    private void jE5ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jE5ButtonActionPerformed
+        jE5Button.setText("1");        // TODO add your handling code here:
+    }//GEN-LAST:event_jE5ButtonActionPerformed
 
     /**
      * @param args the command line arguments
