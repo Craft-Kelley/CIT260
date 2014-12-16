@@ -151,7 +151,9 @@ public class EnterPlayerNames extends javax.swing.JFrame {
     }//GEN-LAST:event_jNameTextFieldActionPerformed
 
     private void jContinueButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jContinueButtonActionPerformed
-        StartGame start = new StartGame();
+        OptionFrame option = new OptionFrame();
+        option.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jContinueButtonActionPerformed
 
     /**

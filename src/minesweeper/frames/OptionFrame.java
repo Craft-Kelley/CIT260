@@ -37,12 +37,12 @@ public class OptionFrame extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jEditRowsButton = new javax.swing.JButton();
+        jEditColumnsButton = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jOptionMenuTitle = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
-        jEditRowsButton = new javax.swing.JButton();
-        jEditColumnsButton = new javax.swing.JButton();
         jEditGameLevelButton = new javax.swing.JButton();
         jMainMenuButton = new javax.swing.JButton();
         jQuitButton = new javax.swing.JButton();
@@ -64,37 +64,6 @@ public class OptionFrame extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-
-        jPanel1.setBackground(new java.awt.Color(68, 205, 182));
-
-        jPanel2.setBackground(new java.awt.Color(0, 0, 153));
-
-        jOptionMenuTitle.setBackground(new java.awt.Color(0, 0, 153));
-        jOptionMenuTitle.setFont(new java.awt.Font("Menlo", 1, 36)); // NOI18N
-        jOptionMenuTitle.setForeground(new java.awt.Color(255, 255, 255));
-        jOptionMenuTitle.setText("Option Menu");
-        jOptionMenuTitle.setBorder(null);
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(78, 78, 78)
-                .addComponent(jOptionMenuTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jOptionMenuTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
-        );
-
-        jPanel3.setBackground(new java.awt.Color(68, 205, 182));
-
         jEditRowsButton.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
         jEditRowsButton.setForeground(new java.awt.Color(0, 0, 153));
         jEditRowsButton.setText("Rows");
@@ -112,6 +81,42 @@ public class OptionFrame extends javax.swing.JFrame {
                 jEditColumnsButtonActionPerformed(evt);
             }
         });
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(68, 205, 182));
+
+        jPanel2.setBackground(new java.awt.Color(0, 0, 153));
+
+        jOptionMenuTitle.setBackground(new java.awt.Color(0, 0, 153));
+        jOptionMenuTitle.setFont(new java.awt.Font("Menlo", 1, 36)); // NOI18N
+        jOptionMenuTitle.setForeground(new java.awt.Color(255, 255, 255));
+        jOptionMenuTitle.setText("Options");
+        jOptionMenuTitle.setBorder(null);
+        jOptionMenuTitle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jOptionMenuTitleActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jOptionMenuTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(144, 144, 144))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(25, Short.MAX_VALUE)
+                .addComponent(jOptionMenuTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23))
+        );
+
+        jPanel3.setBackground(new java.awt.Color(68, 205, 182));
 
         jEditGameLevelButton.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
         jEditGameLevelButton.setForeground(new java.awt.Color(0, 0, 153));
@@ -150,28 +155,22 @@ public class OptionFrame extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jEditRowsButton)
                             .addComponent(jEditGameLevelButton)
-                            .addComponent(jMainMenuButton)
-                            .addComponent(jEditColumnsButton)))
+                            .addComponent(jMainMenuButton)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jQuitButton)
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
-                .addComponent(jEditRowsButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jEditColumnsButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(59, 59, 59)
                 .addComponent(jEditGameLevelButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jMainMenuButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jQuitButton)
-                .addGap(24, 24, 24))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
 
         jTextArea2.setColumns(20);
@@ -179,7 +178,7 @@ public class OptionFrame extends javax.swing.JFrame {
         jTextArea2.setForeground(new java.awt.Color(0, 0, 153));
         jTextArea2.setLineWrap(true);
         jTextArea2.setRows(5);
-        jTextArea2.setText("This menu will help you edit the game board, the game level and also take you back to the main menu. \n\nClick on Rows to edit the number of rows in the game and click on Columns to edit the number of columns in the game. Click on Game Level to change which level you are in. Or feel free to click on Main Menu to check out other options.");
+        jTextArea2.setText("Before you begin the game make sure and choose which game level you want. Click on Game Level to play Beginner, Intermediate or Hard. \n\nOr feel free to click on Main Menu to check out other options.\n\nHappy Gaming!");
         jTextArea2.setWrapStyleWord(true);
         jTextArea2.setBorder(javax.swing.BorderFactory.createEmptyBorder(5, 5, 5, 5));
         jScrollPane2.setViewportView(jTextArea2);
@@ -201,9 +200,11 @@ public class OptionFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane2)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
@@ -244,17 +245,23 @@ public class OptionFrame extends javax.swing.JFrame {
     private void jEditGameLevelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEditGameLevelButtonActionPerformed
         GameLevel gameLevel = new GameLevel();
         gameLevel.setVisible(true);
+        this.dispose();
              
     }//GEN-LAST:event_jEditGameLevelButtonActionPerformed
 
     private void jMainMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMainMenuButtonActionPerformed
         MainFrame main = new MainFrame();
         main.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jMainMenuButtonActionPerformed
 
     private void jQuitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jQuitButtonActionPerformed
         this.dispose();
     }//GEN-LAST:event_jQuitButtonActionPerformed
+
+    private void jOptionMenuTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jOptionMenuTitleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jOptionMenuTitleActionPerformed
 
 
     

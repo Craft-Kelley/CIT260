@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package minesweeper.frames;
+import minesweeper.frames.EasyBoard;
+
+
 
 /**
  *
@@ -63,27 +66,27 @@ public class GameLevel extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jEasyLevelButton.setFont(new java.awt.Font("Menlo", 0, 16)); // NOI18N
+        jEasyLevelButton.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
         jEasyLevelButton.setForeground(new java.awt.Color(0, 0, 153));
-        jEasyLevelButton.setText("Easy");
+        jEasyLevelButton.setText("Beginner");
         jEasyLevelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jEasyLevelButtonActionPerformed(evt);
             }
         });
 
-        jMediumLevelButton.setFont(new java.awt.Font("Menlo", 0, 16)); // NOI18N
+        jMediumLevelButton.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
         jMediumLevelButton.setForeground(new java.awt.Color(0, 0, 153));
-        jMediumLevelButton.setText("Medium");
+        jMediumLevelButton.setText("Intermediate");
         jMediumLevelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMediumLevelButtonActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Menlo", 0, 16)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
         jButton3.setForeground(new java.awt.Color(0, 0, 153));
-        jButton3.setText("Hard");
+        jButton3.setText("Expert");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -100,14 +103,14 @@ public class GameLevel extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(99, 99, 99)
+                        .addGap(81, 81, 81)
                         .addComponent(jEasyLevelButton))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addComponent(jMediumLevelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(90, 90, 90)
+                        .addComponent(jButton3))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(98, 98, 98)
-                        .addComponent(jButton3)))
+                        .addGap(58, 58, 58)
+                        .addComponent(jMediumLevelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -144,11 +147,15 @@ public class GameLevel extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jEasyLevelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEasyLevelButtonActionPerformed
-        // TODO add your handling code here:
+        EasyBoard easyBoard= new EasyBoard();
+        easyBoard.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jEasyLevelButtonActionPerformed
 
     private void jMediumLevelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMediumLevelButtonActionPerformed
-        // TODO add your handling code here:
+        IntermediateBoard intermediateBoard= new IntermediateBoard();
+        intermediateBoard.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jMediumLevelButtonActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
