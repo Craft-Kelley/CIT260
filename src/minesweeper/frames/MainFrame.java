@@ -232,7 +232,8 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jAboutActionPerformed
 
     private void jOptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jOptionsActionPerformed
-        OptionMenu option = new OptionMenu();
+        OptionFrame option = new OptionFrame();
+        option.setVisible(true);
     }//GEN-LAST:event_jOptionsActionPerformed
 
 
