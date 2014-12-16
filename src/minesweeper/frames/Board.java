@@ -211,15 +211,51 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
+        jA2Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jA2ButtonActionPerformed(evt);
+            }
+        });
+
         jA3Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jA3ButtonActionPerformed(evt);
             }
         });
 
+        jA4Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jA4ButtonActionPerformed(evt);
+            }
+        });
+
         jA5Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jA5ButtonActionPerformed(evt);
+            }
+        });
+
+        jA6Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jA6ButtonActionPerformed(evt);
+            }
+        });
+
+        jA7Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jA7ButtonActionPerformed(evt);
+            }
+        });
+
+        jA8Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jA8ButtonActionPerformed(evt);
+            }
+        });
+
+        jA9Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jA9ButtonActionPerformed(evt);
             }
         });
 
@@ -300,7 +336,7 @@ public class Board extends javax.swing.JFrame {
 
     private void jA1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jA1ButtonActionPerformed
         jA1Button.setText("1");
-       
+
     }//GEN-LAST:event_jA1ButtonActionPerformed
 
     private void jA1ButtonComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jA1ButtonComponentShown
@@ -308,48 +344,45 @@ public class Board extends javax.swing.JFrame {
     }//GEN-LAST:event_jA1ButtonComponentShown
 
     private void jA3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jA3ButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jA3ButtonActionPerformed
+        jA3Button.setText("1");    }//GEN-LAST:event_jA3ButtonActionPerformed
 
     private void jA5ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jA5ButtonActionPerformed
-        jA5Button.setText("*");
-        jA7Button.setText("*");
+        jA5Button.setText("Kaboom!");
+        jA7Button.setText("Kaboom!");
+        this.dispose();
+        GameOver over = new GameOver();
+        over.setVisible(true);
     }//GEN-LAST:event_jA5ButtonActionPerformed
+
+    private void jA2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jA2ButtonActionPerformed
+        jA2Button.setText("1");    }//GEN-LAST:event_jA2ButtonActionPerformed
+
+    private void jA4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jA4ButtonActionPerformed
+        jA4Button.setText("2");        // TODO add your handling code here:
+    }//GEN-LAST:event_jA4ButtonActionPerformed
+
+    private void jA6ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jA6ButtonActionPerformed
+        jA6Button.setText("1");
+    }//GEN-LAST:event_jA6ButtonActionPerformed
+
+    private void jA7ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jA7ButtonActionPerformed
+        jA5Button.setText("Kaboom!");
+        jA7Button.setText("Kaboom!");
+        this.dispose();
+        GameOver over = new GameOver();
+        over.setVisible(true);    }//GEN-LAST:event_jA7ButtonActionPerformed
+
+    private void jA8ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jA8ButtonActionPerformed
+        jA8Button.setText("2");        // TODO add your handling code here:
+    }//GEN-LAST:event_jA8ButtonActionPerformed
+
+    private void jA9ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jA9ButtonActionPerformed
+        jA9Button.setText("1");        // TODO add your handling code here:
+    }//GEN-LAST:event_jA9ButtonActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Board.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Board.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Board.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Board.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Board().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jA1Button;
