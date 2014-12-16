@@ -38,6 +38,8 @@ public class PauseFrame extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(68, 205, 182));
 
+        jButton1.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 153));
         jButton1.setText("Resume");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
