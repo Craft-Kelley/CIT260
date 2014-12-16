@@ -7,6 +7,9 @@ package minesweeper.frames;
 import minesweeper.menu.OptionMenu;
 import minesweeper.GameBoard;
 import minesweeper.menu.MainMenu;
+import minesweeper.frames.EnterNumberOfRows;
+import minesweeper.frames.EnterNumberOfCols;
+import minesweeper.frames.GameLevel;
 /**
  *
  * @author Jacky Northgrave
@@ -158,7 +161,7 @@ public class OptionFrame extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(26, Short.MAX_VALUE)
+                .addContainerGap(32, Short.MAX_VALUE)
                 .addComponent(jEditRowsButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jEditColumnsButton)
@@ -168,7 +171,7 @@ public class OptionFrame extends javax.swing.JFrame {
                 .addComponent(jMainMenuButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jQuitButton)
-                .addGap(30, 30, 30))
+                .addGap(24, 24, 24))
         );
 
         jTextArea2.setColumns(20);
@@ -229,22 +232,24 @@ public class OptionFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jEditRowsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEditRowsButtonActionPerformed
-         EnterNumberOfRows enterNumberOfRows = new EnterNumberOfRows();
+         EnterNumberOfRows enterNumberOfRows= new EnterNumberOfRows();
+         enterNumberOfRows.setVisible(true);
     }//GEN-LAST:event_jEditRowsButtonActionPerformed
 
     private void jEditColumnsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEditColumnsButtonActionPerformed
-         EnterNumberOfCols enterNumberOfCols = new EnterNumberOfCols();
+         EnterNumberOfCols enterNumberOfCols= new EnterNumberOfCols();
+         enterNumberOfCols.setVisible(true);
     }//GEN-LAST:event_jEditColumnsButtonActionPerformed
 
     private void jEditGameLevelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEditGameLevelButtonActionPerformed
-        OptionMenu option = new OptionMenu();
-        option.getInput();
+        GameLevel gameLevel = new GameLevel();
+        gameLevel.setVisible(true);
              
     }//GEN-LAST:event_jEditGameLevelButtonActionPerformed
 
     private void jMainMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMainMenuButtonActionPerformed
-        MainMenu menu = new MainMenu();
-        menu.getInput();
+        MainFrame main = new MainFrame();
+        main.setVisible(true);
     }//GEN-LAST:event_jMainMenuButtonActionPerformed
 
     private void jQuitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jQuitButtonActionPerformed
