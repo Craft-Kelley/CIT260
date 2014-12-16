@@ -220,8 +220,8 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jStartActionPerformed
         
-        EnterPlayerNames enterPlayerNames = new EnterPlayerNames();
-               enterPlayerNames.setVisible(true);
+        Board board= new Board();
+        board.setVisible(true);
     }//GEN-LAST:event_jStartActionPerformed
 
     private void jQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jQuitActionPerformed
