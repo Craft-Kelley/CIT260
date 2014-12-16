@@ -9,7 +9,7 @@ import minesweeper.menu.StartGame;
 
 /**
  *
- * @author mattnorthgrave
+ * @author Jacky Northgrave
  */
 public class EnterNumberOfRows extends javax.swing.JFrame {
 
