@@ -213,8 +213,8 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jHelpActionPerformed
-        HelpMenu helpMenu = new HelpMenu();
-        helpMenu.getInput();      
+        Help help= new Help();
+        help.setVisible(true);      
     }//GEN-LAST:event_jHelpActionPerformed
 
     private void jStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jStartActionPerformed
@@ -228,7 +228,8 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jQuitActionPerformed
 
     private void jAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAboutActionPerformed
-       AboutMenu about = new AboutMenu();
+       About about = new About();
+            about.setVisible(true);
     }//GEN-LAST:event_jAboutActionPerformed
 
     private void jOptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jOptionsActionPerformed
