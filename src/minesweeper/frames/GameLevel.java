@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package minesweeper.frames;
-import minesweeper.frames.EasyBoard;
+import minesweeper.frames.BeginnerBoard;
 
 
 
@@ -36,16 +36,19 @@ public class GameLevel extends javax.swing.JFrame {
         jEasyLevelButton = new javax.swing.JButton();
         jMediumLevelButton = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jBackButton = new javax.swing.JButton();
+        jMainMenuButton = new javax.swing.JButton();
+        jQuitButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(68, 205, 182));
 
-        jPanel2.setBackground(new java.awt.Color(68, 205, 182));
+        jPanel2.setBackground(new java.awt.Color(0, 0, 153));
 
-        jTextField1.setBackground(new java.awt.Color(68, 205, 182));
+        jTextField1.setBackground(new java.awt.Color(0, 0, 153));
         jTextField1.setFont(new java.awt.Font("Menlo", 1, 18)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(0, 0, 153));
+        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
         jTextField1.setText("Choose Game Level");
         jTextField1.setBorder(null);
 
@@ -54,19 +57,19 @@ public class GameLevel extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(48, 48, 48)
+                .addGap(52, 52, 52)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(279, Short.MAX_VALUE))
+                .addContainerGap(275, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
+                .addContainerGap(32, Short.MAX_VALUE)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(23, 23, 23))
         );
 
-        jEasyLevelButton.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
+        jEasyLevelButton.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
         jEasyLevelButton.setForeground(new java.awt.Color(0, 0, 153));
         jEasyLevelButton.setText("Beginner");
         jEasyLevelButton.addActionListener(new java.awt.event.ActionListener() {
@@ -75,7 +78,7 @@ public class GameLevel extends javax.swing.JFrame {
             }
         });
 
-        jMediumLevelButton.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
+        jMediumLevelButton.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
         jMediumLevelButton.setForeground(new java.awt.Color(0, 0, 153));
         jMediumLevelButton.setText("Intermediate");
         jMediumLevelButton.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +87,7 @@ public class GameLevel extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
         jButton3.setForeground(new java.awt.Color(0, 0, 153));
         jButton3.setText("Expert");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -92,6 +95,23 @@ public class GameLevel extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+
+        jBackButton.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
+        jBackButton.setForeground(new java.awt.Color(0, 0, 153));
+        jBackButton.setText("Back");
+        jBackButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBackButtonActionPerformed(evt);
+            }
+        });
+
+        jMainMenuButton.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
+        jMainMenuButton.setForeground(new java.awt.Color(0, 0, 153));
+        jMainMenuButton.setText("Main Menu");
+
+        jQuitButton.setFont(new java.awt.Font("Menlo", 0, 14)); // NOI18N
+        jQuitButton.setForeground(new java.awt.Color(0, 0, 153));
+        jQuitButton.setText("Quit");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -103,27 +123,40 @@ public class GameLevel extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addComponent(jEasyLevelButton))
+                        .addContainerGap()
+                        .addComponent(jBackButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jMainMenuButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jQuitButton))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(90, 90, 90)
-                        .addComponent(jButton3))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addComponent(jMediumLevelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(73, 73, 73)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(23, 23, 23)
+                                .addComponent(jEasyLevelButton))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addComponent(jButton3))
+                            .addComponent(jMediumLevelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(26, 26, 26)
                 .addComponent(jEasyLevelButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jMediumLevelButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton3)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBackButton)
+                    .addComponent(jMainMenuButton)
+                    .addComponent(jQuitButton))
+                .addGap(27, 27, 27))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -132,22 +165,22 @@ public class GameLevel extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jEasyLevelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEasyLevelButtonActionPerformed
-        EasyBoard easyBoard= new EasyBoard();
+        BeginnerBoard easyBoard= new BeginnerBoard();
         easyBoard.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jEasyLevelButtonActionPerformed
@@ -159,8 +192,16 @@ public class GameLevel extends javax.swing.JFrame {
     }//GEN-LAST:event_jMediumLevelButtonActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        ExpertBoard expertBoard= new ExpertBoard();
+        expertBoard.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jBackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBackButtonActionPerformed
+        OptionFrame option = new OptionFrame();
+        option.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jBackButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,11 +209,14 @@ public class GameLevel extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBackButton;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jEasyLevelButton;
+    private javax.swing.JButton jMainMenuButton;
     private javax.swing.JButton jMediumLevelButton;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JButton jQuitButton;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
