@@ -199,6 +199,7 @@ public class Help extends javax.swing.JFrame {
     private void jInstructionsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jInstructionsButtonActionPerformed
          Instructions instructions = new Instructions();
          instructions.setVisible(true);
+         this.dispose();
     }//GEN-LAST:event_jInstructionsButtonActionPerformed
 
     private void jQuitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jQuitButtonActionPerformed
@@ -212,6 +213,7 @@ public class Help extends javax.swing.JFrame {
     private void jMainMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMainMenuButtonActionPerformed
           MainFrame main = new MainFrame();
           main.setVisible(true);
+          this.dispose();
     }//GEN-LAST:event_jMainMenuButtonActionPerformed
 
  

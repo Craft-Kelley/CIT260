@@ -235,11 +235,13 @@ public class OptionFrame extends javax.swing.JFrame {
     private void jEditRowsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEditRowsButtonActionPerformed
          EnterNumberOfRows enterNumberOfRows= new EnterNumberOfRows();
          enterNumberOfRows.setVisible(true);
+         this.dispose();
     }//GEN-LAST:event_jEditRowsButtonActionPerformed
 
     private void jEditColumnsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEditColumnsButtonActionPerformed
          EnterNumberOfCols enterNumberOfCols= new EnterNumberOfCols();
          enterNumberOfCols.setVisible(true);
+         this.dispose();
     }//GEN-LAST:event_jEditColumnsButtonActionPerformed
 
     private void jEditGameLevelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEditGameLevelButtonActionPerformed
