@@ -178,7 +178,7 @@ public class OptionFrame extends javax.swing.JFrame {
         jTextArea2.setForeground(new java.awt.Color(0, 0, 153));
         jTextArea2.setLineWrap(true);
         jTextArea2.setRows(5);
-        jTextArea2.setText("Before you begin the game make sure and choose which game level you want. Click on Game Level to play Beginner, Intermediate or Hard. \n\nOr feel free to click on Main Menu to check out other options.\n\nHappy Gaming!");
+        jTextArea2.setText("Before you begin the game make sure and choose which game level you want. Click on Game Level to play Beginner, Intermediate or Expert. \n\nOr feel free to click on Main Menu to check out other options.\n\nHappy Gaming!");
         jTextArea2.setWrapStyleWord(true);
         jTextArea2.setBorder(javax.swing.BorderFactory.createEmptyBorder(5, 5, 5, 5));
         jScrollPane2.setViewportView(jTextArea2);
