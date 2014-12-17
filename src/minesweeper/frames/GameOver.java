@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package minesweeper.frames;
-import minesweeper.frames.Board;
+import minesweeper.frames.ExpertBoard;
 
 
 /**
