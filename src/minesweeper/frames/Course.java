@@ -175,6 +175,7 @@ public class Course extends javax.swing.JFrame {
     private void jMainMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMainMenuButtonActionPerformed
          MainFrame main = new MainFrame();
          main.setVisible(true);
+         this.dispose();
     }//GEN-LAST:event_jMainMenuButtonActionPerformed
 
     private void jQuitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jQuitButtonActionPerformed
